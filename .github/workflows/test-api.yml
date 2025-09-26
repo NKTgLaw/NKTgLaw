@@ -31,8 +31,4 @@ jobs:
     http POST http://localhost:8080/api/nktg1 x:=2.0 momentum:=15.0
     http POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15.0
 
-    - name: Run API tests
-      run: |
-        http POST http://localhost:8080/api/momentum mass:=5 velocity:=3
-        http POST http://localhost:8080/api/nktg1 x:=2 momentum:=15
-        http POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15
+   
