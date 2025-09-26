@@ -1,1 +1,26 @@
+name: Benchmark NKTg
+
+on:
+  push:
+    paths:
+      - benchmarks/**
+      - core/**
+      - .github/workflows/benchmark.yml
+
+jobs:
+  run-benchmark:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install build tools
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Compile benchmark
+      run: g++ -O2 benchmarks/benchmark.cpp core/nktg.cpp -o benchmark
+
+    - name: Run benchmark
+      run: ./benchmark
 
