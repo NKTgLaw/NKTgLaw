@@ -1,1 +1,31 @@
+openapi: 3.0.0
+info:
+  title: NKTg Law API
+  version: 1.0.0
+paths:
+  /nktg:
+    post:
+      summary: Tính NKTg₁ và NKTg₂
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                x: { type: number }
+                v: { type: number }
+                m: { type: number }
+                dm_dt: { type: number }
+      responses:
+        '200':
+          description: Kết quả tính toán
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  p: { type: number }
+                  NKTg1: { type: number }
+                  NKTg2: { type: number }
 
