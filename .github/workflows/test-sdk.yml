@@ -1,0 +1,32 @@
+name: Test SDK
+
+on:
+  push:
+    paths:
+      - sdk/**
+      - .github/workflows/test-sdk.yml
+
+jobs:
+  sdk-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y python3 python3-pip httpie
+        pip3 install flask requests
+
+    - name: Start API server
+      run: |
+        python3 server/app.py > server.log 2>&1 &
+        sleep 15
+        echo "📄 Server log:"
+        cat server.log
+
+    - name: Run SDK tests
+      run: |
+        python3 sdk/test_sdk.py
