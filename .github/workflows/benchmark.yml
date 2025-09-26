@@ -1,5 +1,4 @@
 name: Benchmark NKTg
-
 on:
   push:
     paths:
