@@ -1,0 +1,33 @@
+name: Test API
+
+on:
+  push:
+    paths:
+      - tests/test_api.http
+      - server/**
+      - .github/workflows/test-api.yml
+
+jobs:
+  api-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install dependencies
+      run: |
+        sudo apt update
+        sudo apt install -y python3 python3-pip httpie
+        pip3 install flask
+
+    - name: Start API server
+      run: |
+        nohup python3 server/app.py &
+        sleep 5
+
+    - name: Run API tests
+      run: |
+        http POST http://localhost:8080/api/momentum mass:=5 velocity:=3
+        http POST http://localhost:8080/api/nktg1 x:=2 momentum:=15
+        http POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15
