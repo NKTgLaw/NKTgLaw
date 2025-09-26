@@ -1,0 +1,25 @@
+name: Test Edge Cases
+
+on:
+  push:
+    paths:
+      - tests/test_edge.cpp
+      - core/**
+      - .github/workflows/test-edge.yml
+
+jobs:
+  run-edge-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install build tools
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Compile edge test
+      run: g++ -O2 tests/test_edge.cpp core/nktg.cpp -o test_edge
+
+    - name: Run edge test
+      run: ./test_edge
