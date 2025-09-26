@@ -1,0 +1,25 @@
+name: Test NKTg Core
+
+on:
+  push:
+    paths:
+      - tests/**
+      - core/**
+      - .github/workflows/test.yml
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Install build tools
+      run: sudo apt update && sudo apt install -y g++
+
+    - name: Compile unit tests
+      run: g++ -O2 tests/test_core.cpp core/nktg.cpp -o test_core
+
+    - name: Run unit tests
+      run: ./test_core
