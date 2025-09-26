@@ -23,18 +23,17 @@ jobs:
 
     - name: Start API server
       run: |
-        python3 server/app.py > server.log 2>&1 &
-        sleep 15
-        echo "📄 Server log:"
-        cat server.log
+        python3 server/app.py &
+        sleep 10
+        echo "✅ Flask server started on port 8080"
 
     - name: Run API tests
       run: |
         echo "🔍 Testing /api/momentum"
-        http --check-status POST http://localhost:8080/api/momentum mass:=5.0 velocity:=3.0
+        http --check-status --json POST http://localhost:8080/api/momentum mass:=5.0 velocity:=3.0
 
         echo "🔍 Testing /api/nktg1"
-        http --check-status POST http://localhost:8080/api/nktg1 x:=2.0 momentum:=15.0
+        http --check-status --json POST http://localhost:8080/api/nktg1 x:=2.0 momentum:=15.0
 
         echo "🔍 Testing /api/nktg2"
-        http --check-status POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15.0
+        http --check-status --json POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15.0
