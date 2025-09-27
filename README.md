@@ -3,4 +3,19 @@
 ![C++ CI Status](https://github.com/NKTgLaw/nktg-law-library/actions/workflows/cpp-test.yml/badge.svg)
 
 # nktg-law-library
-Core library &amp; API for the NKTg Law (Nguyen Khanh Tung). Includes core implementation, REST/gRPC API, and 150+ client wrappers
+
+Core library & API for the NKTg Law (Nguyen Khanh Tung).  
+Includes core implementation, REST/gRPC API, and 150+ client wrappers.
+
+---
+
+## Installation
+
+```bash
+pip install nktg-law-library
+
+## Usage
+from nktg_law import NKTgClient
+
+client = NKTgClient()
+client.some_method()
