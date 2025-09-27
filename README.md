@@ -1,6 +1,4 @@
 ![Release v0.1.0](https://img.shields.io/github/v/release/NKTgLaw/nktg-law-library?label=Release)
-# NKTG Law Library
-
 ![Python Test](https://github.com/NKTGLaw/nktg-law-library/actions/workflows/python-test.yml/badge.svg)
 ![C++ Test](https://github.com/NKTGLaw/nktg-law-library/actions/workflows/cpp-test.yml/badge.svg)
 
