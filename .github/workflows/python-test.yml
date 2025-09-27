@@ -1,0 +1,34 @@
+name: Python Test
+
+on:
+  push:
+    paths:
+      - 'nktg.py'
+      - 'tests/test_nktg.py'
+      - 'setup.py'
+      - 'pyproject.toml'
+  pull_request:
+    paths:
+      - 'nktg.py'
+      - 'tests/test_nktg.py'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install dependencies
+      run: |
+        pip install -e .
+        pip install pytest
+
+    - name: Run tests
+      run: pytest tests/test_nktg.py
