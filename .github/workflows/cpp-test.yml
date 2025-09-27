@@ -1,0 +1,26 @@
+name: C++ Test
+
+on:
+  push:
+    paths:
+      - 'clients/cpp/**'
+  pull_request:
+    paths:
+      - 'clients/cpp/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install build tools
+      run: sudo apt-get update && sudo apt-get install -y g++
+
+    - name: Compile test file
+      run: g++ clients/cpp/tests/test_nktg.cpp -o test
+
+    - name: Run test
+      run: ./test
