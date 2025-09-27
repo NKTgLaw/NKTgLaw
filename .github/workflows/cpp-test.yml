@@ -24,3 +24,8 @@ jobs:
 
     - name: Run test
       run: ./test
+    - name: Compile API test
+      run: g++ clients/cpp/tests/test_nktg_api.cpp -o test_api
+
+    - name: Run API test
+      run: ./test_api
