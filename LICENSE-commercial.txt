@@ -1,0 +1,62 @@
+NKTgLaw Commercial License
+==========================
+
+Copyright (c) 2025 Nguyễn Khánh Tùng
+
+All rights reserved.
+
+This file outlines the terms under which you may obtain a commercial license to use
+the NKTgLaw software. By obtaining a commercial license, you are granted the rights
+to use, copy, modify, and distribute the software under the conditions described below.
+
+1. Grant of License
+-------------------
+Subject to payment of the applicable license fees and compliance with the terms of this
+Agreement, the Licensor grants the Licensee a non-exclusive, non-transferable, worldwide
+license to use NKTgLaw for commercial purposes without the obligation to release modifications
+or derivatives as open source.
+
+2. Restrictions
+---------------
+- You may not redistribute the software except as allowed under this commercial license.
+- You may not sublicense the software without explicit permission from the Licensor.
+- The software may not be used in a manner that violates applicable laws.
+
+3. Fees and Payment
+------------------
+Commercial use requires a license fee, which is agreed upon between the Licensor and
+Licensee prior to distribution or deployment. Contact the Licensor for licensing terms
+and payment details.
+
+4. Support and Maintenance
+--------------------------
+The Licensor may provide commercial support, updates, and maintenance services according
+to separate agreements.
+
+5. Disclaimer of Warranty
+-------------------------
+The software is provided "as is" without warranty of any kind, either express or implied,
+including but not limited to warranties of merchantability or fitness for a particular purpose.
+
+6. Limitation of Liability
+--------------------------
+In no event shall the Licensor be liable for any damages arising from the use of the software,
+including direct, indirect, incidental, or consequential damages.
+
+7. Termination
+--------------
+This license is effective until terminated. It will terminate automatically without notice
+if you fail to comply with any of the terms herein. Upon termination, you must destroy all
+copies of the software.
+
+8. Contact
+----------
+For commercial licensing inquiries, please contact:
+
+Nguyễn Khánh Tùng  
+Email: traiphieu.com@gmail.com  
+Website: https://traiphieu.com
+
+---
+
+By using NKTgLaw under this commercial license, you agree to be bound by the terms above.
