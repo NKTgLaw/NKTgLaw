@@ -1,0 +1,7 @@
+# LabVIEW: graphical programming for engineering and instrumentation
+# This logic would be implemented using visual blocks:
+# - Set x = 2.0, v = 3.0, m = 5.0, dm_dt = 0.1
+# - Compute p = m * v
+# - Compute NKTg1 = x * p
+# - Compute NKTg2 = dm_dt * p
+# - Display p, NKTg1, NKTg2 on front panel
