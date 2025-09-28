@@ -67,12 +67,10 @@ NKTg₂ = (dm/dt) * p
 
 - ### 🐍 Python Client
 
-```bash
-cd clients/python
-python NKTgLaw.py
+```cd clients/python
+python NKTgLaw.py```
 
-
-cd clients/cpp
+```cd clients/cpp
 g++ NKTgLaw.cpp -o nktg_client
 ./nktg_client
 
