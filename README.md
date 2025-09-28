@@ -61,6 +61,7 @@ NKTg₂ = (dm/dt) * p
 
 ## ⚡ Quick Start
 
+- You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
 - Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
 
 ### 🐍 Python Client
@@ -87,9 +88,6 @@ Expected output:
 ```text
 p=15 NKTg1=30 NKTg2=1.5
 ```
-
-
-- You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
 
 ---
 
