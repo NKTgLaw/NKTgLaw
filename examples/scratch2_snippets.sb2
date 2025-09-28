@@ -1,0 +1,7 @@
+# Scratch 2.0: block-based programming for kids
+# This logic would be built using visual blocks:
+# - Set x = 2.0, v = 3.0, m = 5.0, dm_dt = 0.1
+# - Compute p = m * v
+# - Compute NKTg1 = x * p
+# - Compute NKTg2 = dm_dt * p
+# - Show p, NKTg1, NKTg2 on screen
