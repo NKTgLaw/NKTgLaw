@@ -1,0 +1,8 @@
+# Zigbee: wireless protocol, not a programming language
+# Logic would be implemented in embedded C or vendor-specific scripting
+# Placeholder to represent Zigbee device logic:
+# - Set x, v, m, dm_dt
+# - Compute p = m * v
+# - Compute NKTg1 = x * p
+# - Compute NKTg2 = dm_dt * p
+# - Transmit values over Zigbee network
