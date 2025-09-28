@@ -68,12 +68,12 @@ NKTg₂ = (dm/dt) * p
 
 ```bash
 cd clients/python
-python NKTgLaw.py
+python NKTgLaw.py```
+
 Expected output:
 
-Mã
-p=15.0, NKTg1=30.0, NKTg2=1.5
-```
+```bash
+p=15.0, NKTg1=30.0, NKTg2=1.5```
 
 
 
