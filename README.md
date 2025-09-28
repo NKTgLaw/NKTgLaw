@@ -60,6 +60,28 @@ NKTg₂ = (dm/dt) * p
 - Specialized: Solidity, VHDL, Verilog, Q#, Scratch, Prolog, COBOL  
 
 ---
+## ⚡ Quick Start
+
+Use the provided client wrappers to quickly test the NKTg Law:
+
+### 🐍 Python Client
+
+```bash
+cd clients/python
+python NKTgLaw.py
+Expected output:
+
+
+p=15.0, NKTg1=30.0, NKTg2=1.5
+💻 C++ Client
+bash
+cd clients/cpp
+g++ NKTgLaw.cpp -o nktg_client
+./nktg_client
+Expected output:
+
+p=15 NKTg1=30 NKTg2=1.5
+👉 You can also explore the examples/ directory for 150 standalone implementations.
 
 ## 📜 License
 
