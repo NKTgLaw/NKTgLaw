@@ -1,0 +1,11 @@
+# SPARQL: query language for RDF data
+# SPARQL is not designed for arithmetic, but conceptually:
+# SELECT ?p ?NKTg1 ?NKTg2 WHERE {
+#   BIND(2.0 AS ?x)
+#   BIND(3.0 AS ?v)
+#   BIND(5.0 AS ?m)
+#   BIND(0.1 AS ?dm_dt)
+#   BIND(?m * ?v AS ?p)
+#   BIND(?x * ?p AS ?NKTg1)
+#   BIND(?dm_dt * ?p AS ?NKTg2)
+# }
