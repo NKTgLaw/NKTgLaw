@@ -35,4 +35,65 @@ Where:
 This repository contains **150 implementations** of the NKTg Law, one for each programming language.  
 
 - All code snippets are stored in the [`examples/`](./examples) directory.  
-- Each file is self-contained and demonstrates the calculation of:  
+- Each file is self-contained and demonstrates the calculation of:
+p = m * v
+NKTg₁ = x * p
+NKTg₂ = (dm/dt) * p
+- Default parameters: `x=2, v=3, m=5, dm_dt=0.1`
+
+👉 Browse the full list here: [examples/](./examples)
+
+**Examples include (but are not limited to):**
+
+- High-level: Python, Java, JavaScript, C#, Swift, Kotlin, Go, Rust  
+- Scientific: MATLAB, R, Julia, Fortran  
+- Functional: Haskell, Scala, Lisp, Scheme, F#  
+- Systems: C, C++, Assembly, Ada  
+- Web & scripting: PHP, TypeScript, Ruby, Lua, Perl, Bash  
+- Database & query: SQL, PL/SQL  
+- Specialized: Solidity, VHDL, Verilog, Q#, Scratch, Prolog, COBOL  
+
+---
+
+## ⚡ Quick Start
+
+Use the provided client wrappers to quickly test the NKTg Law:
+
+### Python Client
+
+```bash
+cd clients/python
+python NKTgLaw.py
+
+Expected output:
+p=15.0, NKTg1=30.0, NKTg2=1.5
+C++ Client
+cd clients/cpp
+g++ NKTgLaw.cpp -o nktg_client
+./nktg_client
+You should see:
+p=15 NKTg1=30 NKTg2=1.5
+👉 You can also explore examples/
+ for 150 standalone implementations.
+📜 License
+
+NKTgLaw is available under a dual licensing model:
+
+GPL-3.0 License (Open Source)
+
+You can use, modify, and redistribute NKTgLaw under the terms of the GPL-3.0 License
+.
+
+This version is free and requires that any derivative works are also released under GPL-3.0.
+
+Commercial License (Proprietary)
+
+For commercial use without the GPL obligations, a commercial license is required.
+
+See LICENSE-commercial.txt
+ for terms and conditions.
+
+Contact Nguyễn Khánh Tùng (traiphieu.com@gmail.com
+) for licensing and support.
+
+Note: Each user must choose either the GPL license or the Commercial license. Combining both is not permitted for the same use case.
