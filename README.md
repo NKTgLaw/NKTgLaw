@@ -60,26 +60,28 @@ NKTg₂ = (dm/dt) * p
 - Specialized: Solidity, VHDL, Verilog, Q#, Scratch, Prolog, COBOL  
 
 ---
-📜 **License**
 
-NKTgLaw is available under **a dual licensing model:**
+## 📜 License
 
-**1. GPL-3.0 License (Open Source)**
+NKTgLaw is available under a **dual licensing model**:
 
-You can use, modify, and redistribute NKTgLaw under the terms of the GPL-3.0 License
-.
+---
 
-This version is free and requires that any derivative works are also released under GPL-3.0.
+### 1. GPL-3.0 License (Open Source)
 
-**2. Commercial License (Proprietary)**
+- You can use, modify, and redistribute NKTgLaw under the terms of the [GPL-3.0 License](LICENSE).  
+- This version is free and requires that any derivative works are also released under GPL-3.0.
 
-For commercial use without the GPL obligations, a commercial license is required.
+---
 
-See LICENSE-commercial.txt
- for terms and conditions.
+### 2. Commercial License (Proprietary)
 
-Contact **Nguyễn Khánh Tùng** (traiphieu.com@gmail.com) for licensing and support.
+- For commercial use without the GPL obligations, a commercial license is required.  
+- See [LICENSE-commercial.txt](LICENSE-commercial.txt) for terms and conditions.  
+- Contact **Nguyễn Khánh Tùng** (traiphieu.com@gmail.com) for licensing and support.
 
-**Note:** Each user must choose either the GPL license or the Commercial license. Combining both is not permitted for the same use case.
+---
 
+**Note:** Each user must choose either the **GPL license** **or** the **Commercial license**.  
+Combining both is not permitted for the same use case.
 
