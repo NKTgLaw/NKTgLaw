@@ -1,4 +1,4 @@
-! Fortran: khoa học, kỹ thuật, mô phỏng số
+! Fortran: used in scientific and engineering computation
 program NKTgLaw
   real :: x = 2.0, v = 3.0, m = 5.0, dm_dt = 0.1
   real :: p, NKTg1, NKTg2
