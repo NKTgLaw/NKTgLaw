@@ -69,9 +69,10 @@ NKTg₂ = (dm/dt) * p
 ```bash
 cd clients/python
 python NKTgLaw.py
+```
+
 Expected output:
-
-
+```text
 p=15.0, NKTg1=30.0, NKTg2=1.5
 ```
 
