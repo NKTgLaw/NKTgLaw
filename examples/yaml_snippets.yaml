@@ -1,0 +1,9 @@
+# YAML: data serialization format, not for computation
+x: 2.0
+v: 3.0
+m: 5.0
+dm_dt: 0.1
+p: !!float "m * v"
+NKTg1: !!float "x * p"
+NKTg2: !!float "dm_dt * p"
+# Note: actual math must be done externally
