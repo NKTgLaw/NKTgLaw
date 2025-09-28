@@ -62,6 +62,28 @@ NKTg₂ = (dm/dt) * p
 ## ⚡ Quick Start
 
 - You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
+
+### Assembly
+
+```bash
+; Assembly: low-level programming
+; x=2, v=3, m=5, dm_dt=0.1
+; Calculate p=m*v, NKTg1=x*p, NKTg2=dm_dt*p conceptually
+```
+### Q#
+
+```bash
+// Q#: quantum programming
+let x=2.0;
+let v=3.0;
+let m=5.0;
+let dm_dt=0.1;
+let p=m*v;
+let NKTg1=x*p;
+let NKTg2=dm_dt*p;
+Message($"p={p} NKTg1={NKTg1} NKTg2={NKTg2}");
+```
+  
 - Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
 
 ###  Python Client
