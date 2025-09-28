@@ -1,0 +1,7 @@
+# Alice: educational 3D programming environment
+# This logic would be implemented using drag-and-drop blocks:
+# Set x to 2.0, v to 3.0, m to 5.0, dm_dt to 0.1
+# Compute p = m * v
+# Compute NKTg1 = x * p
+# Compute NKTg2 = dm_dt * p
+# Display p, NKTg1, NKTg2 in the scene
