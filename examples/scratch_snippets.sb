@@ -1,0 +1,7 @@
+# Scratch: block-based visual programming for beginners
+# This logic would be implemented using blocks:
+# Set x to 2, v to 3, m to 5, dm_dt to 0.1
+# Compute p = m * v
+# Compute NKTg1 = x * p
+# Compute NKTg2 = dm_dt * p
+# Display p, NKTg1, and NKTg2
