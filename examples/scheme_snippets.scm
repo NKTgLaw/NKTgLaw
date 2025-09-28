@@ -1,0 +1,11 @@
+;; Scheme: minimalist dialect of Lisp, used in education and functional programming
+(let* ((x 2.0)
+       (v 3.0)
+       (m 5.0)
+       (dm_dt 0.1)
+       (p (* m v))
+       (nktg1 (* x p))
+       (nktg2 (* dm_dt p)))
+  (display "p=") (display p)
+  (display " NKTg1=") (display nktg1)
+  (display " NKTg2=") (display nktg2) (newline))
