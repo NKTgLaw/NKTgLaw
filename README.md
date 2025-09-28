@@ -9,7 +9,9 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 The **NKTg Law on Varying Inertia** describes the motion tendency of an object depending on its position (**x**), velocity (**v**), and mass (**m**):
 
 p = m * v
+
 NKTg₁ = x * p
+
 NKTg₂ = (dm/dt) * p
 
 Where:
@@ -36,9 +38,13 @@ This repository contains **150 implementations** of the NKTg Law, one for each p
 
 - All code snippets are stored in the [`examples/`](./examples) directory.  
 - Each file is self-contained and demonstrates the calculation of:
+  
 p = m * v
+
 NKTg₁ = x * p
+
 NKTg₂ = (dm/dt) * p
+
 - Default parameters: `x=2, v=3, m=5, dm_dt=0.1`
 
 👉 Browse the full list here: [examples/](./examples)
@@ -54,14 +60,27 @@ NKTg₂ = (dm/dt) * p
 - Specialized: Solidity, VHDL, Verilog, Q#, Scratch, Prolog, COBOL  
 
 ---
-## ⚡ Quick Start
+📜 License
 
-Use the provided client wrappers to quickly test the NKTg Law:
+NKTgLaw is available under a dual licensing model:
 
-### 🐍 Python Client
+1. GPL-3.0 License (Open Source)
 
-```bash
-cd clients/python
-python NKTgLaw.py
+You can use, modify, and redistribute NKTgLaw under the terms of the GPL-3.0 License
+.
+
+This version is free and requires that any derivative works are also released under GPL-3.0.
+
+2. Commercial License (Proprietary)
+
+For commercial use without the GPL obligations, a commercial license is required.
+
+See LICENSE-commercial.txt
+ for terms and conditions.
+
+Contact Nguyễn Khánh Tùng (traiphieu.com@gmail.com
+) for licensing and support.
+
+Note: Each user must choose either the GPL license or the Commercial license. Combining both is not permitted for the same use case.
 
 
