@@ -62,8 +62,11 @@ NKTg₂ = (dm/dt) * p
 ---
 
 ## ⚡ Quick Start
-- Use the provided client wrappers to quickly test the NKTg Law
-- You can also explore the examples/ directory for 150 standalone implementations.
+
+- Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
+
+- You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
+
 
 ---
 
