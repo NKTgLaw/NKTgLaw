@@ -1,4 +1,3 @@
-
 Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implementation, REST/gRPC API, and 150+ client wrappers
 
 ---
@@ -76,6 +75,18 @@ Expected output:
 p=15.0, NKTg1=30.0, NKTg2=1.5
 ```
 
+### 💻 C++ Client
+
+```bash
+cd clients/cpp
+g++ NKTgLaw.cpp -o nktg_client
+./nktg_client
+```
+
+Expected output:
+```text
+p=15 NKTg1=30 NKTg2=1.5
+```
 
 
 - You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
