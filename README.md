@@ -65,14 +65,12 @@ NKTg₂ = (dm/dt) * p
 
 NKTgLaw is available under a **dual licensing model**:
 
----
 
 ### 1. GPL-3.0 License (Open Source)
 
 - You can use, modify, and redistribute NKTgLaw under the terms of the [GPL-3.0 License](LICENSE).  
 - This version is free and requires that any derivative works are also released under GPL-3.0.
 
----
 
 ### 2. Commercial License (Proprietary)
 
