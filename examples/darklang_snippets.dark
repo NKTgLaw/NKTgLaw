@@ -1,0 +1,9 @@
+# Darklang: integrated backend/frontend language for rapid web development
+let x = 2.0
+let v = 3.0
+let m = 5.0
+let dm_dt = 0.1
+let p = m * v
+let NKTg1 = x * p
+let NKTg2 = dm_dt * p
+Debug.log("p=" ++ String.fromFloat(p) ++ " NKTg1=" ++ String.fromFloat(NKTg1) ++ " NKTg2=" ++ String.fromFloat(NKTg2))
