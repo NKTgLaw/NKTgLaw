@@ -1,0 +1,4 @@
+# Zen Coding (Emmet): abbreviation syntax for HTML/CSS
+# Not a programming language, but used for rapid markup
+# Example: div>span{p=... NKTg1=... NKTg2=...}
+# Actual values must be inserted manually or via script
