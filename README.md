@@ -64,18 +64,16 @@ NKTg₂ = (dm/dt) * p
 
 - Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
 
-### 🐍 Python Client
-
-```bash
-cd clients/python
-python NKTgLaw.py
+cd clients/cpp
+g++ NKTgLaw.cpp -o nktg_client
+./nktg_client
 
 Expected output:
 
-p=15.0, NKTg1=30.0, NKTg2=1.5
+p=15 NKTg1=30 NKTg2=1.5
+
 
 - You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
-
 
 ---
 
