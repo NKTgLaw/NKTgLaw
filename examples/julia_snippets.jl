@@ -1,4 +1,4 @@
-# Julia: scientific computing, performance
+# Julia: high-performance language for scientific computing
 x, v, m, dm_dt = 2.0, 3.0, 5.0, 0.1
 p = m * v
 NKTg1 = x * p
