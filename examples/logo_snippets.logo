@@ -1,0 +1,9 @@
+; Logo: educational language with turtle graphics
+MAKE "x 2.0
+MAKE "v 3.0
+MAKE "m 5.0
+MAKE "dm_dt 0.1
+MAKE "p :m * :v
+MAKE "NKTg1 :x * :p
+MAKE "NKTg2 :dm_dt * :p
+PRINT (SE "p=" :p "NKTg1=" :NKTg1 "NKTg2=" :NKTg2)
