@@ -78,7 +78,7 @@ g++ NKTgLaw.cpp -o nktg_client
 
 Expected output:
 
-p=15 NKTg1=30 NKTg2=1.5
+p=15 NKTg1=30 NKTg2=1.5``
 
 
 
