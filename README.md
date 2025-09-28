@@ -1,4 +1,3 @@
-![Release v0.1.0](https://img.shields.io/github/v/release/NKTgLaw/nktg-law-library?label=Release)
 
 Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implementation, REST/gRPC API, and 150+ client wrappers
 
@@ -91,4 +90,6 @@ NKTgLaw is available under a **dual licensing model**:
 
 **Note:** Each user must choose either the **GPL license** **or** the **Commercial license**.  
 Combining both is not permitted for the same use case.
+
+![Release v0.1.0](https://img.shields.io/github/v/release/NKTgLaw/nktg-law-library?label=Release)
 
