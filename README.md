@@ -63,19 +63,17 @@ NKTg₂ = (dm/dt) * p
 ## ⚡ Quick Start
 
 - Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
-## ⚡ Quick Start
-
-Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law:
 
 ### 🐍 Python Client
 
 ```bash
 cd clients/python
 python NKTgLaw.py
-
 Expected output:
 
+Mã
 p=15.0, NKTg1=30.0, NKTg2=1.5
+```
 
 
 
