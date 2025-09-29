@@ -54,7 +54,8 @@ This theoretical framework can be applied to:
 
 ## 📘 Full Wiki Documentation
 
-📖 [https://github.com/NKTgLaw/The-NKTg-Law-on-Varying-Inertia/wiki](https://github.com/NKTgLaw/The-NKTg-Law-on-Varying-Inertia/wiki)
+📖 [Wiki (archived)](wiki.md)
+
 
 ## 📚 Related Research Articles
 
