@@ -66,7 +66,6 @@ This theoretical framework can be applied to:
 
 ## 📄 CITATION.cff
 
-```yaml
 cff-version: 1.2.0
 message: "If you use this work, please cite it:"
 title: "The NKTg Law on Varying Inertia"
@@ -81,13 +80,8 @@ keywords:
   - variable inertia
   - momentum
 license: CC-BY-4.0
-repository-code: https://github.com/NKTgLaw/The-NKTg-Law-on-Varying-Inertia
+repository-code: https://github.com/NKTgLaw/NKTgLaw
 date-released: 2025-07-18
 version: "1.0.0"
 doi: 10.6084/m9.figshare.29481710.v1
-👤 Author
-Nguyen Khanh Tung
-🔗 https://traiphieu.com
-✉️ traiphieu.com@gmail.com
 
-📄 Licensed under Creative Commons Attribution 4.0 International
