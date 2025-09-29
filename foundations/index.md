@@ -59,9 +59,8 @@ This theoretical framework can be applied to:
 
 ## 📚 Related Research Articles
 
-- [🔬 Experimental Verification of the NKTg Law: Interpolating the Masses of 8 Planets Using NASA Data (2024)](./nktg-law/Experimental_Verification_of_the_NKTg_Law_Interpolating_the_Masses_of_8_Planets_2024.md)
-- [🌊 Experimental Verification of the NKTg Law Using NASA Neptune Data (2023–2024)](./nktg-law/Experimental_Verification_of_the_NKTg_Law_Using_NASA_Neptune_Data_2023_2024.md)
-
+- [🔬 Experimental Verification of the NKTg Law: Interpolating the Masses of 8 Planets Using NASA Data (2024)](Experimental_Verification_of_the_NKTg_Law_Interpolating_the_Masses_of_8_Planets_2024.md)  
+- [🌊 Experimental Verification of the NKTg Law Using NASA Neptune Data (2023–2024)](Experimental_Verification_of_the_NKTg_Law_Using_NASA_Neptune_Data_2023_2024.md)
 
 ---
 
