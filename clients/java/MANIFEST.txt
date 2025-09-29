@@ -1,0 +1,6 @@
+src/main/java/nktg/NKTgLaw.java
+src/test/java/nktg/NKTgLawTest.java
+example.java
+benchmark.java
+README.md
+build.gradle
