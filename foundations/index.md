@@ -68,7 +68,7 @@ This theoretical framework can be applied to:
 
 cff-version: 1.2.0
 message: "If you use this work, please cite it:"
-title: "The NKTg Law on Varying Inertia"
+title: "NKTg Law on Varying Inertia"
 authors:
   - family-names: Tung
     given-names: Nguyen Khanh
