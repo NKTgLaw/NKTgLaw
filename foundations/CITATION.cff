@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this work, please cite it:"
+title: "The NKTg Law on Varying Inertia"
+authors:
+  - family-names: Tung
+    given-names: Nguyen Khanh
+    website: https://traiphieu.com
+    email: traiphieu.com@gmail.com
+keywords:
+  - NKTg
+  - orbital mechanics
+  - variable inertia
+  - momentum
+license: CC-BY-4.0
+repository-code: https://github.com/NKTgLaw/The-NKTg-Law-on-Varying-Inertia
+date-released: 2025-07-18
+version: "1.0.0"
+doi: 10.6084/m9.figshare.29481710.v1
