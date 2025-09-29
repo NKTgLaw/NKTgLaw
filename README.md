@@ -30,6 +30,18 @@ Where:
 
 ---
 
+## 📑 Foundations  
+The `foundations/` directory contains theoretical materials and supporting documents:  
+
+- `wiki.md`: consolidated wiki documentation  
+- `index.md`: structured entry point for foundational texts  
+- Experimental verifications (e.g., planetary mass interpolation, NASA Neptune data)  
+- `NKTm-Unit.md`: unit definition related to NKTg Law  
+
+👉 Browse the full collection here: [foundations/](foundations/)
+
+---
+
 ## 🌍 Examples
 
 This repository contains **150 implementations** of the NKTg Law, one for each programming language.  
