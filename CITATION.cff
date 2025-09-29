@@ -1,1 +1,25 @@
-
+cff-version: 1.2.0
+message: "If you use this work, please cite it as below:"
+title: "NKTg Law on Varying Inertia"
+abstract: "The NKTg Law describes the motion tendency of an object depending on its position, velocity, and mass through a new quantity called NKTg. This repository includes core implementations, REST/gRPC API, 150+ client wrappers, and foundational theoretical documents with experimental verifications."
+authors:
+  - family-names: Tung
+    given-names: Nguyen Khanh
+    orcid: https://orcid.org/0009-0002-9877-4137
+    email: traiphieu.com@gmail.com
+    website: https://traiphieu.com
+version: "1.0.0"
+date-released: "2025-09-29"
+identifiers:
+  - type: doi
+    value: "https://doi.org/10.6084/m9.figshare.29481710.v1"
+  - type: doi
+    value: "https://doi.org/10.5281/zenodo.15808498"
+license: "GPL-3.0 or Commercial"
+repository-code: "https://github.com/NKTgLaw/NKTgLaw"
+keywords:
+  - NKTg
+  - variable inertia
+  - orbital mechanics
+  - momentum
+  - physics
