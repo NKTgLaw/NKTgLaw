@@ -1,0 +1,28 @@
+name: Java Test
+
+on:
+  push:
+    paths:
+      - 'clients/java/**'
+  pull_request:
+    paths:
+      - 'clients/java/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Build with Gradle
+        run: |
+          cd clients/java
+          ./gradlew build
