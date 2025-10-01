@@ -18,9 +18,7 @@ To measure this, a new unit called **NKTm** is established. NKTm has been verifi
 
 The NKTg Law describes motion as:
 
-\[
 NKTg = f(x, v, m)
-\]
 
 where:  
 - *x*: position [L]  
