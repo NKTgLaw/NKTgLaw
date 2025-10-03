@@ -36,13 +36,13 @@ In which:
 
 The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency:
 
-• If NKTg₁ is positive, the object tends to move away from the stable state.
+    • If NKTg₁ is positive, the object tends to move away from the stable state.
 
-• If NKTg₁ is negative, the object tends to move toward the stable state.
+    • If NKTg₁ is negative, the object tends to move toward the stable state.
 
-• If NKTg₂ is positive, the mass variation has a supporting effect on the movement.
+    • If NKTg₂ is positive, the mass variation has a supporting effect on the movement.
 
-• If NKTg₂ is negative, the mass variation has a resisting effect on the movement.
+    • If NKTg₂ is negative, the mass variation has a resisting effect on the movement.
 
 The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
 
