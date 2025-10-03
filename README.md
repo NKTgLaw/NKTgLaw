@@ -4,27 +4,13 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 ## 📖 Introduction
 
-## 📖 Introduction
+The **NKTg Law on Varying Inertia** describes the motion tendency of an object depending on its position (**x**), velocity (**v**), and mass (**m**):
 
-The **NKTg Law on Varying Inertia** describes the movement tendency of an object in space depending on its **position (x)**, **velocity (v)**, and **mass (m)**:
+p = m * v
 
-\[
-NKTg = f(x, v, m)
-\]
+NKTg₁ = x * p
 
-Core relations:
-
-\[
-p = m \times v
-\]
-
-\[
-NKTg₁ = x \times p
-\]
-
-\[
-NKTg₂ = \frac{dm}{dt} \times p
-\]
+NKTg₂ = (dm/dt) * p
 
 Where:
 
@@ -47,11 +33,6 @@ The sign and value of the two quantities determine the motion tendency:
 - \( NKTg₂ < 0 \): mass variation has a **resisting effect** on the movement  
 
 **Stable state** is understood as the condition where **position (x)**, **velocity (v)**, and **mass (m)** interact to maintain the motion structure, helping the object **avoid losing control** and preserve its inherent **movement pattern**.
-
----
-
-## 📂 Core Components
-
 
 ---
 
