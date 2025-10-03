@@ -4,25 +4,19 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 ## 📖 Introduction
 
-The movement tendency of an object in space depends on the relationship between its **position**, **velocity**, and **mass**:
+## 📖 Introduction
+
+The **NKTg Law on Varying Inertia** describes the movement tendency of an object in space depending on its **position (x)**, **velocity (v)**, and **mass (m)**:
 
 \[
 NKTg = f(x, v, m)
 \]
 
----
+Core relations:
 
-### Definitions
-
-- **x**: position or displacement of the object relative to the reference point.  
-- **v**: velocity.  
-- **m**: mass.  
-
----
-
-### Fundamental Quantities
-
-The movement tendency of the object is determined by the following product quantities:
+\[
+p = m \times v
+\]
 
 \[
 NKTg₁ = x \times p
@@ -34,17 +28,30 @@ NKTg₂ = \frac{dm}{dt} \times p
 
 Where:
 
-- **p** = linear momentum = \( m \times v \).  
-- **dm/dt** = rate of mass change over time.  
-- **NKTg₁** = product of position and momentum.  
-- **NKTg₂** = product of mass variation and momentum.  
-- **Unit** = **NKTm**, representing a unit of varying inertia.  
+- **x**: displacement relative to a reference point  
+- **v**: velocity  
+- **m**: mass  
+- **p = m × v**: linear momentum  
+- **dm/dt**: rate of mass variation over time  
+- **NKTg₁**: product of position and momentum  
+- **NKTg₂**: product of mass variation and momentum  
+- **Unit**: **NKTm**, representing a unit of varying inertia  
 
 ---
 
-### Interpretation
+The sign and value of the two quantities determine the motion tendency:
 
-The sign and value of \( NKTg₁ \
+- \( NKTg₁ > 0 \): the object tends to move **away from the stable state**  
+- \( NKTg₁ < 0 \): the object tends to move **toward the stable state**  
+- \( NKTg₂ > 0 \): mass variation has a **supporting effect** on the movement  
+- \( NKTg₂ < 0 \): mass variation has a **resisting effect** on the movement  
+
+**Stable state** is understood as the condition where **position (x)**, **velocity (v)**, and **mass (m)** interact to maintain the motion structure, helping the object **avoid losing control** and preserve its inherent **movement pattern**.
+
+---
+
+## 📂 Core Components
+
 
 ---
 
