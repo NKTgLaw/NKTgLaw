@@ -6,7 +6,7 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 **The NKTg Law on Varying Inertia** describes the movement tendency of an object in space depends on the relationship between its position, velocity, and mass.
 
-NKTg = f(x, v, m)
+    NKTg = f(x, v, m)
 
 In which:
 
@@ -18,9 +18,9 @@ In which:
 
 The movement tendency of the object is determined by the following basic product quantities:
 
-NKTg₁ = x × p
+    NKTg₁ = x × p
 
-NKTg₂ = (dm/dt) × p
+    NKTg₂ = (dm/dt) × p
 
 In which:
 
@@ -32,7 +32,7 @@ In which:
 
     • NKTg₂ is the quantity representing the product of mass variation and momentum.
 
-• The unit of measurement is NKTm, representing a unit of varying inertia.
+    • The unit of measurement is NKTm, representing a unit of varying inertia.
 
 The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency:
 
@@ -45,7 +45,6 @@ The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movem
 • If NKTg₂ is negative, the mass variation has a resisting effect on the movement.
 
 The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
-
 
 ---
 
