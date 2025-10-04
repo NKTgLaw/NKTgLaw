@@ -12,9 +12,9 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 • x is the position or displacement of the object relative to the reference point.
 
-    • v is the velocity.
+• v is the velocity.
 
-    • m is the mass.
+• m is the mass.
 
 The movement tendency of the object is determined by the following basic product quantities:
 
@@ -22,27 +22,27 @@ The movement tendency of the object is determined by the following basic product
 
     NKTg₂ = (dm/dt) × p
 
-In which:
+*In which*:
 
-    • p is the linear momentum, calculated by p = m × v.
+• p is the linear momentum, calculated by p = m × v.
 
-    • dm/dt is the rate of mass change over time.
+• dm/dt is the rate of mass change over time.
 
-    • NKTg₁ is the quantity representing the product of position and momentum.
+• NKTg₁ is the quantity representing the product of position and momentum.
 
-    • NKTg₂ is the quantity representing the product of mass variation and momentum.
+• NKTg₂ is the quantity representing the product of mass variation and momentum.
 
-    • The unit of measurement is NKTm, representing a unit of varying inertia.
+• The unit of measurement is NKTm, representing a unit of varying inertia.
 
-The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency:
+*The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency*:
 
-    • If NKTg₁ is positive, the object tends to move away from the stable state.
+• If NKTg₁ is positive, the object tends to move away from the stable state.
 
-    • If NKTg₁ is negative, the object tends to move toward the stable state.
+• If NKTg₁ is negative, the object tends to move toward the stable state.
 
-    • If NKTg₂ is positive, the mass variation has a supporting effect on the movement.
+• If NKTg₂ is positive, the mass variation has a supporting effect on the movement.
 
-    • If NKTg₂ is negative, the mass variation has a resisting effect on the movement.
+• If NKTg₂ is negative, the mass variation has a resisting effect on the movement.
 
 The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
 
