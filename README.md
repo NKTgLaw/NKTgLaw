@@ -8,9 +8,9 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
     NKTg = f(x, v, m)
 
-In which:
+*In which*:
 
-    • x is the position or displacement of the object relative to the reference point.
+• x is the position or displacement of the object relative to the reference point.
 
     • v is the velocity.
 
