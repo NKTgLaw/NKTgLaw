@@ -10,11 +10,11 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 In which:
 
-*• x is the position or displacement of the object relative to the reference point.*
+• x is the position or displacement of the object relative to the reference point.
 
-*• v is the velocity.*
+• v is the velocity.
 
-*• m is the mass.*
+• m is the mass.
 
 The movement tendency of the object is determined by the following basic product quantities:
 
@@ -22,7 +22,7 @@ The movement tendency of the object is determined by the following basic product
 
     NKTg₂ = (dm/dt) × p
 
-*In which*:
+In which:
 
 • p is the linear momentum, calculated by p = m × v.
 
@@ -34,7 +34,7 @@ The movement tendency of the object is determined by the following basic product
 
 • The unit of measurement is NKTm, representing a unit of varying inertia.
 
-*The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency*:
+The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movement tendency:
 
 • If NKTg₁ is positive, the object tends to move away from the stable state.
 
