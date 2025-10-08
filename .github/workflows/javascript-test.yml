@@ -1,0 +1,34 @@
+name: JavaScript SDK Test
+
+on:
+  push:
+    paths:
+      - 'clients/javascript/**'
+      - '.github/workflows/javascript-test.yml'
+  pull_request:
+    paths:
+      - 'clients/javascript/**'
+      - '.github/workflows/javascript-test.yml'
+
+jobs:
+  test-javascript:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Install dependencies
+        run: |
+          cd clients/javascript
+          npm install
+
+      - name: Run tests
+        run: |
+          cd clients/javascript
+          npm test
