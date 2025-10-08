@@ -36,7 +36,7 @@ npm test
 📁 Project Structure
 
 clients/javascript/
-"
+```bash
 ├── src/               # SDK source code
 │   └── index.js
 ├── test/              # Unit tests
