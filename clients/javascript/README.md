@@ -34,8 +34,9 @@ bash
 npm install
 npm test
 📁 Project Structure
-Mã
+
 clients/javascript/
+"
 ├── src/               # SDK source code
 │   └── index.js
 ├── test/              # Unit tests
@@ -45,5 +46,7 @@ clients/javascript/
 ├── package.json       # Package configuration
 ├── .gitignore         # Ignored files
 └── jest.config.js     # Jest configuration
+```
+
 📄 License
 This project is licensed under a dual licensing model
