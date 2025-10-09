@@ -1,27 +1,32 @@
-### Test momentum calculation
-POST http://localhost:8080/api/momentum
-Content-Type: application/json
+### 🧪 Test: Compute NKTg quantities
 
-{
-  "mass": 5.0,
-  "velocity": 3.0
-}
-
-### Test NKTg1 calculation
-POST http://localhost:8080/api/nktg1
+POST http://localhost:8000/compute
 Content-Type: application/json
 
 {
   "x": 2.0,
-  "momentum": 15.0
+  "v": 3.0,
+  "m": 5.0,
+  "dm_dt": 0.1
 }
 
-### Test NKTg2 calculation
-POST http://localhost:8080/api/nktg2
+###
+
+### 🧪 Test: Invalid input (missing fields)
+
+POST http://localhost:8000/compute
 Content-Type: application/json
 
 {
-  "dm_dt": 0.1,
-  "momentum": 15.0
+  "x": 2.0,
+  "v": 3.0
 }
 
+###
+
+### 🧪 Test: Health check (if implemented)
+
+GET http://localhost:8000/health
+Accept: application/json
+
+###
