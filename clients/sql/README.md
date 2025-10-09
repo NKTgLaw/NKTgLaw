@@ -4,22 +4,29 @@ This SQL-based implementation models variable mass motion using the NKTg Law. It
 
 ## 📁 Structure
 
-clients/sql/ ├── schema.sql # Table definition ├── insert_sample.sql # Sample data ├── queries.sql # Core NKTg queries ├── test_queries.sql # Unit test queries └── README.md # Documentation
+clients/sql/ 
+├── schema.sql # Table definition 
+├── insert_sample.sql # Sample data 
+├── queries.sql # Core NKTg queries 
+├── test_queries.sql # Unit test queries 
+└── README.md # Documentation
 
-Mã
 
 ## 🚀 Usage
 
-```bash
+```
 sqlite3 nktg.db < schema.sql
 sqlite3 nktg.db < insert_sample.sql
 sqlite3 nktg.db < queries.sql
+
 🧪 Run Tests
-bash
+
 sqlite3 nktg.db < test_queries.sql
+
 📊 Benchmark
-bash
+
 sqlite3 nktg.db < ../../benchmarks/benchmark.sql
+
 📄 License
 NKTgLaw is available under a dual licensing model:
 
