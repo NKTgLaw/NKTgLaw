@@ -1,0 +1,23 @@
+name: Swift SDK Test
+
+on:
+  push:
+    paths:
+      - 'clients/swift/**'
+      - '.github/workflows/swift-test.yml'
+  pull_request:
+    paths:
+      - 'clients/swift/**'
+      - '.github/workflows/swift-test.yml'
+
+jobs:
+  test-swift:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run Swift tests
+        run: |
+          swift test --package-path clients/swift
