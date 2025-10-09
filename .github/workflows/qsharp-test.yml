@@ -1,0 +1,31 @@
+name: Q# SDK Test
+
+on:
+  push:
+    paths:
+      - 'clients/qsharp/**'
+      - '.github/workflows/qsharp-test.yml'
+  pull_request:
+    paths:
+      - 'clients/qsharp/**'
+      - '.github/workflows/qsharp-test.yml'
+
+jobs:
+  test-qsharp:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install .NET and QDK
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y dotnet-sdk-7.0
+          dotnet tool install -g Microsoft.Quantum.IQSharp
+          dotnet iqsharp install
+
+      - name: Run Q# tests
+        run: |
+          cd clients/qsharp
+          dotnet test
