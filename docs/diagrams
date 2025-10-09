@@ -1,1 +1,53 @@
+# 📊 Diagrams for NKTgLaw
 
+This file contains visual representations of the NKTgLaw system, including architecture, data flow, and physical relationships defined by the NKTg Law.
+
+---
+
+## 🧭 System Architecture Diagram
+
+```plaintext
++------------------+        +------------------+        +------------------+
+|   Clients        |  --->  |     API Layer    |  --->  |   Core Library   |
+| (Python, C++,…)  |        |  (REST/gRPC)     |        | (C++/Rust/Go)    |
++------------------+        +------------------+        +------------------+
+        |                          |                          |
+        v                          v                          v
++------------------+        +------------------+        +------------------+
+|  Examples        |        |  Server          |        |  Foundations     |
+| (150 languages)  |        | (app.py)         |        | (theory/docs)    |
++------------------+        +------------------+        +------------------+
+🔄 Data Flow Diagram
+plaintext
+[Input: x, v, m, dm/dt]
+       ↓
+[Compute p = m × v]
+       ↓
+[Compute NKTg₁ = x × p]
+[Compute NKTg₂ = (dm/dt) × p]
+       ↓
+[Output: Movement tendency]
+⚛️ Physical Relationships
+plaintext
+NKTg = f(x, v, m)
+
+Where:
+- x: Position
+- v: Velocity
+- m: Mass
+- p = m × v: Momentum
+- dm/dt: Rate of mass change
+
+Derived Quantities:
+- NKTg₁ = x × p
+- NKTg₂ = (dm/dt) × p
+📌 Notes
+You can convert these diagrams into visual formats using tools like Mermaid, PlantUML, or draw.io.
+
+For future updates, consider adding:
+
+Sequence diagrams for API calls
+
+Component diagrams for microservices
+
+Graphs showing stability vs instability based on NKTg₁ and NKTg₂
