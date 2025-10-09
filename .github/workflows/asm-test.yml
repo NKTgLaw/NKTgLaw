@@ -1,0 +1,27 @@
+name: Assembly SDK Test
+
+on:
+  push:
+    paths:
+      - 'clients/asm/**'
+      - '.github/workflows/asm-test.yml'
+  pull_request:
+    paths:
+      - 'clients/asm/**'
+      - '.github/workflows/asm-test.yml'
+
+jobs:
+  test-asm:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install NASM
+        run: sudo apt-get update && sudo apt-get install -y nasm
+
+      - name: Build and run test
+        run: |
+          cd clients/asm
+          make test
