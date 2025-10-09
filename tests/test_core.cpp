@@ -1,16 +1,25 @@
+// 🧪 NKTgLaw Core Test Suite (C++)
+
+#include <iostream>
 #include <cassert>
-#include "nktg.hpp"
+#include "../core/nktg.hpp"
 
 int main() {
-    double p = nktg::momentum(5.0, 3.0);
+    // Test case: default values
+    double x = 2.0;
+    double v = 3.0;
+    double m = 5.0;
+    double dm_dt = 0.1;
+
+    double p = nktg::momentum(m, v);
     assert(p == 15.0);
 
-    double NKTg1 = nktg::computeNKTg1(2.0, p);
+    double NKTg1 = nktg::computeNKTg1(x, p);
     assert(NKTg1 == 30.0);
 
-    double NKTg2 = nktg::computeNKTg2(0.1, p);
+    double NKTg2 = nktg::computeNKTg2(dm_dt, p);
     assert(NKTg2 == 1.5);
 
+    std::cout << "✅ All core tests passed.\n";
     return 0;
 }
-
