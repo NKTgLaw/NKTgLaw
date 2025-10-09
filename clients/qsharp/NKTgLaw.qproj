@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.Quantum.Sdk/0.20.2111128911">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <QSharpLangVersion>1.0</QSharpLangVersion>
+    <RootNamespace>NKTgLaw</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="src/NKTgClient.qs" />
+    <Compile Include="example/RunNKTg.qs" />
+    <Compile Include="tests/NKTgClientTests.qs" />
+  </ItemGroup>
+
+</Project>
