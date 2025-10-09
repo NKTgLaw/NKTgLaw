@@ -1,2 +1,0 @@
-# Placeholder file to mimic Python's __init__.py
-# Used to indicate this folder contains Assembly logic for NKTgLaw
