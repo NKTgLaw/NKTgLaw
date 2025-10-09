@@ -46,4 +46,3 @@ if [ -f "api/openapi.yaml" ]; then
 fi
 
 echo "✅ Build completed successfully."
-
