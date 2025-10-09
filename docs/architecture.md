@@ -80,3 +80,62 @@ Extend to relativistic mechanics
 Provide interactive visualizations
 
 Expand client support (e.g., mobile, web)
+
+## 🧭 Architecture Diagram
+
+```plaintext
++------------------+        +------------------+        +------------------+
+|   Clients        |  --->  |     API Layer    |  --->  |   Core Library   |
+| (Python, C++,…)  |        |  (REST/gRPC)     |        | (C++/Rust/Go)    |
++------------------+        +------------------+        +------------------+
+        |                          |                          |
+        v                          v                          v
++------------------+        +------------------+        +------------------+
+|  Examples        |        |  Server          |        |  Foundations     |
+| (150 languages)  |        | (app.py)         |        | (theory/docs)    |
++------------------+        +------------------+        +------------------+
+📁 Directory Breakdown
+/core
+Contains the main implementation of NKTg Law functions.
+
+Written in C++, Rust, and Go.
+
+Includes nktg.hpp for momentum and NKTg₁/NKTg₂ calculations.
+
+/api
+Defines the OpenAPI specification (openapi.yaml) for REST/gRPC services.
+
+Enables external systems to interact with NKTgLaw via HTTP or RPC.
+
+/server
+Hosts the backend logic using Python (FastAPI).
+
+Implements endpoints for computing NKTg quantities.
+
+/clients
+Language-specific wrappers for interacting with the API.
+
+Includes project files like NKTgLaw.qproj for Q# and others.
+
+/examples
+Contains 150+ standalone implementations in various programming languages.
+
+Each file demonstrates the core NKTg calculations with default parameters.
+
+/foundations
+Theoretical documents and experimental data.
+
+Includes wiki, unit definitions, and planetary datasets.
+
+/benchmarks
+Performance tests and benchmarking scripts.
+
+Example: benchmark.qs for Q# performance evaluation.
+
+/docs
+Project documentation: overview, usage guide, roadmap, architecture, etc.
+
+Includes diagrams and markdown references.
+
+/tools
+Developer utilities like lint.sh for code quality checks.
