@@ -1,0 +1,28 @@
+name: SQL Test
+
+on:
+  push:
+    paths:
+      - 'clients/sql/**'
+      - '.github/workflows/sql-test.yml'
+  pull_request:
+    paths:
+      - 'clients/sql/**'
+      - '.github/workflows/sql-test.yml'
+
+jobs:
+  test-sql:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Install SQLite
+        run: sudo apt-get install sqlite3
+
+      - name: Run SQL tests
+        run: |
+          sqlite3 test.db < clients/sql/schema.sql
+          sqlite3 test.db < clients/sql/insert_sample.sql
+          sqlite3 test.db < clients/sql/test_queries.sql
