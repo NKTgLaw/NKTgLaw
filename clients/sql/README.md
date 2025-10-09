@@ -3,14 +3,14 @@
 This SQL-based implementation models variable mass motion using the NKTg Law. It defines a table structure and queries to compute momentum, NKTg₁, and NKTg₂.
 
 ## 📁 Structure
-
+```
 clients/sql/ 
 ├── schema.sql # Table definition 
 ├── insert_sample.sql # Sample data 
 ├── queries.sql # Core NKTg queries 
 ├── test_queries.sql # Unit test queries 
 └── README.md # Documentation
-
+```
 
 ## 🚀 Usage
 
