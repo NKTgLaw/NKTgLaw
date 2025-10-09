@@ -5,9 +5,13 @@ This document outlines the security policy for the NKTgLaw project. We take secu
 We actively maintain the latest version of NKTgLaw. Older versions may not receive security updates unless explicitly stated.
 
 Version	Supported
+
 v0.1.0	✅ Yes
+
 < v0.1.0	❌ No
+
 📣 Reporting a Vulnerability
+
 If you discover a security vulnerability in the NKTgLaw codebase, please report it privately to the project maintainer:
 
 📧 traiphieu.com@gmail.com 👤 Contact: Nguyễn Khánh Tùng
