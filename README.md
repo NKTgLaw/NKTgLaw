@@ -25,7 +25,6 @@ The movement tendency of the object is determined by the following basic product
 In which:
 
 • p is the linear momentum, calculated by p = m × v.
-
 • dm/dt is the rate of mass change over time.
 
 • NKTg₁ is the quantity representing the product of position and momentum.
@@ -77,14 +76,14 @@ This recognition is based on:
 
 - **Multi-Platform Deployment** To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 8 major Git platforms:
 
-- [GitHub](https://github.com/NKTgLaw/NKTgLaw)  
-- [GitLab](https://gitlab.com/NKTgLaw/NKTgLaw)  
-- [Gitea](https://gitea.com/NKTgLaw/NKTgLaw)  
-- [Codeberg](https://codeberg.org/NKTgLaw/NKTgLaw)  
-- [Launchpad](https://git.launchpad.net/nktglaw)  
-- [SourceForge](https://sourceforge.net/projects/nktglaw/)  
-- [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
-- [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
+  - [GitHub](https://github.com/NKTgLaw/NKTgLaw)  
+  - [GitLab](https://gitlab.com/NKTgLaw/NKTgLaw)  
+  - [Gitea](https://gitea.com/NKTgLaw/NKTgLaw)  
+  - [Codeberg](https://codeberg.org/NKTgLaw/NKTgLaw)  
+  - [Launchpad](https://git.launchpad.net/nktglaw)  
+  - [SourceForge](https://sourceforge.net/projects/nktglaw/)  
+  - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
+  - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
 
 This distributed presence establishes **NKTgLaw** as an independent, verifiable, and community-accessible **Global Physics Standard API**, aligned with open science and global reproducibility principles.
 
