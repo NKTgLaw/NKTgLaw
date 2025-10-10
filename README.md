@@ -67,10 +67,31 @@ This recognition is based on:
 - **Experimental verification:** Consistent results with **planetary and NASA datasets (2023–2024)**.  
 - **Open archival:** Official research records archived under two permanent DOIs:  
   - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
-  - Figshare — [10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928)  
-- **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).  
+  - Figshare — [10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928)
 
-> As a software-defined scientific framework, NKTgLaw’s verification follows the **open-source reproducibility standard**, replacing traditional peer review with **transparent, cross-language implementations and empirical validation**.
+🌐 Multi-Platform Deployment
+
+To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 8 major Git platforms:
+
+GitHub
+
+GitLab
+
+Gitea
+
+Codeberg
+
+Launchpad
+
+SourceForge
+
+Bitbucket
+
+SourceHut
+
+This distributed presence establishes NKTgLaw as an independent, verifiable, and community-accessible physics API standard, aligned with open science and global reproducibility principles.
+- **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
+  > As a software-defined scientific framework, NKTgLaw’s verification follows the **open-source reproducibility standard**, replacing traditional peer review with **transparent, cross-language implementations and empirical validation**.
 
 ---
 
