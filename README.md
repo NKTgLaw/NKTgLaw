@@ -111,12 +111,14 @@ Visit the wiki for detailed explanations, examples, and API references.
 
 ## 📑 Foundations  
 The `foundations/` directory contains theoretical materials and supporting documents:  
+ 
+- Experimental verifications: Summary of Neptune Data Simulated by the NKTg Law Compared to NASA's Published Data (2024)
+  - Zenodo — [10.5281/zenodo.15864091](https://doi.org/10.5281/zenodo.15864091) 
+  - Figshare — [10.6084/m9.figshare.29546048](https://doi.org/10.6084/m9.figshare.29546048)
 
+- NKTm-Unit.md`: unit definition related to NKTg Law  
 - `wiki.md`: consolidated wiki documentation  
-- `index.md`: structured entry point for foundational texts  
-- Experimental verifications (e.g., planetary mass interpolation, NASA Neptune data)  
-- `NKTm-Unit.md`: unit definition related to NKTg Law  
-
+- `index.md`: structured entry point for foundational texts 
 👉 Browse the full collection here: [foundations/](foundations/)
 
 ---
