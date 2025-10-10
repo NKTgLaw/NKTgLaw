@@ -15,7 +15,7 @@ identifiers:
     value: "https://doi.org/10.5281/zenodo.17190536"
  - type: doi
     value: "https://doi.org/10.6084/m9.figshare.30195928"
-   - type: doi
+  - type: doi
     value: "https://doi.org/10.6084/m9.figshare.29481710.v1"
   - type: doi
     value: "https://doi.org/10.5281/zenodo.15808498"
