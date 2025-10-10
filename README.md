@@ -98,10 +98,10 @@ This distributed presence establishes **NKTgLaw** as an independent, verifiable,
 
 Detailed documentation for the **NKTgLaw Library** is maintained in the project wiki:
 
-- 🔌 [API Guide](https://github.com/NKTgLaw/NKTgLaw/wiki/API-Guide)
-- 🌌 [Global Physics Standard API](https://github.com/NKTgLaw/NKTgLaw/wiki/Global-Physics-Standard-API)
-- 🗂 [Library Structure](https://github.com/NKTgLaw/NKTgLaw/wiki/NKTgLaw-Library-Structure)
-- 📐 [Theory](https://github.com/NKTgLaw/NKTgLaw/wiki/Theory)
+-  [API Guide](https://github.com/NKTgLaw/NKTgLaw/wiki/API-Guide)
+-  [Global Physics Standard API](https://github.com/NKTgLaw/NKTgLaw/wiki/Global-Physics-Standard-API)
+-  [Library Structure](https://github.com/NKTgLaw/NKTgLaw/wiki/NKTgLaw-Library-Structure)
+-  [Theory](https://github.com/NKTgLaw/NKTgLaw/wiki/Theory)
 
 Visit the wiki for detailed explanations, examples, and API references.
 
