@@ -75,7 +75,9 @@ This recognition is based on:
 - **Open archival:** Official research records archived under two permanent DOIs:  
   - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
   - Figshare — [10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928)
+
 *These DOIs provide long-term preservation and citation access for all 150 language source packages and verified implementations of the NKTgLaw Core & API*.
+
 - **Multi-Platform Deployment** To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 8 major Git platforms:
 
   - [GitHub](https://github.com/NKTgLaw/NKTgLaw)  
