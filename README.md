@@ -57,6 +57,23 @@ The stable state in this law is understood as the state in which the position (x
 
 ---
 
+### 🌌 Global Physics Standard API  
+
+**NKTgLaw** is formally recognized as a **Global Physics Standard API** — a cross-disciplinary specification for modeling varying inertia and dynamic mass interactions across physical, computational, and engineering systems.  
+
+This recognition is based on:  
+- **Completed Core & API Layers:** Implemented in C++, Rust, Go, with REST/gRPC interfaces.  
+- **Cross-language adoption:** Over **150 client implementations** across major programming languages.  
+- **Experimental verification:** Consistent results with **planetary and NASA datasets (2023–2024)**.  
+- **Open archival:** Official research records archived under two permanent DOIs:  
+  - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
+  - Figshare — [10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928)  
+- **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).  
+
+> As a software-defined scientific framework, NKTgLaw’s verification follows the **open-source reproducibility standard**, replacing traditional peer review with **transparent, cross-language implementations and empirical validation**.
+
+---
+
 ## 📑 Foundations  
 The `foundations/` directory contains theoretical materials and supporting documents:  
 
