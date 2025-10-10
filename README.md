@@ -116,7 +116,11 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Zenodo — [10.5281/zenodo.15864091](https://doi.org/10.5281/zenodo.15864091) 
   - Figshare — [10.6084/m9.figshare.29546048](https://doi.org/10.6084/m9.figshare.29546048)
 
-- NKTm-Unit.md`: unit definition related to NKTg Law  
+- NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
+  - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127) 
+  - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945 )
+
+
 - `wiki.md`: consolidated wiki documentation  
 - `index.md`: structured entry point for foundational texts 
 👉 Browse the full collection here: [foundations/](foundations/)
