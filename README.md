@@ -48,7 +48,7 @@ The stable state in this law is understood as the state in which the position (x
 
 - **Reference DOI:**  
 
-  - [Zenodo: 10.5281/zenodo.15808498(https://doi.org/10.5281/zenodo.15808498)  
+  - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)  
   - [Figshare: 10.6084/m9.figshare.29481710.v1](https://doi.org/10.6084/m9.figshare.29481710.v1) 
 
   *These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.*
