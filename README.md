@@ -25,6 +25,7 @@ The movement tendency of the object is determined by the following basic product
 In which:
 
 • p is the linear momentum, calculated by p = m × v.
+
 • dm/dt is the rate of mass change over time.
 
 • NKTg₁ is the quantity representing the product of position and momentum.
@@ -46,6 +47,7 @@ The sign and value of the two quantities NKTg₁ and NKTg₂ determine the movem
 The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
 
 **Reference DOI:**  
+
 [Zenodo: 10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
 [Figshare: 10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928) 
 
