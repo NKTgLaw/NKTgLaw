@@ -11,4 +11,3 @@ int main() {
     std::cout << "p=" << p << " NKTg1=" << NKTg1 << " NKTg2=" << NKTg2 << std::endl;
     return 0;
 }
-
