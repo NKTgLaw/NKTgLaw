@@ -17,7 +17,7 @@ make
 ## How to Run
 After building, double-click run_server.bat (Windows) or run ./build/nktg.exe manually. The server will start and listen on http://localhost:8080.
 
-API Endpoint
+## API Endpoint
 
 POST /predict
 Content-Type: application/json
@@ -25,12 +25,16 @@ Content-Type: application/json
 {
   "text": "Your input here"
 }
-Response
+
+## Response
+
 json
 {
   "result": "Predicted output"
 }
-Requirements
+
+## Requirements
+
 Windows with CMake and a C++ compiler (e.g. Visual Studio or MinGW)
 
 No internet connection required
