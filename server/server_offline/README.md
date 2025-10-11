@@ -6,8 +6,10 @@
 This is an internal REST API written in C++ for calculating the NKTg law.  
 The API runs at `http://localhost:8080` and does not require internet access, Docker, or an online server.
 
+```
 ## Build Instructions
 
+```
 mkdir build && cd build
 cmake ..
 make
@@ -19,6 +21,7 @@ After building, double-click run_server.bat (Windows) or run ./build/nktg.exe ma
 
 ## API Endpoint
 
+```
 POST /predict
 Content-Type: application/json
 
@@ -26,12 +29,17 @@ Content-Type: application/json
   "text": "Your input here"
 }
 
+```
+
 ## Response
 
+```
 json
 {
   "result": "Predicted output"
 }
+
+```
 
 ## Requirements
 
