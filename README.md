@@ -71,7 +71,14 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 ### 🌌 NKTgVerse API  
 
-**NKTgVerse API** is formally established as a **Universal Dynamics Ecosystem** — a **cross-disciplinary platform** for modeling variable inertia, dynamic mass interactions, and systemic motion across **physical, scientific, computational, engineering, economic, and social domains**.
+
+**NKTgVerse API** is formally established as the **Universal Dynamics Ecosystem** — covering multiple fields, cross-platform, and cross-disciplinary, aimed at modeling variable inertia, dynamic mass interactions, and systemic motion across various domains, including:
+
+  - Computer science: artificial intelligence, software, hardware;
+
+  - Natural sciences: physics, chemistry, biology;
+
+  - Social sciences: economics, sociology, psychology, behavioral science.
 
 This ecosystem enables unified representations of motion and interaction laws across all scales — from microscopic particles and physical systems to computational networks, organizational models, and socio-economic dynamics.
 
