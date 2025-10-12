@@ -8,9 +8,9 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
     NKTg = f(x, v, m)
 
-In which:
+- In which:
 
-• x is the position or displacement of the object relative to the reference point.
+  • x is the position or displacement of the object relative to the reference point.
 
 • v is the velocity.
 
@@ -94,7 +94,7 @@ This recognition is based on:
 This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
-  > As a software-defined scientific framework, NKTgLaw’s verification follows the **open-source reproducibility standard**, replacing traditional peer review with **transparent, cross-language implementations and empirical validation**.
+  > NKTg Law is a multidisciplinary, cross-domain fundamental law defined through software. Its verification adheres to open-source reproducibility standards, featuring transparent, multilingual implementations and empirical validation against NASA’s public datasets, which produced fully consistent results.
 
 ---
 
