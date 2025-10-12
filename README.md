@@ -144,11 +144,11 @@ The `foundations/` directory contains theoretical materials and supporting docum
     - NKTg₁ and NKTg₂ fully combine to form NKTg, representing the system’s true variable inertia.
     - Not only the two quantities NKTg₁ and NKTg₂, but it also asserts that: Both are two aspects of the same physical phenomenon: variable inertia.
 
-      🔹 NKTg₁ = x × p represents the interaction between position and momentum — that is, spatial inertia.
+        🔹 NKTg₁ = x × p represents the interaction between position and momentum — that is, spatial inertia.
 
-      🔹 NKTg₂ = (dm/dt) × p represents the interaction between mass variation and momentum — that is, dynamic mass inertia.
+        🔹 NKTg₂ = (dm/dt) × p represents the interaction between mass variation and momentum — that is, dynamic mass inertia.
 
-      👉 Both are different manifestations of the same physical essence: the change in the motion tendency of a system of objects when the factors x, v, m vary.
+        👉 Both are different manifestations of the same physical essence: the change in the motion tendency of a system of objects when the factors x, v, m vary.
 
 - **Wiki.md**: consolidated wiki documentation  
 - **Index.md**: structured entry point for foundational texts
