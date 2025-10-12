@@ -139,7 +139,7 @@ The `foundations/` directory contains theoretical materials and supporting docum
 
     - NKTg₁ represents position–momentum interaction. NKTg₂ represents mass-variation–momentum interaction.  
     - Both coexist in a unified variable-inertia space and share the `NKTm` unit. Thus, their sum is a **vectorial composition**, not a scalar addition.
-    - If orthogonal, the sum follows the Pythagorean theorem: NKTg = sqrt(NKTg₁^2 + NKTg₂^2). NKTg = √(NKTg₁² + NKTg₂²)
+    - If orthogonal, the sum follows the Pythagorean theorem: NKTg = √(NKTg₁² + NKTg₂²).
 
     - If linear, the sum is simple: NKTg = NKTg₁ + NKTg₂.
     - NKTg₁ and NKTg₂ fully combine to form NKTg, representing the system’s true variable inertia.
