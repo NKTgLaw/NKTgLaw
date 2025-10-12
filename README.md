@@ -141,6 +141,8 @@ The `foundations/` directory contains theoretical materials and supporting docum
 
     - Both coexist in a unified variable-inertia space and share the `NKTm` unit. Thus, their sum is a **vectorial composition**, not a scalar addition.
 
+    - If orthogonal, the sum follows the Pythagorean theorem: $ \text{NKTg} = \sqrt{(\text{NKTg}_1)^2 + (\text{NKTg}_2)^2} $.
+
     - If orthogonal, the sum follows the Pythagorean theorem: $$
 \text{NKTg} = \sqrt{(\text{NKTg}_1)^2 + (\text{NKTg}_2)^2}
 $$
