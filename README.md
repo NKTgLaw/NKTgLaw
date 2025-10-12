@@ -46,7 +46,7 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 - The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
 
-- **Reference DOI:**These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.
+- **Reference DOI:** These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.
 
   - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)  
   - [Figshare: 10.6084/m9.figshare.29481710.v1](https://doi.org/10.6084/m9.figshare.29481710.v1) 
