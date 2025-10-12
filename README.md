@@ -136,16 +136,14 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127) 
   - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945 )
   - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent values but components of a single vector — the generalized variable-inertia vector `NKTg`.
-
-    - `NKTg₁` represents position–momentum interaction. `NKTg₂` represents mass-variation–momentum interaction.  
-
+    - NKTg₁ represents position–momentum interaction. NKTg₂ represents mass-variation–momentum interaction.  
     - Both coexist in a unified variable-inertia space and share the `NKTm` unit. Thus, their sum is a **vectorial composition**, not a scalar addition.
     - If orthogonal, the sum follows the Pythagorean theorem: NKTg = sqrt(NKTg₁^2 + NKTg₂^2).
     - If linear, the sum is simple: NKTg = NKTg₁ + NKTg₂.
     - `NKTg₁` and `NKTg₂` fully combine to form `NKTg`, representing the system’s true variable inertia.
 
-- **`wiki.md`**: consolidated wiki documentation  
-- **`index.md`**: structured entry point for foundational texts
+- **wiki.md**: consolidated wiki documentation  
+- **index.md**: structured entry point for foundational texts
   
 👉 Browse the full collection here: [foundations/](foundations/)
 
