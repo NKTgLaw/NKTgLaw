@@ -64,9 +64,11 @@ The stable state in this law is understood as the state in which the position (x
 
 ---
 
-### 🌌 Global Physics Standard API  
+### 🌌 NKTgVerse API  
 
-**NKTgLaw** is formally recognized as a **Global Physics Standard API** — a cross-disciplinary specification for modeling varying inertia and dynamic mass interactions across physical, computational, and engineering systems.  
+**NKTgVerse API** is formally established as a **Universal Dynamics Ecosystem** — a **cross-disciplinary platform** for modeling variable inertia, dynamic mass interactions, and systemic motion across **physical, scientific, computational, engineering, economic, and social domains**.
+
+This ecosystem enables unified representations of motion and interaction laws across all scales — from microscopic particles and physical systems to computational networks, organizational models, and socio-economic dynamics.
 
 This recognition is based on:  
 - **Completed Core & API Layers:** Implemented in C++, Rust, Go, with REST/gRPC interfaces.  
