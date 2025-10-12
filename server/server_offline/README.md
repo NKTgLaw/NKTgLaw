@@ -11,17 +11,20 @@ It runs locally at `http://localhost:8080` and does **not** require internet acc
 
 If you want to build the server from source:
 
-```bash
+```
 mkdir build
 cd build
 cmake ..
 make
+
+```
+
 This will generate nktg.exe inside the build/ directory.
 
 ▶️ How to Run
 Use the provided run_server.bat script to launch the server. It will automatically detect the correct location of nktg.exe:
 
-bat
+```
 @echo off
 echo === Starting NKTg Backend ===
 
@@ -37,6 +40,8 @@ IF EXIST ..\..\nktg.exe (
 )
 
 pause
+
+```
 Once started, the server will listen at: http://localhost:8080
 
 🔌 API Endpoint
@@ -45,16 +50,24 @@ Content-Type: application/json
 
 Request Body:
 
+```
 json
 {
   "text": "Your input here"
 }
+
+```
+
 Response:
 
+```
 json
 {
   "result": "Predicted output"
 }
+
+```
+
 🧪 Default Example Parameters
 The default examples use:
 
