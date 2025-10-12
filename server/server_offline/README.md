@@ -45,7 +45,7 @@ pause
 ```
 Once started, the server will listen at: http://localhost:8080
 
-##🔌 API Endpoint
+## 🔌API Endpoint
 
 POST /predict
 Content-Type: application/json
