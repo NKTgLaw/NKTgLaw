@@ -122,7 +122,8 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945 )
 
 - `wiki.md`: consolidated wiki documentation  
-- `index.md`: structured entry point for foundational texts 
+- `index.md`: structured entry point for foundational texts
+  
 👉 Browse the full collection here: [foundations/](foundations/)
 
 ---
@@ -162,7 +163,7 @@ NKTg₂ = (dm/dt) * p
   - For **maximum performance and full precision**, we recommend using the **offline backend**, located at [`server/server_offline`](https://github.com/NKTgLaw/NKTgLaw/tree/main/server/server_offline).  
   - For quick integration or remote access, you can use the **online client wrappers** under [`clients/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients).
 
-- 👉 You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
+👉 You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
 
 - ### Assembly
 
@@ -189,7 +190,7 @@ Message($"p={p} NKTg1={NKTg1} NKTg2={NKTg2}");
 
 ```
   
-- 👉 Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
+👉 Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
 
 - ### Python Client
 
