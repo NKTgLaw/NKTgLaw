@@ -91,7 +91,7 @@ This recognition is based on:
   - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
 
-This distributed presence establishes **NKTgLaw** as an independent, verifiable, and community-accessible **Global Physics Standard API**, aligned with open science and global reproducibility principles.
+This distributed presence establishes NKTgVerse API as an independent, verifiable, and community-accessible Universal Dynamics Ecosystem, aligned with the principles of open science, cross-domain collaboration, and global reproducibility
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
   > As a software-defined scientific framework, NKTgLaw’s verification follows the **open-source reproducibility standard**, replacing traditional peer review with **transparent, cross-language implementations and empirical validation**.
