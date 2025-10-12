@@ -83,12 +83,14 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 This ecosystem enables unified representations of motion and interaction laws across all scales — from microscopic particles and physical systems to computational networks, organizational models, and socio-economic dynamics.
 
 This recognition is based on:  
+- **Experimental verification:** Consistent results with **planetary and NASA datasets (2023–2024)**.  
 - **Completed Core & API Layers:** Implemented in C++, Rust, Go, with REST/gRPC interfaces.  
 - **Cross-language adoption:** Over **150 client implementations** across major programming languages.  
-- **Experimental verification:** Consistent results with **planetary and NASA datasets (2023–2024)**.  
+- **The NKTg Law **preserves its invariant mathematical structure across more than 150 programming languages, applied throughout all domains of science and life. It requires no differentiation or approximation methods, ensuring that its computational results remain precise, reproducible, and consistent across all environments and implementations.
 - **Reference DOI:** These DOIs provide long-term preservation and citation access for all 150 language source packages and verified implementations of the NKTgLaw Core & API.
   - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
   - Figshare — [10.6084/m9.figshare.30195928](https://doi.org/10.6084/m9.figshare.30195928)
+
 - **Multi-Platform Deployment** To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 8 major Git platforms:
 
   - [GitHub](https://github.com/NKTgLaw/NKTgLaw)  
