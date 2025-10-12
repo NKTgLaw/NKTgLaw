@@ -163,6 +163,10 @@ NKTg₂ = (dm/dt) * p
 
 ## ⚡ Quick Start
 
+- NKTgLaw supports both **offline** and **online** modes.  
+  - For **maximum performance and full precision**, we recommend using the **offline backend**, located at [`server/server_offline`](https://github.com/NKTgLaw/NKTgLaw/tree/main/server/server_offline).  
+  - For quick integration or remote access, you can use the **online client wrappers** under [`clients/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients).
+
 - You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
 
 ### Assembly
