@@ -141,12 +141,16 @@ This repository contains **150 implementations** of the NKTg Law, one for each p
 
 - All code snippets are stored in the [`examples/`](./examples) directory.  
 - Each file is self-contained and demonstrates the calculation of:
-  
+
+```
+
 p = m * v
 
 NKTg₁ = x * p
 
 NKTg₂ = (dm/dt) * p
+
+```
 
 - Default parameters: `x=2, v=3, m=5, dm_dt=0.1`
 
