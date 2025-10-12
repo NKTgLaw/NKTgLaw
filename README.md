@@ -269,7 +269,7 @@ NKTgLaw is available under a **dual licensing model**:
 
 - For commercial use without the GPL obligations, a commercial license is required.  
 - See [LICENSE-commercial.txt](LICENSE-commercial.txt) for terms and conditions.  
-- Contact **Nguyễn Khánh Tùng** (traiphieu.com@gmail.com) for licensing and support.
+- Contact **Nguyen Khanh Tung** (traiphieu.com@gmail.com) for licensing and support.
 
 ---
 
