@@ -164,16 +164,19 @@ NKTg₂ = (dm/dt) * p
 
 - You can also explore the [`examples/`](https://github.com/NKTgLaw/NKTgLaw/tree/main/examples) directory for 150 standalone implementations.
 
-### Assembly
+- ### Assembly
 
-```bash
+```
 ; Assembly: low-level programming
 ; x=2, v=3, m=5, dm_dt=0.1
 ; Calculate p=m*v, NKTg1=x*p, NKTg2=dm_dt*p conceptually
-```
-### Q#
 
-```bash
+```
+
+- ### Q#
+
+```
+
 // Q#: quantum programming
 let x=2.0;
 let v=3.0;
@@ -183,33 +186,43 @@ let p=m*v;
 let NKTg1=x*p;
 let NKTg2=dm_dt*p;
 Message($"p={p} NKTg1={NKTg1} NKTg2={NKTg2}");
+
 ```
   
 - Use the provided [client wrappers](https://github.com/NKTgLaw/NKTgLaw/tree/main/clients) to quickly test the NKTg Law.
 
-### Python Client
+- ### Python Client
 
-```bash
+```
 cd clients/python
 python NKTgLaw.py
+
 ```
 
 Expected output:
-```text
-p=15.0, NKTg1=30.0, NKTg2=1.5
+
 ```
 
-### C++ Client
+p=15.0, NKTg1=30.0, NKTg2=1.5
 
-```bash
+```
+
+- ### C++ Client
+
+```
+
 cd clients/cpp
 g++ NKTgLaw.cpp -o nktg_client
 ./nktg_client
+
 ```
 
 Expected output:
-```text
+
+```
+
 p=15 NKTg1=30 NKTg2=1.5
+
 ```
 
 ---
