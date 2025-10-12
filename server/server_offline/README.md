@@ -21,7 +21,8 @@ make
 
 This will generate nktg.exe inside the build/ directory.
 
-▶️ How to Run
+## ▶️ How to Run
+
 Use the provided run_server.bat script to launch the server. It will automatically detect the correct location of nktg.exe:
 
 ```
@@ -44,31 +45,31 @@ pause
 ```
 Once started, the server will listen at: http://localhost:8080
 
-🔌 API Endpoint
+##🔌 API Endpoint
+
 POST /predict
 Content-Type: application/json
 
 Request Body:
 
 ```
-json
 {
   "text": "Your input here"
 }
 
 ```
 
-Response:
+## Response:
 
 ```
-json
 {
   "result": "Predicted output"
 }
 
 ```
 
-🧪 Default Example Parameters
+## 🧪 Default Example Parameters
+
 The default examples use:
 
 x = 2
@@ -87,7 +88,8 @@ NKTg₁ = x × p
 
 NKTg₂ = (dm/dt) × p
 
-📦 Requirements
+## 📦 Requirements
+
 Windows OS
 
 CMake
@@ -98,13 +100,16 @@ No internet connection required
 
 No Docker, no Python, no external dependencies
 
-📁 Related Directories
+## 📁 Related Directories
+
 Folder	Purpose
 server/server_offline/	C++ source code and build scripts
 clients/	Examples in 150 programming languages
 examples/	Standalone examples without server
 run_server.bat	Smart launcher script for offline mode
-📮 Contact & License
+
+## 📮 Contact & License
+
 Author: Nguyễn Khánh Tùng
 
 Email: traiphieu.com@gmail.com
