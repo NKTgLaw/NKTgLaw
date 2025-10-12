@@ -6,7 +6,10 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 **The NKTg Law on Varying Inertia** describes the movement tendency of an object in space depends on the relationship between its position, velocity, and mass.
 
+```
     NKTg = f(x, v, m)
+
+```
 
 - In which:
 
@@ -18,9 +21,13 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 - The movement tendency of the object is determined by the following basic product quantities:
 
+```
+
     NKTg₁ = x × p
 
     NKTg₂ = (dm/dt) × p
+
+```
 
 - In which:
 
