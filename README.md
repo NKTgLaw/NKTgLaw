@@ -85,7 +85,7 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 
 This framework can reflect any system with state, velocity, and mass variation — so it is not only mathematically correct but also practically applicable in real-world engineering.
 
-This recognition is based on:  
+👉 This recognition is based on:  
 
 - **Completed Core & API Layers:** Implemented in C++, Rust, Go, with REST/gRPC interfaces.  
 - **Cross-language adoption:** Over **150 client implementations** across major programming languages.  
@@ -109,7 +109,7 @@ This recognition is based on:
 
 - The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, across **8 Git platforms** and **Dual-mode Server**, it has been translated into **the world’s most widely spoken languages**, including English, Vietnamese, Chinese, Spanish, French, Japanese, Russian, Greek, German, Portuguese, Hindi, and Arabic, among others.
 
-👉 This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
+- This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
 
 ---
 
