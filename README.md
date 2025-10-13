@@ -109,7 +109,8 @@ This distributed presence establishes **NKTgVerse API** as an **independent, ver
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
-👉 Its verification adheres to open-source reproducibility standards, with transparent, cross-platform implementations, implemented in 150 different codebases and the 14 most widely spoken languages worldwide, and is empirically validated against NASA’s public datasets, producing fully consistent results
+👉 Its verification adheres to open-source reproducibility standards, with transparent, cross-platform implementations, implemented in 150 different codebases and the 14 most widely spoken languages worldwide, and is empirically validated against NASA’s public datasets, producing fully consistent results.
+
 ---
 
 ## 📖 Documentation
