@@ -105,11 +105,11 @@ This recognition is based on:
   - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
 
-This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
-
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
-👉 Its verification adheres to open-source reproducibility standards, with transparent, cross-platform implementations, implemented in 150 different codebases and the 14 most widely spoken languages worldwide, and is empirically validated against NASA’s public datasets, producing fully consistent results.
+- Its verification adheres to open-source reproducibility standards, with transparent, cross-platform implementations, implemented in 150 different codebases and the 14 most widely spoken languages worldwide, and is empirically validated against NASA’s public datasets, producing fully consistent results.
+
+👉 This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
 
 ---
 
