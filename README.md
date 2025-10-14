@@ -290,5 +290,9 @@ NKTgLaw is available under a **dual licensing model**:
 Combining both is not permitted for the same use case.
 
 
-![Release v0.2.0](https://img.shields.io/github/v/release/NKTgLaw/nktg-law-library?label=Release)
+---
+
+### 📦 Latest Release
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/NKTgLaw/NKTgLaw?label=Release&color=blue)](https://github.com/NKTgLaw/NKTgLaw/releases/latest)
+
 
