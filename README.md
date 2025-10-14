@@ -107,7 +107,7 @@ This framework can reflect any system with state, velocity, and mass variation �
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
-- The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, across **8 Git platforms** and **Dual-mode Server**, it has been translated into **the world’s most widely spoken languages**, including English, Vietnamese, Chinese, Spanish, French, Japanese, Russian, Greek, German, Portuguese, Hindi, and Arabic, among others.
+- The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, across **8 Git platforms** and **Dual-mode Server**,  **Offline Mode and Online Mode**.
 
 - This distributed presence establishes **NKTgVerse API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
 
