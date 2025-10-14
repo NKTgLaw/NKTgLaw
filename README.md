@@ -292,6 +292,7 @@ Combining both is not permitted for the same use case.
 
 ---
 
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/NKTgLaw/NKTgLaw?label=Release&color=blue)](https://github.com/NKTgLaw/NKTgLaw/releases/latest)
+[![Release v0.1.0](https://img.shields.io/badge/release-v0.1.0-blue.svg)](https://github.com/NKTgLaw/NKTgLaw/releases/tag/v0.1.0)
+
 
 
