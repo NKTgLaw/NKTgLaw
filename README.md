@@ -293,6 +293,9 @@ Combining both is not permitted for the same use case.
 ---
 
 ### 📦 Latest Release
+---
+
+### 📦 Latest Release
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/NKTgLaw/NKTgLaw?label=Release&color=blue)](https://github.com/NKTgLaw/NKTgLaw/releases/latest)
 
 
