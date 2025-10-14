@@ -289,5 +289,6 @@ NKTgLaw is available under a **dual licensing model**:
 **Note:** Each user must choose either the **GPL license** **or** the **Commercial license**.  
 Combining both is not permitted for the same use case.
 
+
 ![Release v0.2.0](https://img.shields.io/github/v/release/NKTgLaw/nktg-law-library?label=Release)
 
