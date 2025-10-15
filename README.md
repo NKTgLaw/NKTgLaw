@@ -293,3 +293,10 @@ Combining both is not permitted for the same use case.
 
 **🌍Release v0.2.0**
 - [AI Manifest](./ai-manifest.json)
+---
+
+🌍 **Release v0.2.0**  
+NKTgLaw Core & API — stable release with all 150 language implementations.
+
+📄 **AI Manifest**  
+[View AI Manifest](./ai-manifest.json) — enables AI indexing, summarization, and reproducibility verification across 8 Git platforms.
