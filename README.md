@@ -284,8 +284,6 @@ NKTgLaw is available under a **dual licensing model**:
 - See [LICENSE-commercial.txt](LICENSE-commercial.txt) for terms and conditions.  
 - Contact **Nguyen Khanh Tung** (traiphieu.com@gmail.com) for licensing and support.
 
----
-
 **Note:** Each user must choose either the **GPL license** **or** the **Commercial license**.  
 Combining both is not permitted for the same use case.
 
