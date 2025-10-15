@@ -291,9 +291,5 @@ Combining both is not permitted for the same use case.
 
 ---
 
-**🌍Release v0.2.0**
-- [AI Manifest](./ai-manifest.json)
----
-
 🌍 Release v0.2.0 — 📄 [AI Manifest](./ai-manifest.json)
 
