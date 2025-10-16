@@ -2,10 +2,10 @@
   "schema_version": "1.0",
   "project": {
     "name": "NKTgLaw",
-    "full_name": "NKTgLaw — The Law of Varying Inertia",
+    "full_name": "NKTgLaw — The Law on Varying Inertia",
     "organization": "NKTg Organization",
     "version": "v0.2.0",
-    "description": "The NKTgLaw defines the Law of Varying Inertia — describing the movement tendency of an object in space as a function of its position, velocity, and mass, forming the Universal Dynamics Ecosystem (NKTgUniversa API).",
+    "description": "The NKTgLaw defines the Law on Varying Inertia — describing the movement tendency of an object in space as a function of its position, velocity, and mass, forming the Universal Dynamics Ecosystem (NKTgUniversa API).",
     "language_core": ["C++", "Rust", "Go"],
     "languages_supported": 150,
     "domains": [
