@@ -84,7 +84,7 @@
       "p = m × v",
       "NKTg₁ = x × p",
       "NKTg₂ = (dm/dt) × p"
-          ],
+    ]
     "definitions": {
       "x": "position or displacement",
       "v": "velocity",
