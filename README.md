@@ -138,14 +138,16 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Figshare — [10.6084/m9.figshare.29589431](https://doi.org/10.6084/m9.figshare.29589431)
 
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
-  - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127) 
-  - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945 )
-  - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent values but components of a single vector — the generalized variable-inertia vector `NKTg`.
+  - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127)  
+  - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945)  
+  - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
 
-    - NKTg₁ represents position–momentum interaction. NKTg₂ represents mass-variation–momentum interaction.  
-    - Both coexist in a unified variable-inertia space and share the `NKTm` unit. Thus, their sum is a **vectorial composition**, not a scalar addition.
-    - Not only the two quantities NKTg₁ and NKTg₂, but it also asserts that: Both are two aspects of the same physical phenomenon: variable inertia.
-    - Both are different manifestations of the same physical essence: the change in the motion tendency of a system of objects when the factors x, v, m vary.
+    - `NKTg₁` represents the interaction between position and momentum.  
+    - `NKTg₂` represents the interaction between mass variation and momentum.  
+    - Both share the same measurement unit `NKTm` and together describe the complete state of variable inertia within a system.  
+    - The law emphasizes that `NKTg₁` and `NKTg₂` are not independent entities, but two aspects of the same physical phenomenon: **variable inertia**.  
+    - They express different manifestations of the same underlying essence — the change in the motion tendency of an object system when the factors **x**, **v**, and **m** vary.
+
 
 - **Wiki.md**: consolidated wiki documentation  
 - **Index.md**: structured entry point for foundational texts
