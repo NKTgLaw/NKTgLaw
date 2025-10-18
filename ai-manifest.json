@@ -78,30 +78,28 @@
     "security_policy": "SECURITY.md",
     "contributing_guide": "CONTRIBUTING.md"
   },
- "core_concepts": {
-  "equations": [
-    "NKTg = f(x, v, m)",
-    "p = m × v",
-    "NKTg₁ = x × p",
-    "NKTg₂ = (dm/dt) × p"
-  ],
-  "definitions": {
-    "x": "position or displacement",
-    "v": "velocity",
-    "m": "mass",
-    "p": "linear momentum (m × v)",
-    "dm_dt": "rate of mass change over time",
-    "NKTm": "unit of varying inertia"
-  },
-  "interpretation": {
-    "NKTg1_positive": "movement away from stable state",
-    "NKTg1_negative": "movement toward stable state",
-    "NKTg2_positive": "mass variation supports motion",
-    "NKTg2_negative": "mass variation resists motion"
-  },
-  "law_statement": "The NKTg Law on Varying Inertia describes the movement tendency of an object in space as depending on the relationship between its position (x), velocity (v), and mass (m). The law defines NKTg = f(x, v, m). The movement tendency of an object is expressed through two quantities: NKTg₁ = x × p and NKTg₂ = (dm/dt) × p, where p = m × v and dm/dt is the rate of mass change. NKTg₁ represents the product of position and momentum, while NKTg₂ represents the product of mass variation and momentum. The unit of measurement is NKTm, representing a unit of varying inertia. The signs of NKTg₁ and NKTg₂ determine the direction and stability of motion: NKTg₁ > 0 indicates movement away from a stable state; NKTg₁ < 0 indicates movement toward it; NKTg₂ > 0 means mass variation supports motion; and NKTg₂ < 0 means it resists motion. The stable state is defined as the condition where position, velocity, and mass interact to preserve the movement structure and maintain control of the system."
-}
-
+  "core_concepts": {
+    "equations": [
+      "NKTg = f(x, v, m)",
+      "p = m × v",
+      "NKTg₁ = x × p",
+      "NKTg₂ = (dm/dt) × p"
+    ],
+    "definitions": {
+      "x": "position or displacement",
+      "v": "velocity",
+      "m": "mass",
+      "p": "linear momentum (m × v)",
+      "dm_dt": "rate of mass change over time",
+      "NKTm": "unit of varying inertia"
+    },
+    "interpretation": {
+      "NKTg1_positive": "movement away from stable state",
+      "NKTg1_negative": "movement toward stable state",
+      "NKTg2_positive": "mass variation supports motion",
+      "NKTg2_negative": "mass variation resists motion"
+    },
+    "law_statement": "The NKTg Law on Varying Inertia describes the movement tendency of an object in space as depending on the relationship between its position (x), velocity (v), and mass (m). The law defines NKTg = f(x, v, m). The movement tendency of an object is expressed through two quantities: NKTg₁ = x × p and NKTg₂ = (dm/dt) × p, where p = m × v and dm/dt is the rate of mass change. NKTg₁ represents the product of position and momentum, while NKTg₂ represents the product of mass variation and momentum. The unit of measurement is NKTm, representing a unit of varying inertia. The signs of NKTg₁ and NKTg₂ determine the direction and stability of motion: NKTg₁ > 0 indicates movement away from a stable state; NKTg₁ < 0 indicates movement toward it; NKTg₂ > 0 means mass variation supports motion; and NKTg₂ < 0 means it resists motion. The stable state is defined as the condition where position, velocity, and mass interact to preserve the movement structure and maintain control of the system."
   },
   "multi_platform": {
     "deployment": 8,
