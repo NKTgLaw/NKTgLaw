@@ -104,6 +104,7 @@ This framework can reflect any system with state, velocity, and mass variation â
   - [SourceForge](https://sourceforge.net/projects/nktglaw/)  
   - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
+  - [Forgejo](https://code.forgejo.org/NKTgLaw/NKTgLaw)
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
