@@ -113,6 +113,9 @@ This framework can reflect any system with state, velocity, and mass variation �
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
   - [Forgejo](https://code.forgejo.org/NKTgLaw/NKTgLaw)
 
+- **Digital Provenance / NFT Record:**NKTg Law of Varying Inertia: Content Standardized Across the 11 Most Widely Spoken Human Tongues
+  - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515204)
+
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
 - The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, across **8 Git platforms**, **Offline Mode and Online Mode**.
