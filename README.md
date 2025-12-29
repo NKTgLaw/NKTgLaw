@@ -150,7 +150,7 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945)  
 - **Digital Provenance / NFT Record:** This NFT provides immutable on-chain preservation and provenance for the NKTm Unit
   - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515202)  
-  - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
+- In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
 
     - `NKTg₁` represents the interaction between position and momentum.  
     - `NKTg₂` represents the interaction between mass variation and momentum.  
