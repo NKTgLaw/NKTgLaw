@@ -56,7 +56,11 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 - **Reference DOI:** These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.
 
   - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)  
-  - [Figshare: 10.6084/m9.figshare.29481710.v1](https://doi.org/10.6084/m9.figshare.29481710.v1) 
+  - [Figshare: 10.6084/m9.figshare.29481710.v1](https://doi.org/10.6084/m9.figshare.29481710.v1)
+    
+- **Digital Provenance / NFT Record:** This NFT serves as a digital provenance record associated with the NKTg work.
+  
+- [Rarible (ERC-1155)](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515201?tab=owners)
 
 ---
 
