@@ -60,7 +60,7 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
     
 - **Digital Provenance / NFT Record:** This NFT serves as a digital provenance record associated with the NKTg work.
   
-  - [Rarible (ERC-1155)](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515201?tab=owners)
+  - [Rarible: (ERC-1155)](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515201?tab=owners)
 
 ---
 
