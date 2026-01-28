@@ -151,6 +151,10 @@ The `foundations/` directory contains theoretical materials and supporting docum
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
   - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127)  
   - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945)  
+- **Reference DOI:** Compatibility of Classical Physics, Relativity, and Quantum Mechanics with the NKTg Law
+  - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)  
+  - Figshare — [10.6084/m9.figshare.31173580](https://doi.org/10.6084/m9.figshare.31173580)  
+
 - **Digital Provenance / NFT Record:** This NFT provides immutable on-chain preservation and provenance for the NKTm Unit
   - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515202)  
 - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
