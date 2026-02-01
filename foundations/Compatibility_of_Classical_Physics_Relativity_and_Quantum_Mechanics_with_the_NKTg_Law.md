@@ -1,9 +1,9 @@
 # Compatibility of Classical Physics, Relativity, and Quantum Mechanics with the NKTg Law
 
-👤 **Author:** Nguyễn Khánh Tùng  
-📧 **Email:** traiphieu.com@gmail.com  
-🔗 **Website:** https://traiphieu.com  
-🔗 **ORCID iD:** 0009-0002-9877-4137  
+👤 Author: Nguyễn Khánh Tùng  
+📧 Email: traiphieu.com@gmail.com  
+🔗 Website: https://traiphieu.com  
+🔗 ORCID iD: 0009-0002-9877-4137  
 
 ---
 
@@ -23,71 +23,87 @@ This publication focuses on establishing the conceptual consistency and compatib
 
 The NKTg Law describes the tendency of motion of a physical object through the relationship among:
 
-- Position (**x**)
-- Velocity (**v**)
-- Mass (**m**)
+- Position (x)
+- Velocity (v)
+- Mass (m)
 
-**General formulation:**
+General formulation:
 
-$$
-\mathrm{NKTg} = f(x, v, m)
-$$
+NKTg = f(x, v, m)
 
-The system is characterized by two core product quantities (unit: **NKTm**):
+The system is characterized by two core product quantities (unit: NKTm):
 
-- **NKTg₁ = x · p**  
-- **NKTg₂ = (dm/dt) · p**
+- NKTg₁ = x · p  
+- NKTg₂ = (dm/dt) · p  
+
+where p = m · v is linear momentum.
 
 ---
 
 ## 1. With Isaac Newton – Classical Mechanics
 
-When the mass of the system does not vary with time:
+When the mass of the system does not vary with time, the NKTg Law reduces to a static inertial state.
 
-- Condition: $ \frac{dm}{dt} = 0 $
-- Consequence: $ \mathrm{NKTg}_2 = 0 $
+Condition: dm/dt = 0  
+Consequence: NKTg₂ = 0  
 
-$$
-\mathrm{NKTg} = \mathrm{NKTg}_1 = x \cdot p
-$$
+Remaining expression:
+
+NKTg = NKTg₁ = x · p
+
+In the context of classical mechanics and Newtonian gravitation, the quantity x · p preserves the structure of the momentum state, reflecting orbital stability and periodic motion.
+
+In the limit of systems with large mass and velocities much smaller than the speed of light, the NKTg Law is structurally compatible, both in form and physical consequences, with all fundamental laws of classical mechanics.
 
 ---
 
 ## 2. With Albert Einstein – Relativity
 
-Energy–mass equivalence:
+In high-energy systems where mass and energy can be converted into one another, the NKTg Law extends into a regime of varying inertia.
 
-$$
-E = mc^2
-$$
+As velocity approaches the speed of light, energy and mass are related by:
 
-Mass variation:
+E = m · c²
 
-$$
-\frac{dm}{dt} \neq 0 \Rightarrow \mathrm{NKTg}_2 \neq 0
-$$
+In this case:
+
+dm/dt ≠ 0 → NKTg₂ emerges and plays a dominant role
+
+The NKTg Law describes the dynamical tendency of the system through changes in mass–energy states, without contradicting the fundamental relations of relativity.
+
+In extreme configurations such as strong gravitational fields, the relative imbalance between NKTg₁ (associated with spatial structure) and NKTg₂ (associated with energy state) consistently reflects the phenomenology of relativistic objects, including systems with event horizons.
 
 ---
 
 ## 3. With Werner Heisenberg – Quantum Mechanics
 
-Vanishing mass limit:
+At the microscopic scale, when considering particles with very small mass or mass approaching zero, the varying inertia component vanishes.
 
-$$
-m \to 0 \Rightarrow \frac{dm}{dt} = 0 \Rightarrow \mathrm{NKTg}_2 = 0
-$$
+Condition: m → 0  
+Then: dm/dt = 0 → NKTg₂ = 0  
 
 Thus:
 
-$$
-\mathrm{NKTg} = \mathrm{NKTg}_1 = x \cdot p
-$$
+NKTg = NKTg₁ = x · p
 
-The expression $x \cdot p$ is structurally compatible with the uncertainty relation  
-$\Delta x \cdot \Delta p$.
+In the quantum context, x and p are no longer interpreted as definite values, but correspond to uncertainties in position and momentum.
+
+The expression x · p is structurally compatible with the Heisenberg uncertainty inequality Δx · Δp and does not violate the foundational mathematical form of quantum mechanics.
 
 ---
 
-## Conclusion
+## Conclusion: Synthesis of Physical Regimes
 
-The NKTg Law remains structurally compatible across classical, relativistic, and quantum regimes by reducing to appropriate limiting forms without violating established physical principles.
+| Reference | Principle | Characteristic Condition | Dominant NKTg Component |
+|---------|----------|--------------------------|------------------------|
+| Newton | Classical mechanics | dm/dt = 0 | NKTg₁ = x · p |
+| Einstein | Relativity | Energy-dominated regime | NKTg₂ ≠ 0 |
+| Heisenberg | Uncertainty principle | m → 0 | NKTg₁ (x, p) |
+
+---
+
+## General Significance
+
+The NKTg Law enables the stages of physical development to be described as different state limits of a single general dynamical relationship among position, velocity, and mass.
+
+This approach opens a unified and continuous perspective from the microscopic to the macroscopic scale, without breaking the foundational structure of existing physical theories.
