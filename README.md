@@ -149,7 +149,7 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Figshare — [10.6084/m9.figshare.29589431](https://doi.org/10.6084/m9.figshare.29589431)
 
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
-  - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.17162127)  
+  - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.18471049)  
   - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945)  
 - **Reference DOI:** Compatibility of Classical Physics, Relativity, and Quantum Mechanics with the NKTg Law
   - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)  
