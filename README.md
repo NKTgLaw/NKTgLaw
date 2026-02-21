@@ -56,7 +56,6 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 - **Reference DOI:** These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.
 
   - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)  
-  - [Figshare: 10.6084/m9.figshare.29481710.v1](https://doi.org/10.6084/m9.figshare.29481710.v1)
     
 - **Digital Provenance / NFT Record:** This NFT serves as a digital provenance record associated with the NKTg work.
   
@@ -142,21 +141,19 @@ The `foundations/` directory contains theoretical materials and supporting docum
  
 - **Reference DOI:** Experimental verifications: Summary of Neptune Data Simulated by the NKTg Law Compared to NASA's Published Data (2024)
   - Zenodo — [10.5281/zenodo.15864091](https://doi.org/10.5281/zenodo.15864091) 
-  - Figshare — [10.6084/m9.figshare.29546048](https://doi.org/10.6084/m9.figshare.29546048)
 
 - **Reference DOI:** Experimental Verification of the NKT Law: Interpolating the Masses of 8 Planets Using NASA Data as of 30–31/12/2024
   - Zenodo — [10.5281/zenodo.16023879](https://doi.org/10.5281/zenodo.16023879) 
-  - Figshare — [10.6084/m9.figshare.29589431](https://doi.org/10.6084/m9.figshare.29589431)
 
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
   - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.18471049)  
-  - Figshare — [10.6084/m9.figshare.30166945](https://doi.org/10.6084/m9.figshare.30166945)  
+
 - **Reference DOI:** Compatibility of Classical Physics, Relativity, and Quantum Mechanics with the NKTg Law
   - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)  
-  - Figshare — [10.6084/m9.figshare.31173580](https://doi.org/10.6084/m9.figshare.31173580)  
 
 - **Digital Provenance / NFT Record:** This NFT provides immutable on-chain preservation and provenance for the NKTm Unit
   - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515202)  
+
 - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
 
     - `NKTg₁` represents the interaction between position and momentum.  
