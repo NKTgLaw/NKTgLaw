@@ -113,8 +113,8 @@ This framework can reflect any system with state, velocity, and mass variation â
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
   - [Forgejo](https://code.forgejo.org/NKTgLaw/NKTgLaw)
 
-- **Digital Provenance / NFT Record:** NKTg Law of Varying Inertia: Content Standardized Across the 11 Most Widely Spoken Human Tongues
-  - Rarible â€” [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515204)
+- **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
+  - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)  
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
