@@ -54,11 +54,10 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 - The stable state in this law is understood as the state in which the position (x), velocity (v), and mass (m) of the object interact with each other to maintain the movement structure, helping the object avoid losing control and preserving its inherent movement pattern.
 
 - **Reference DOI:** These DOIs represent the theoretical foundation and empirical datasets of the NKTg Law on Varying Inertia.
-
-  - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)  
-    
+  - [Zenodo: 10.5281/zenodo.15808498](https://doi.org/10.5281/zenodo.15808498)
+- **Permanent DOI Archive:**  All research on the NKTg Law on Varying Inertia is permanently registered and archived via DOI records in DataCite and Crossref, ensuring global traceability, academic verifiability, and long-term preservation.
+  - [ORCID: https://orcid.org/0009-0002-9877-4137](https://orcid.org/0009-0002-9877-4137)
 - **Digital Provenance / NFT Record:** This NFT serves as a digital provenance record associated with the NKTg work.
-  
   - [Rarible: (ERC-1155)](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515201?tab=owners)
 
 ---
