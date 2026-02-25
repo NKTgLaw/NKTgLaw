@@ -170,7 +170,7 @@ The `foundations/` directory contains theoretical materials and supporting docum
 
 ## 🌍 Examples
 
-F# example using the default parameters (x=2, v=3, m=5, dm_dt=-0.5).
+F# example using the default parameters (x=2, v=3, m=5, dm/dt=-0.5).
 
 ```fsharp
 type nktg={p:float;nktg1:float;nktg2:float;tendency1:string;tendency2:string}
