@@ -178,6 +178,15 @@ let nktg x v m dm_dt=let p=mv in let nktg1,nktg2=xp,dm_dt*p
                      {p=p;nktg1=nktg1;nktg2=nktg2;tendency1=tendency1 nktg1;tendency2=tendency2 nktg2}
 printfn "%A" (nktg 2.0 3.0 5.0 -0.5)
 ```
+Output
+
+```text
+{ p = 15.0
+  nktg1 = 30.0
+  nktg2 = -7.5
+  tendency1 = "Moving away from stable state"
+  tendency2 = "Mass variation resists movement" }
+```
 
 This repository contains **150 implementations** of the NKTg Law, one for each programming language.  
 
