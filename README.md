@@ -137,10 +137,12 @@ Visit the wiki for detailed explanations, examples, and API references.
 ## 📑 Foundations  
 The `foundations/` directory contains theoretical materials and supporting documents:  
  
+- **Reference DOI:** Experimental verifications:Experimental Verification of the NKTg Law Using NASA Mercury Data in 2025
+  - Zenodo — [10.5281/zenodo.18734660](https://doi.org/10.5281/zenodo.18734660)
+- **Reference DOI:** Experimental Verification of the NKTg Law in Earth Orbit Based on NASA’s 2025 Earth Dataset
+  - Zenodo — [10.5281/zenodo.18859684](https://doi.org/10.5281/zenodo.18859684)
 - **Reference DOI:** Experimental verifications: Summary of Neptune Data Simulated by the NKTg Law Compared to NASA's Published Data (2024)
   - Zenodo — [10.5281/zenodo.15864091](https://doi.org/10.5281/zenodo.15864091)
-- **Reference DOI:** Experimental verifications:Experimental Verification of the NKTg Law Using NASA Mercury Data in 2025
-  - Zenodo — [10.5281/zenodo.18734660](https://doi.org/10.5281/zenodo.18734660 )
 - **Reference DOI:** Experimental Verification of the NKT Law: Interpolating the Masses of 8 Planets Using NASA Data as of 30–31/12/2024
   - Zenodo — [10.5281/zenodo.16023879](https://doi.org/10.5281/zenodo.16023879) 
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
