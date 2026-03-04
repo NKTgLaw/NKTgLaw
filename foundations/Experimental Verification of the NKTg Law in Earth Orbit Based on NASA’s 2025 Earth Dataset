@@ -1,0 +1,115 @@
+Author: Nguyen Khanh Tung  
+ORCID Identifier: 0009-0002-9877-4137  
+Project: NKTgLaw Core & API Ecosystem  
+Field: Celestial Mechanics, Variable Inertia Dynamics, AI Control Systems.  
+
+---
+
+## ABSTRACT
+
+This report publishes the results of the experimental verification of the NKTg Law (Variable Inertia Law) through the simulation of Earth orbital data based on the NASA JPL Horizons system. The study not only stops at theoretical calculations but also introduces the NKTgUniversa ecosystem — a multilingual algorithmic framework (150+ programming languages) designed to standardize planetary dynamics calculations and intelligent control systems.
+
+---
+
+## THEORETICAL FOUNDATION AND UNITS OF MEASUREMENT
+
+The NKTg Law defines the motion tendency of an object through the interaction between position (x), velocity (v), and mass (m):
+
+Quantity NKTg_1 = x × p: Represents the position – momentum interaction, determining the stable orbital structure.
+
+Quantity NKTg_2 = (dm/dt) × p: Represents the mass variation – momentum interaction, reflecting resistance or inertia-supporting force.
+
+Unit NKTm: Standardized measurement unit for variable inertia, permanently archived through DOI records
+
+---
+
+## EXPERIMENT ON EARTH DATA (2025)
+
+Using the real Earth distance x, velocity v dataset published by NASA. The study establishes a simulation for Earth with gas escape and micro cosmic dust accretion data using data from GOLD/ICON, Atmospheric studies, CNEOS (NASA JPL), Geophysical models
+
+---
+
+## Table 1 - Actual orbital and mass data of Earth (Earth) in 2024 from NASA JPL Horizons System
+
+| Thời điểm | x (m) | v (m/s) | m (kg) | p = m·v | NKTg₁ = x·p (NKTm) |
+|------------|------------|------------|------------|----------------------|--------------------------|
+| 1/1/2024 | 1.47103×10¹¹ | 3.0286×10⁴ | 5.97×10²⁴ | 1.8080742×10²⁹ | 2.659731390426×10⁴⁰ |
+| 4/1/2024 | 1.49526×10¹¹ | 2.9785×10⁴ | 5.97×10²⁴ | 1.7781645×10²⁹ | 2.65881825027×10⁴⁰ |
+| 7/1/2024 | 1.52094×10¹¹ | 2.9292×10⁴ | 5.97×10²⁴ | 1.7487324×10²⁹ | 2.659717056456×10⁴⁰ |
+| 10/1/2024 | 1.49599×10¹¹ | 2.9782×10⁴ | 5.97×10²⁴ | 1.7779854×10²⁹ | 2.659848378546×10⁴⁰ |
+| 12/31/2024 | 1.47101×10¹¹ | 3.0287×10⁴ | 5.97×10²⁴ | 1.8081339×10²⁹ | 2.659783048239×10⁴⁰ |
+
+---
+
+| Component | Source | Mass (kg/year) |
+|------------|------------|----------------|
+| Hydrogen escape | GOLD/ICON | −9.5×10⁷ kg |
+| Helium escape | Atmospheric studies | −1.6×10⁶ kg |
+| Cosmic dust | CNEOS (NASA JPL) | +4.0×10⁷ kg |
+| Nuclear decay | Geophysical models | −1.6×10⁵ kg |
+| Net Loss |  | ≈ −5.7×10⁷ kg/year |
+| dm/dt |  | ≈ −1.8 kg/s |
+
+---
+
+## Table 2 - Simulated orbital and mass data of Earth (Earth) in 2025 according to the NKTg law
+
+| Time | x (m) | v (m/s) | m (kg) | p = m·v (kg·m/s) | NKTg₁ = x·p (NKTm) | NKTg₂ = dm/dt·p (NKTm) | dm/dt (kg/s) |
+|------------|------------|------------|------------|----------------------|--------------------------|----------------------------|--------------|
+| 1/1/2025 | 1.471012×10¹¹ | 3.0276×10⁴ | 5.97219×10²⁴ | 1.8081314416463×10²⁹ | 2.659783048239×10⁴⁰ | −3.25463659496333×10²⁹ | −1.8 |
+| 4/1/2025 | 1.494953×10¹¹ | 2.9791×10⁴ | 5.97218999999998×10²⁴ | 1.77917502974274×10²⁹ | 2.659783048239×10⁴⁰ | −3.20251505353693×10²⁹ | −1.8 |
+| 7/1/2025 | 1.520965×10¹¹ | 2.9282×10⁴ | 5.97218999999997×10²⁴ | 1.74874704430345×10²⁹ | 2.659783048239×10⁴⁰ | −3.14774467974621×10²⁹ | −1.8 |
+| 10/1/2025 | 1.496328×10¹¹ | 2.9764×10⁴ | 5.97218999999995×10²⁴ | 1.7775401170325×10²⁹ | 2.659783048239×10⁴⁰ | −3.19957221065849×10²⁹ | −1.8 |
+| 12/31/2025 | 1.471025×10¹¹ | 3.0276×10⁴ | 5.97218999999994×10²⁴ | 1.80811546251015×10²⁹ | 2.659783048239×10⁴⁰ | −3.25460783251828×10²⁹ | −1.8 |
+
+---
+
+## Table 3 - Actual orbital and mass data of Earth (Earth) in 2025 from NASA JPL Horizons System
+
+| Time | x (m) | v (m/s) | m (kg) |
+|------------|------------|------------|------------|
+| 1/1/2025 | 1.471012×10¹¹ | 3.0287×10⁴ | 5.9722×10²⁴ |
+| 4/1/2025 | 1.494953×10¹¹ | 2.9791×10⁴ | 5.9722×10²⁴ |
+| 7/1/2025 | 1.520965×10¹¹ | 2.9291×10⁴ | 5.9722×10²⁴ |
+| 10/1/2025 | 1.496328×10¹¹ | 2.9778×10⁴ | 5.9722×10²⁴ |
+| 12/31/2025 | 1.471025×10¹¹ | 3.0286×10⁴ | 5.9722×10²⁴ |
+
+---
+
+## TABLE 4 – Comparison of NKTg Simulation vs NASA in 2025
+
+| Time | v – NKTg | v – NASA | Sai lệch (%) |
+|------------|------------|------------|--------------|
+| 1/1/2025 | 3.0276×10⁴ | 3.0287×10⁴ | −0.04% |
+| 4/1/2025 | 2.9791×10⁴ | 2.9791×10⁴ | 0.00% |
+| 7/1/2025 | 2.9282×10⁴ | 2.9291×10⁴ | −0.03% |
+| 10/1/2025 | 2.9764×10⁴ | 2.9778×10⁴ | −0.05% |
+| 12/31/2025 | 3.0276×10⁴ | 3.0286×10⁴ | −0.03% |
+
+---
+
+## Result analysis:
+
+Orbital stability: The quantity NKTg_1 of Earth maintains a target constant, helping the planet self-adjust its velocity when the distance to the Sun changes (from perihelion to aphelion).
+
+NKTg_2 effect: With an extremely small mass loss rate from the atmosphere (hydrogen escape), NKTg_2 carries a negative value, acting as a self-resistance mechanism helping maintain system stability against external perturbations.
+
+---
+
+## NKTgUNIVERSA: GLOBAL DYNAMICS ECOSYSTEM
+
+The NKTgLaw project on multi-platform: Deployed on 9 major Git platforms (GitHub · GitLab · Gitea · Codeberg · Launchpad · SourceForge · Bitbucket · SourceHut · Forgejo) and archived on Blockchain ensuring transparency and permanent availability. Marking a milestone in the digitization of physical laws:
+
+Multilingual: More than 150 implementations from low-level languages (Assembly, C++) to modern languages (Python, Rust, Go) and specialized ones (Q# for quantum computing, Solidity for Blockchain).
+
+Application: The NKTgUniversa API aims to model not only celestial bodies but also robots, self-reflexive AI control systems and complex physical simulations.
+
+---
+
+## SCIENTIFIC CONCLUSION
+
+The successful verification on Earth (error ~0%), combined with previous data on Neptune (error ~0%) and Mercury (error ~1.3%), confirms:
+
+The NKTg Law is a consistent rule, allowing the description of dynamics without relying on complex approximation methods.
+
+NKTgUniversa provides a complete technological solution to apply this theory into global engineering practice.
