@@ -111,7 +111,9 @@ This framework can reflect any system with state, velocity, and mass variation â
   - [Forgejo](https://code.forgejo.org/NKTgLaw/NKTgLaw)
 
 - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
-  - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)  
+  - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
+- **Reference DOI:** PublicaÂ­tion of software description and algorithm for the nktg law of variable inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
+  - [Zenodo: 10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
