@@ -149,9 +149,10 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Zenodo — [10.5281/zenodo.16023879](https://doi.org/10.5281/zenodo.16023879) 
 - **Reference DOI:** NKTm Unit: Measurement Standard for Varying Inertia in the NKTg Law  
   - Zenodo — [10.5281/zenodo.17162127](https://doi.org/10.5281/zenodo.18471049)  
-
 - **Reference DOI:** Compatibility of Classical Physics, Relativity, and Quantum Mechanics with the NKTg Law
-  - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)  
+  - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)
+- **Reference DOI:** Variable Inertia From Abstract Concept to the Era of Measuring the Universe
+  - Zenodo — [10.5281/zenodo.18897940](https://doi.org/10.5281/zenodo.18897940)  
 
 - **Digital Provenance / NFT Record:** This NFT provides immutable on-chain preservation and provenance for the NKTm Unit
   - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515202)  
