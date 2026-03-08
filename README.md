@@ -96,9 +96,6 @@ This framework can reflect any system with state, velocity, and mass variation �
 - **The NKTg Law** preserves its invariant mathematical structure across more than **150 programming languages**, applied throughout all domains of science and life. It requires no differentiation or approximation methods, ensuring that its computational results remain precise, reproducible, and consistent across all environments and implementations.
 - **Reference DOI:** These DOIs provide long-term preservation and citation access for all **150 language source** packages and verified implementations of the NKTgLaw Core & API.
   - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
-- **Digital Provenance / NFT Record:** This NFT provides long-term on-chain preservation and provenance for all 150 language source packages and verified implementations of the NKTgLaw Core & API.
-  - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515203)
-
 - **Experimental verification:** Consistent results with **planetary and NASA datasets**  Detailed datasets and DOI references for these verifications are provided in the **Foundations** section.
 - **Multi-Platform Deployment** To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 9 major Git platforms:
 
@@ -155,9 +152,6 @@ The `foundations/` directory contains theoretical materials and supporting docum
   - Zenodo — [10.5281/zenodo.18406191](https://doi.org/10.5281/zenodo.18406191)
 - **Reference DOI:** Variable Inertia From Abstract Concept to the Era of Measuring the Universe
   - Zenodo — [10.5281/zenodo.18897940](https://doi.org/10.5281/zenodo.18897940)  
-
-- **Digital Provenance / NFT Record:** This NFT provides immutable on-chain preservation and provenance for the NKTm Unit
-  - Rarible — [ERC-1155](https://og.rarible.com/token/0xb66a603f4cfe17e3d27b87a8bfcad319856518b8:38194613413526326280435937529183067329104603762300740319657894664129950515202)  
 
 - In **NKTg Law**, `NKTg₁` and `NKTg₂` are not independent quantities but two interrelated expressions of a single concept — the generalized variable inertia `NKTg`.
 
