@@ -60,7 +60,7 @@ Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implement
 - **Blockchain Verification:** NKTg Law is recorded on the Solana blockchain:
   - Token: NKTg = f(x, v, m)
   - Symbol: NKTg
-  - Smart Contract: * **Smart Contract:** [`Cks3YVsvYDZhyDYy3nd5EaEewjrtFJVitdPUt8HQa3XL`](https://solscan.io/token/Cks3YVsvYDZhyDYy3nd5EaEewjrtFJVitdPUt8HQa3XL)
+  - Smart Contract: [`Cks3YVsvYDZhyDYy3nd5EaEewjrtFJVitdPUt8HQa3XL`](https://solscan.io/token/Cks3YVsvYDZhyDYy3nd5EaEewjrtFJVitdPUt8HQa3XL)
  
 ---
 
