@@ -171,26 +171,6 @@ The `foundations/` directory contains theoretical materials and supporting docum
 
 ## 🌍 Examples
 
-F# example using the default parameters (x=2, v=3, m=5, dm/dt=-0.5).
-
-```fsharp
-type nktg={p:float;nktg1:float;nktg2:float;tendency1:string;tendency2:string}
-let tendency1=function n when n>0.0->"Moving away from stable state"|n when n<0.0->"Moving toward stable state" |->"Stable equilibrium"
-let tendency2=function n when n>0.0->"Mass variation supports movement"|n when n<0.0->"Mass variation resists movement" |->"No mass variation effect"
-let nktg x v m dm_dt=let p=mv in let nktg1,nktg2=xp,dm_dt*p
-                     {p=p;nktg1=nktg1;nktg2=nktg2;tendency1=tendency1 nktg1;tendency2=tendency2 nktg2}
-printfn "%A" (nktg 2.0 3.0 5.0 -0.5)
-```
-Output
-
-```text
-{ p = 15.0
-  nktg1 = 30.0
-  nktg2 = -7.5
-  tendency1 = "Moving away from stable state"
-  tendency2 = "Mass variation resists movement" }
-```
-
 This repository contains **150 implementations** of the NKTg Law, one for each programming language.  
 
 - All code snippets are stored in the [`examples/`](./examples) directory.  
