@@ -1,53 +1,33 @@
-# NKTg Law SDK – Go Implementation
+# NKTg Law – Go SDK
 
-This is the official Go SDK for modeling variable mass motion using the NKTg Law. It provides a simple interface for computing momentum and two forms of NKTg expressions.
+This is the official Go implementation of the **NKTg Law of Varying Inertia**. Designed for high-performance physics simulations and backend integrations, this SDK provides a clean, idiomatic Go interface.
 
----
+## 🔬 Physical Logic
+The implementation strictly adheres to the **Product Quantity** logic to ensure universal consistency:
+- **Momentum ($p$):** $m \times v$
+- **NKTg1:** $x \times p$
+- **NKTg2:** $\frac{dm}{dt} \times p$
 
-## 📦 Build & Run
+## 📦 Installation & Build
 
-Make sure you have Go installed (version 1.20 or higher).
+Ensure you have **Go 1.20** or higher installed.
 
-```
+```bash
 cd clients/go
+go mod tidy
 go build ./...
-🚀 Example
-bash
-go run example/main.go
-🧪 Run Tests
-Unit tests are written using Go's built-in testing framework.
+🚀 Quick StartTo run the provided example and verify the experimental constants ($30.0$ and $1.5$):Bashgo run example/main.go
+Usage Example:Goimport "[github.com/NKTgLaw/NKTgLaw/clients/go/nktg](https://github.com/NKTgLaw/NKTgLaw/clients/go/nktg)"
 
-
-go test
-📊 Benchmark
-To measure performance of the SDK:
-
-
-go run ../../benchmarks/benchmark.go
-📁 Project Structure
-
-clients/go/
-├── nktg/           # SDK source code
-│   └── client.go
-├── example/        # Sample usage
+client := nktg.NewClient(2.0, 3.0, 5.0, 0.1)
+fmt.Println("NKTg1:", client.NKTg1()) // Output: 30.0
+🧪 TestingWe use Go's native testing framework to validate the mathematical accuracy:Bashgo test -v ./...
+📁 Project StructurePlaintextclients/go/
+├── nktg/           # Core SDK package logic
+│   └── client.go   # Struct and Methods (Product Logic)
+├── example/        # Sample implementation
 │   └── main.go
-├── nktg_test.go    # Unit tests
-├── go.mod          # Module definition
-└── README.md       # Documentation
-
-benchmarks/
-└── benchmark.go    # Go performance test
-📄 License
-NKTgLaw is available under a dual licensing model:
-
-1. GPL-3.0 License (Open Source)
-You can use, modify, and redistribute NKTgLaw under the terms of the GPL-3.0 License. This version is free and requires that any derivative works are also released under GPL-3.0.
-
-2. Commercial License (Proprietary)
-For commercial use without the GPL obligations, a commercial license is required. See LICENSE-commercial.txt for terms and conditions. Contact Nguyễn Khánh Tùng at traiphieu.com@gmail.com for licensing and support.
-
-Note: Each user must choose either the GPL license or the Commercial license. Combining both is not permitted for the same use case.
-
----
-
-Let me know if you'd like me to regenerate the README for other languages too, or add license badges and links. You're building a world-class multi-language SDK suite com!
+├── go.mod          # Module definition (v1.20)
+├── nktg_test.go    # Unit tests for verification
+└── README.md       # This documentation
+📄 LicenseThis SDK is part of the NKTg Law Library and follows a dual-licensing model:GPL-3.0 License: Open-source usage for the community.Commercial License: Proprietary use without GPL obligations.Contact Nguyễn Khánh Tùng at traiphieu.com@gmail.com for licensing and commercial support.
