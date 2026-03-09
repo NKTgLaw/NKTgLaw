@@ -16,3 +16,13 @@ dependencies {
 test {
     useJUnitPlatform()
 }
+
+jar {
+    manifest {
+        attributes(
+            'Main-Class': 'nktg.Example',
+            'Implementation-Title': 'NKTg Law Java SDK',
+            'Implementation-Version': version
+        )
+    }
+}
