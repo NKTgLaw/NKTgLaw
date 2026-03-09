@@ -1,4 +1,3 @@
-# NKTg Law SDK – Assembly Implementation
 # NKTg Law SDK – Assembly Implementation (x86-64)
 
 This SDK implements the **NKTg Law** core logic in x86-64 Assembly using **NASM** syntax. It provides high-performance, low-level functions for calculating variable inertia components.
