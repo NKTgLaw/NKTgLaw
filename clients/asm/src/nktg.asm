@@ -1,19 +1,24 @@
 section .text
-global compute_nktg
+    global compute_nktg1
+    global compute_nktg2
 
-; double compute_nktg(double x, double v, double m, double dm_dt)
-compute_nktg:
-    ; Arguments: xmm0=x, xmm1=v, xmm2=m, xmm3=dm_dt
-    ; Compute: (m * v + dm_dt * x) / m
+; -----------------------------------------------------------------------------
+; double compute_nktg1(double x, double v, double m, double dm_dt)
+; Formula: NKTg1 = x * (m * v)
+; Arguments: xmm0=x, xmm1=v, xmm2=m, xmm3=dm_dt
+; -----------------------------------------------------------------------------
+compute_nktg1:
+    mulsd xmm1, xmm2    ; xmm1 = m * v (momentum p)
+    mulsd xmm0, xmm1    ; xmm0 = x * p (NKTg1)
+    ret                 ; return NKTg1 in xmm0
 
-    movapd xmm4, xmm2      ; xmm4 = m
-    mulsd xmm4, xmm1       ; xmm4 = m * v
-
-    movapd xmm5, xmm3      ; xmm5 = dm_dt
-    mulsd xmm5, xmm0       ; xmm5 = dm_dt * x
-
-    addsd xmm4, xmm5       ; xmm4 = m*v + dm_dt*x
-    divsd xmm4, xmm2       ; xmm4 = NKTg₂
-
-    movapd xmm0, xmm4      ; return value in xmm0
-    ret
+; -----------------------------------------------------------------------------
+; double compute_nktg2(double x, double v, double m, double dm_dt)
+; Formula: NKTg2 = dm_dt * (m * v)
+; Arguments: xmm0=x, xmm1=v, xmm2=m, xmm3=dm_dt
+; -----------------------------------------------------------------------------
+compute_nktg2:
+    mulsd xmm1, xmm2    ; xmm1 = m * v (momentum p)
+    mulsd xmm3, xmm1    ; xmm3 = dm_dt * p (NKTg2)
+    movapd xmm0, xmm3   ; move result to xmm0 for return
+    ret                 ; return NKTg2 in xmm0
