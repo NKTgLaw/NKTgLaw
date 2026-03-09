@@ -2,8 +2,14 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>NKTgLaw</RootNamespace>
+    <AssemblyName>NKTgLaw</AssemblyName>
     <Version>1.0.0</Version>
-    <Authors>NKTgLaw</Authors>
-    <Description>C# SDK for NKTg Law</Description>
+    <Authors>Nguyễn Khánh Tùng</Authors>
+    <Company>Nhóm NKTg Law</Company>
+    <Description>Official C# SDK for NKTg Law of Varying Inertia</Description>
+    <Copyright>Copyright © 2026 NKTg Law Group</Copyright>
+    
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <Optimize>true</Optimize>
   </PropertyGroup>
 </Project>
