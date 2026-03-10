@@ -3,12 +3,9 @@ name: Test API
 on:
   push:
     paths:
-      - 'tests/test_api.http'
       - 'server/**'
       - '.github/workflows/test-api.yml'
   pull_request:
-    paths:
-      - 'server/**'
 
 jobs:
   api-test:
@@ -22,7 +19,6 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y python3 python3-pip httpie
-        # Search for requirements.txt in the specific server_online directory
         if [ -f server/server_online/requirements.txt ]; then 
           pip3 install -r server/server_online/requirements.txt
         else 
@@ -31,22 +27,16 @@ jobs:
 
     - name: Start API server
       run: |
-        # Pointing to the correct path as seen in your folder structure
-        # Start server in background
+        # Chạy app.py từ đúng thư mục server_online
         python3 server/server_online/app.py > server.log 2>&1 &
         
-        # Health check: Wait for server to be ready (max 30s)
-        echo "Waiting for Flask server to start in server/server_online/..."
+        echo "Waiting for server to start on port 8080..."
         timeout 30s sh -c 'until curl -s http://localhost:8080/health > /dev/null; do sleep 1; done' || \
-        (echo "❌ Server failed to start. Printing Logs:" && cat server.log && exit 1)
-        
-        echo "✅ Flask server started successfully"
+        (echo "❌ Server failed to start. Logs:" && cat server.log && exit 1)
+        echo "✅ Server is UP!"
 
     - name: Run API tests
       run: |
-        # Note: If your app.py uses /nktg instead of /api/momentum, adjust paths below
-        echo "🔍 Testing API Endpoints"
-        
-        # Adjusting the URL based on your OpenAPI spec (/nktg)
+        echo "🔍 Testing Unified Endpoint /nktg"
         http --check-status --json POST http://localhost:8080/nktg \
           x:=2.0 v:=3.0 m:=5.0 dm_dt:=0.1
