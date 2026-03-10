@@ -18,14 +18,21 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install .NET and QDK
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y dotnet-sdk-7.0
-          dotnet tool install -g Microsoft.Quantum.IQSharp
-          dotnet iqsharp install
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v3
+        with:
+          dotnet-version: '7.0.x'
 
-      - name: Run Q# tests
+      - name: Install Quantum Development Kit
         run: |
-          cd clients/qsharp
-          dotnet test
+          # Modern Q# development uses the Microsoft.Quantum.SDK within dotnet
+          dotnet tool install -g Microsoft.Quantum.IQSharp
+          # Optional: Add tools path to environment
+          echo "$HOME/.dotnet/tools" >> $GITHUB_PATH
+
+      - name: Build and Run Q# tests
+        run: |
+          cd clients/go
+          # Restoring dependencies and running tests for the Quantum project
+          dotnet restore
+          dotnet test --configuration Release
