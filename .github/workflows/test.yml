@@ -3,9 +3,12 @@ name: Test NKTg Core
 on:
   push:
     paths:
-      - tests/**
-      - core/**
-      - .github/workflows/test.yml
+      - 'tests/**'
+      - 'core/**'
+      - '.github/workflows/test.yml'
+  pull_request:
+    paths:
+      - 'core/**'
 
 jobs:
   run-tests:
@@ -13,13 +16,22 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install build tools
-      run: sudo apt update && sudo apt install -y g++
+      run: |
+        sudo apt update
+        sudo apt install -y g++ build-essential
 
     - name: Compile unit tests
-      run: g++ -O2 tests/test_core.cpp core/nktg.cpp -o test_core
+      run: |
+        # Compile with optimization and debug symbols for better error reporting
+        # -Icore allows the compiler to find headers in the core directory
+        g++ -O2 -Wall -Icore tests/test_core.cpp core/nktg.cpp -o test_core
 
     - name: Run unit tests
-      run: ./test_core
+      run: |
+        # Ensure the binary has execution permissions
+        chmod +x test_core
+        # Run the core logic validation
+        ./test_core
