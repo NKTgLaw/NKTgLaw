@@ -19,10 +19,16 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install SQLite
-        run: sudo apt-get install sqlite3
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y sqlite3
 
       - name: Run SQL tests
         run: |
-          sqlite3 test.db < clients/sql/schema.sql
-          sqlite3 test.db < clients/sql/insert_sample.sql
-          sqlite3 test.db < clients/sql/test_queries.sql
+          # Set bail on error to ensure CI fails if any SQL command fails
+          sqlite3 test.db -bail ".read clients/sql/schema.sql"
+          sqlite3 test.db -bail ".read clients/sql/insert_sample.sql"
+          
+          # Execute test queries and output results for logging
+          echo "Running NKTg Logic Validation..."
+          sqlite3 test.db -bail ".read clients/sql/test_queries.sql"
