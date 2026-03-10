@@ -8,29 +8,34 @@
 
 namespace nktg {
 
-    // Structure to hold input parameters
+    // Structure to hold input parameters for the calculation
     struct NKTgInput {
-        double x;       // Position
-        double v;       // Velocity
-        double m;       // Mass
-        double dm_dt;   // Rate of mass change
+        double x;       // Position (e.g., 2.0)
+        double v;       // Velocity (e.g., 3.0)
+        double m;       // Mass (e.g., 5.0)
+        double dm_dt;   // Rate of mass change over time (e.g., 0.1)
     };
 
-    // Structure to hold output results
+    // Structure to hold calculation results for the response
     struct NKTgOutput {
-        double p;       // Momentum
-        double NKTg1;   // x × p
-        double NKTg2;   // (dm/dt) × p
-        std::string tendency; // Movement tendency description
+        double p;       // Momentum (p = m * v)
+        double NKTg1;   // NKTg1 = x * p
+        double NKTg2;   // NKTg2 = (dm/dt) * p
+        std::string tendency; // Descriptive movement tendency
     };
 
-    // Core computation function
+    /**
+     * @brief Computes all NKTg quantities based on input parameters.
+     * @param input NKTgInput structure containing x, v, m, dm_dt.
+     * @return NKTgOutput structure containing p, NKTg1, NKTg2, and tendency.
+     */
     NKTgOutput computeNKTg(const NKTgInput& input);
 
-    // Optional: function to serialize output to JSON
-    std::string to_json(const NKTgOutput& output);
+    // Helper functions for individual calculations (Optional for unit tests)
+    double momentum(double m, double v);
+    double computeNKTg1(double x, double p);
+    double computeNKTg2(double dm_dt, double p);
 
 } // namespace nktg
 
 #endif // NKTG_SERVER_HPP
-
