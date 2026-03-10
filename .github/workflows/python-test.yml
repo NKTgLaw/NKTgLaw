@@ -7,6 +7,7 @@ on:
       - 'tests/test_nktg.py'
       - 'setup.py'
       - 'pyproject.toml'
+      - '.github/workflows/python-test.yml'
   pull_request:
     paths:
       - 'nktg.py'
@@ -24,11 +25,17 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
+        # Enables caching for pip dependencies
+        cache: 'pip'
 
     - name: Install dependencies
       run: |
+        python -m pip install --upgrade pip
+        # Install the package in editable mode along with testing tools
         pip install -e .
-        pip install pytest
+        pip install pytest pytest-cov
 
-    - name: Run tests
-      run: pytest tests/test_nktg.py
+    - name: Run tests with coverage
+      run: |
+        # Run tests and generate a basic coverage report
+        pytest tests/test_nktg.py --doctest-modules -v
