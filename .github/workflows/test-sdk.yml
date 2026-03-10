@@ -3,8 +3,12 @@ name: Test SDK
 on:
   push:
     paths:
-      - sdk/**
-      - .github/workflows/test-sdk.yml
+      - 'sdk/**'
+      - 'server/**'
+      - '.github/workflows/test-sdk.yml'
+  pull_request:
+    paths:
+      - 'sdk/**'
 
 jobs:
   sdk-test:
@@ -12,21 +16,33 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
 
     - name: Install dependencies
       run: |
-        sudo apt update
-        sudo apt install -y python3 python3-pip httpie
-        pip3 install flask requests
+        python -m pip install --upgrade pip
+        pip install flask requests pytest
+        # Install SDK in editable mode if pyproject.toml or setup.py exists
+        if [ -f setup.py ] || [ -f pyproject.toml ]; then pip install -e .; fi
 
     - name: Start API server
       run: |
+        # Run server in background and capture output
         python3 server/app.py > server.log 2>&1 &
-        sleep 15
-        echo "📄 Server log:"
-        cat server.log
+        
+        # Wait for server to respond with a 200 OK on health endpoint
+        echo "⏳ Waiting for API server to be ready..."
+        timeout 30s sh -c 'until curl -s http://localhost:8080/health > /dev/null; do sleep 1; done' || \
+        (echo "❌ Server failed to start. Logs:" && cat server.log && exit 1)
 
-    - name: Run SDK tests
+    - name: Run SDK integration tests
       run: |
+        echo "🚀 Starting SDK Integration Tests..."
+        # Using pytest for better reporting of SDK vs Server interactions
         python3 sdk/test_sdk.py
