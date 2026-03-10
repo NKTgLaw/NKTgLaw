@@ -16,34 +16,37 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install dependencies
       run: |
         sudo apt update
         sudo apt install -y python3 python3-pip httpie
-        # Using -r requirements.txt if it exists, otherwise install flask
-        if [ -f server/requirements.txt ]; then pip3 install -r server/requirements.txt; else pip3 install flask; fi
+        # Search for requirements.txt in the specific server_online directory
+        if [ -f server/server_online/requirements.txt ]; then 
+          pip3 install -r server/server_online/requirements.txt
+        else 
+          pip3 install flask
+        fi
 
     - name: Start API server
       run: |
-        # Start server in background and redirect logs for debugging
-        python3 server/app.py > server.log 2>&1 &
+        # Pointing to the correct path as seen in your folder structure
+        # Start server in background
+        python3 server/server_online/app.py > server.log 2>&1 &
         
         # Health check: Wait for server to be ready (max 30s)
-        echo "Waiting for Flask server to start..."
+        echo "Waiting for Flask server to start in server/server_online/..."
         timeout 30s sh -c 'until curl -s http://localhost:8080/health > /dev/null; do sleep 1; done' || \
-        (echo "❌ Server failed to start. Logs:" && cat server.log && exit 1)
+        (echo "❌ Server failed to start. Printing Logs:" && cat server.log && exit 1)
         
         echo "✅ Flask server started successfully"
 
     - name: Run API tests
       run: |
-        echo "🔍 Testing /api/momentum"
-        http --check-status --json POST http://localhost:8080/api/momentum mass:=5.0 velocity:=3.0
-
-        echo "🔍 Testing /api/nktg1"
-        http --check-status --json POST http://localhost:8080/api/nktg1 x:=2.0 momentum:=15.0
-
-        echo "🔍 Testing /api/nktg2"
-        http --check-status --json POST http://localhost:8080/api/nktg2 dm_dt:=0.1 momentum:=15.0
+        # Note: If your app.py uses /nktg instead of /api/momentum, adjust paths below
+        echo "🔍 Testing API Endpoints"
+        
+        # Adjusting the URL based on your OpenAPI spec (/nktg)
+        http --check-status --json POST http://localhost:8080/nktg \
+          x:=2.0 v:=3.0 m:=5.0 dm_dt:=0.1
