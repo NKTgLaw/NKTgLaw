@@ -12,12 +12,19 @@ on:
 
 jobs:
   test-swift:
-    runs-on: macos-latest
+    # Using macOS 14 (Apple Silicon) for the fastest Swift compilation
+    runs-on: macos-14
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - name: Run Swift tests
+      - name: Select Swift version
+        # Ensures the environment uses a modern Swift version
+        run: swift --version
+
+      - name: Build and Run Tests
         run: |
-          swift test --package-path clients/swift
+          # Navigate to the Swift SDK directory and run SPM tests
+          cd clients/swift
+          swift test --enable-code-coverage
