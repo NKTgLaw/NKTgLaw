@@ -3,9 +3,13 @@ name: Test Edge Cases
 on:
   push:
     paths:
-      - tests/test_edge.cpp
-      - core/**
-      - .github/workflows/test-edge.yml
+      - 'tests/test_edge.cpp'
+      - 'core/**'
+      - '.github/workflows/test-edge.yml'
+  pull_request:
+    paths:
+      - 'tests/test_edge.cpp'
+      - 'core/**'
 
 jobs:
   run-edge-tests:
@@ -13,13 +17,20 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
     - name: Install build tools
-      run: sudo apt update && sudo apt install -y g++
+      run: |
+        sudo apt update
+        sudo apt install -y g++ build-essential
 
-    - name: Compile edge test
-      run: g++ -O2 tests/test_edge.cpp core/nktg.cpp -o test_edge
+    - name: Compile edge tests
+      run: |
+        # Using -Wall to catch all potential warnings during edge case handling
+        g++ -O2 -Wall tests/test_edge.cpp core/nktg.cpp -Icore -o test_edge
 
-    - name: Run edge test
-      run: ./test_edge
+    - name: Run edge tests
+      run: |
+        chmod +x test_edge
+        # Executing the test to validate stability under extreme conditions
+        ./test_edge
