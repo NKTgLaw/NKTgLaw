@@ -18,10 +18,15 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install NASM
-        run: sudo apt-get update && sudo apt-get install -y nasm
+      - name: Install NASM and Build Essentials
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y nasm make gcc-multilib
 
       - name: Build and run test
         run: |
           cd clients/asm
+          # Ensure execution permissions for the directory
+          chmod -R +x .
+          # Execute the test target defined in Makefile
           make test
