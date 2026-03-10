@@ -1,13 +1,18 @@
 namespace NKTgLaw {
+    // Computes Momentum (p = m * v)
     operation Momentum(m : Double, v : Double) : Double {
         return m * v;
     }
 
-    operation NKTg1(m : Double, v : Double, dm_dt : Double, x : Double) : Double {
-        return Momentum(m, v) + dm_dt * x;
+    // Computes NKTg1 using Product Logic (NKTg1 = x * p)
+    operation NKTg1(x : Double, m : Double, v : Double) : Double {
+        let p = Momentum(m, v);
+        return x * p;
     }
 
-    operation NKTg2(m : Double, v : Double, dm_dt : Double, x : Double) : Double {
-        return NKTg1(m, v, dm_dt, x) / m;
+    // Computes NKTg2 using Product Logic (NKTg2 = dm/dt * p)
+    operation NKTg2(dm_dt : Double, m : Double, v : Double) : Double {
+        let p = Momentum(m, v);
+        return dm_dt * p;
     }
 }
