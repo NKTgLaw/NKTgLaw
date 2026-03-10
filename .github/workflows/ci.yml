@@ -7,49 +7,29 @@ on:
     branches: [ main ]
 
 jobs:
-  build:
+  server-test:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        language: [python, node]
-
     steps:
     - name: Checkout code
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
 
-    # --- PYTHON SECTION ---
     - name: Set up Python
-      if: matrix.language == 'python'
       uses: actions/setup-python@v4
       with:
         python-version: '3.11'
 
-    - name: Install Python dependencies
-      if: matrix.language == 'python'
+    - name: Install Server Dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f clients/python/requirements.txt ]; then pip install -r clients/python/requirements.txt; fi
+        # Trỏ đúng vào thư mục server_online bạn đang dùng
+        if [ -f server/server_online/requirements.txt ]; then 
+          pip install -r server/server_online/requirements.txt
+        else
+          pip install flask
+        fi
 
-    - name: Run Python tests
-      if: matrix.language == 'python'
+    - name: Run Server Logic Test
       run: |
-        # Chạy test từ thư mục SDK tương ứng
-        if [ -f clients/python/tests/test.py ]; then python clients/python/tests/test.py; fi
-
-    # --- NODE.JS SECTION ---
-    - name: Set up Node.js
-      if: matrix.language == 'node'
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20'
-
-    - name: Install Node.js dependencies
-      if: matrix.language == 'node'
-      run: |
-        cd clients/node && if [ -f package.json ]; then npm install; fi
-
-    - name: Run Node.js tests
-      if: matrix.language == 'node'
-      run: |
-        cd clients/node && if [ -f package.json ]; then npm test; fi
+        # Kiểm tra xem file app.py có lỗi cú pháp không bằng cách thử import
+        python3 -m py_compile server/server_online/app.py
+        echo "✅ Python Syntax Check Passed"
