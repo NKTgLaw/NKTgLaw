@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'clients/java/**'
+      - '.github/workflows/java-test.yml'
   pull_request:
     paths:
       - 'clients/java/**'
@@ -21,8 +22,13 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+          # Tự động cache các phụ thuộc Gradle để tăng tốc CI
+          cache: 'gradle'
 
-      - name: Build with Gradle
+      - name: Grant execute permission for gradlew
+        run: chmod +x clients/java/gradlew
+
+      - name: Build and Test with Gradle
         run: |
           cd clients/java
-          ./gradlew build
+          ./gradlew clean test build
