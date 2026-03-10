@@ -3,9 +3,12 @@ name: Test API
 on:
   push:
     paths:
-      - tests/test_api.http
-      - server/**
-      - .github/workflows/test-api.yml
+      - 'tests/test_api.http'
+      - 'server/**'
+      - '.github/workflows/test-api.yml'
+  pull_request:
+    paths:
+      - 'server/**'
 
 jobs:
   api-test:
@@ -19,13 +22,20 @@ jobs:
       run: |
         sudo apt update
         sudo apt install -y python3 python3-pip httpie
-        pip3 install flask
+        # Using -r requirements.txt if it exists, otherwise install flask
+        if [ -f server/requirements.txt ]; then pip3 install -r server/requirements.txt; else pip3 install flask; fi
 
     - name: Start API server
       run: |
-        python3 server/app.py &
-        sleep 10
-        echo "✅ Flask server started on port 8080"
+        # Start server in background and redirect logs for debugging
+        python3 server/app.py > server.log 2>&1 &
+        
+        # Health check: Wait for server to be ready (max 30s)
+        echo "Waiting for Flask server to start..."
+        timeout 30s sh -c 'until curl -s http://localhost:8080/health > /dev/null; do sleep 1; done' || \
+        (echo "❌ Server failed to start. Logs:" && cat server.log && exit 1)
+        
+        echo "✅ Flask server started successfully"
 
     - name: Run API tests
       run: |
