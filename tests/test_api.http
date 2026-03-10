@@ -1,6 +1,6 @@
-### 🧪 Test: Compute NKTg quantities
-
-POST http://localhost:8000/compute
+### 🧪 Test 1: Compute NKTg quantities (Unified Endpoint)
+# Changed port from 8000 to 8080 and endpoint to /nktg
+POST http://localhost:8080/nktg
 Content-Type: application/json
 
 {
@@ -12,21 +12,18 @@ Content-Type: application/json
 
 ###
 
-### 🧪 Test: Invalid input (missing fields)
-
-POST http://localhost:8000/compute
+### 🧪 Test 2: Individual Momentum Endpoint
+POST http://localhost:8080/api/momentum
 Content-Type: application/json
 
 {
-  "x": 2.0,
-  "v": 3.0
+  "mass": 5.0,
+  "velocity": 3.0
 }
 
 ###
 
-### 🧪 Test: Health check (if implemented)
-
-GET http://localhost:8000/health
+### 🧪 Test 3: Health check
+# Verified port 8080
+GET http://localhost:8080/health
 Accept: application/json
-
-###
