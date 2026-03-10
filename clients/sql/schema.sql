@@ -3,5 +3,5 @@ CREATE TABLE nktg_objects (
     x REAL,       -- Position
     v REAL,       -- Velocity
     m REAL,       -- Mass
-    dm_dt REAL    -- Rate of change of mass
+    dm_dt REAL    -- Rate of change of mass over time
 );
