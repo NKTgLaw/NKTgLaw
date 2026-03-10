@@ -1,40 +1,46 @@
-# 📦 NKTgLaw Docker Compose Configuration
-
+# NKTgLaw Ecosystem Orchestration
 version: '3.9'
 
 services:
+  # Main API Service (C++ Core + Python Wrapper)
   api:
     build:
       context: .
-      dockerfile: Dockerfile
+      dockerfile: api/docker/Dockerfile
     container_name: nktg_api
     ports:
       - "8000:8000"
+    # Note: Mounting the whole directory in production is not recommended,
+    # but useful for development to see hot-reloads.
     volumes:
       - .:/app
     restart: unless-stopped
     environment:
       - PYTHONUNBUFFERED=1
+      - APP_ENV=development
 
+  # Documentation Service (Swagger UI)
   docs:
     image: swaggerapi/swagger-ui
     container_name: nktg_docs
     ports:
-      - "8080:8080"
+      - "8081:8080" # Changed host port to 8081 to avoid common conflicts
     environment:
-      SWAGGER_JSON: /app/openapi.yaml
+      SWAGGER_JSON: /openapi/openapi.yaml
     volumes:
-      - ./api:/app
+      - ./api/openapi.yaml:/openapi/openapi.yaml
     restart: unless-stopped
 
-  # Optional: Add a test client
+  # Test Client Service
   client:
     image: python:3.11-slim
     container_name: nktg_client
     volumes:
       - ./clients/python:/client
     working_dir: /client
+    # Keeps the container alive for manual testing or runs the SDK script
     command: ["python", "NKTgLaw.py"]
     depends_on:
       - api
-
+    environment:
+      - API_URL=http://api:8000
