@@ -7,7 +7,14 @@ let package = Package(
         .library(name: "NKTgLaw", targets: ["NKTgLaw"]),
     ],
     targets: [
-        .target(name: "NKTgLaw", path: "clients/swift/Sources"),
-        .testTarget(name: "NKTgLawTests", dependencies: ["NKTgLaw"], path: "clients/swift/Tests"),
+        .target(
+            name: "NKTgLaw", 
+            path: "Sources"
+        ),
+        .testTarget(
+            name: "NKTgLawTests", 
+            dependencies: ["NKTgLaw"], 
+            path: "Tests"
+        ),
     ]
 )
