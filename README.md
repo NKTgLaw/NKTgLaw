@@ -295,6 +295,6 @@ Combining both is not permitted for the same use case.
 
 ---
 
-🌍 Current Version: v1.0.0 (Stable)
-🌍 Status: This version marks the completion of the core NKTg Law implementation, fully optimized for performance and production-ready.
+- 🌍 Current Version: v1.0.0 (Stable)
+- 🌍 Status: This version marks the completion of the core NKTg Law implementation, fully optimized for performance and production-ready.
 
