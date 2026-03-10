@@ -4,9 +4,11 @@ on:
   push:
     paths:
       - 'clients/matlab/**'
+      - '.github/workflows/matlab-test.yml'
   pull_request:
     paths:
       - 'clients/matlab/**'
+      - '.github/workflows/matlab-test.yml'
 
 jobs:
   test:
@@ -23,5 +25,7 @@ jobs:
         uses: matlab-actions/run-tests@v1
         with:
           source-folder: clients/matlab/nktg_law
-          test-folder: clients/matlab/tests
+          select-by-folder: clients/matlab/tests
           test-results-junit: test-results/results.xml
+          # Ensures the source code is added to the MATLAB search path
+          code-coverage-xml: code-coverage/coverage.xml
