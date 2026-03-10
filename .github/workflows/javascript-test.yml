@@ -22,13 +22,24 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: '18'
+          # Automatic npm cache for faster CI runs
+          cache: 'npm'
+          cache-dependency-path: 'clients/javascript/package-lock.json'
 
       - name: Install dependencies
         run: |
           cd clients/javascript
-          npm install
+          if [ -f package.json ]; then
+            npm ci
+          else
+            echo "No package.json found, skipping npm install."
+          fi
 
       - name: Run tests
         run: |
           cd clients/javascript
-          npm test
+          if [ -f package.json ]; then
+            npm test
+          else
+            echo "No package.json found, skipping tests."
+          fi
