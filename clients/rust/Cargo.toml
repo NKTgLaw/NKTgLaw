@@ -2,5 +2,11 @@
 name = "nktg_law"
 version = "0.1.0"
 edition = "2021"
+authors = ["Nguyễn Khánh Tùng <traiphieu.com@gmail.com>"]
+description = "Rust implementation of the NKTg Law for varying inertia systems"
+license = "GPL-3.0"
+repository = "https://github.com/NKTgLaw/NKTgLaw"
 
 [dependencies]
+# The core logic currently utilizes standard f64 types; 
+# no external dependencies are required at this stage.
