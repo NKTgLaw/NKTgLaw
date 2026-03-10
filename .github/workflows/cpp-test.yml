@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'clients/cpp/**'
+      - '.github/workflows/cpp-test.yml'
   pull_request:
     paths:
       - 'clients/cpp/**'
@@ -17,15 +18,22 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install build tools
-      run: sudo apt-get update && sudo apt-get install -y g++
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y g++ build-essential
 
-    - name: Compile test file
-      run: g++ clients/cpp/tests/test_nktg.cpp -o test
+    - name: Compile Core Test
+      run: |
+        # Biên dịch test logic lõi, bao gồm thư mục header của SDK
+        g++ clients/cpp/tests/test_nktg.cpp -Iclients/cpp/include -o test_core
 
-    - name: Run test
-      run: ./test
-    - name: Compile API test
-      run: g++ clients/cpp/tests/test_nktg_api.cpp -o test_api
+    - name: Run Core Test
+      run: ./test_core
 
-    - name: Run API test
+    - name: Compile API Test
+      run: |
+        # Biên dịch test API
+        g++ clients/cpp/tests/test_nktg_api.cpp -Iclients/cpp/include -o test_api
+
+    - name: Run API Test
       run: ./test_api
