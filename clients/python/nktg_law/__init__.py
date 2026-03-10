@@ -9,7 +9,15 @@ class NKTgClient:
         return self.m * self.v
 
     def nktg1(self) -> float:
-        return self.momentum() + self.dm_dt * self.x
+        return self.x * self.momentum()
 
     def nktg2(self) -> float:
-        return self.nktg1() / self.m
+        return self.dm_dt * self.momentum()
+
+    @staticmethod
+    def static_nktg1(x: float, m: float, v: float) -> float:
+        return x * (m * v)
+
+    @staticmethod
+    def static_nktg2(dm_dt: float, m: float, v: float) -> float:
+        return dm_dt * (m * v)
