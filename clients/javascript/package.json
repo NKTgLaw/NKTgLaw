@@ -7,7 +7,7 @@
     "test": "jest"
   },
   "author": "NKTgLaw",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "devDependencies": {
     "jest": "^29.0.0"
   }
