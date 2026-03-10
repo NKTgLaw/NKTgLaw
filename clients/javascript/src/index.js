@@ -11,11 +11,11 @@ class NKTgClient {
   }
 
   nktg1() {
-    return this.momentum() + this.dm_dt * this.x;
+    return this.x * this.momentum();
   }
 
   nktg2() {
-    return this.nktg1() / this.m;
+    return this.dm_dt * this.momentum();
   }
 }
 
