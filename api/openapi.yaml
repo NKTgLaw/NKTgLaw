@@ -1,31 +1,81 @@
 openapi: 3.0.0
 info:
   title: NKTg Law API
+  description: API for calculating NKTg₁ (Position-Momentum Logic) and NKTg₂ (Mass-Variation Logic).
   version: 1.0.0
+
+servers:
+  - url: http://localhost:8000
+    description: Local development server
+
 paths:
   /nktg:
     post:
-      summary: Tính NKTg₁ và NKTg₂
+      summary: Calculate NKTg1 and NKTg2
+      operationId: calculateNKTg
       requestBody:
+        description: Physical parameters for calculation
         required: true
         content:
           application/json:
             schema:
-              type: object
-              properties:
-                x: { type: number }
-                v: { type: number }
-                m: { type: number }
-                dm_dt: { type: number }
+              $ref: '#/components/schemas/NKTgRequest'
       responses:
         '200':
-          description: Kết quả tính toán
+          description: Successful calculation results
           content:
             application/json:
               schema:
-                type: object
-                properties:
-                  p: { type: number }
-                  NKTg1: { type: number }
-                  NKTg2: { type: number }
+                $ref: '#/components/schemas/NKTgResponse'
+        '400':
+          description: Invalid input parameters
 
+components:
+  schemas:
+    NKTgRequest:
+      type: object
+      required:
+        - x
+        - v
+        - m
+        - dm_dt
+      properties:
+        x:
+          type: number
+          format: double
+          description: Position or distance (x)
+          example: 2.0
+        v:
+          type: number
+          format: double
+          description: Velocity (v)
+          example: 3.0
+        m:
+          type: number
+          format: double
+          description: Initial mass (m)
+          example: 5.0
+        dm_dt:
+          type: number
+          format: double
+          description: Rate of change of mass over time
+          example: 0.1
+    
+    NKTgResponse:
+      type: object
+      properties:
+        p:
+          type: number
+          format: double
+          description: Momentum (p = m * v)
+          example: 15.0
+        NKTg1:
+          type: number
+          format: double
+          description: Calculated NKTg₁ result
+          example: 30.0
+        NKTg2:
+          type: number
+          format: double
+          description: Calculated NKTg₂ result
+          example: 1.5
