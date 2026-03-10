@@ -16,15 +16,19 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Rust
-        uses: actions-rs/toolchain@v1
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Rust Cache
+        uses: Swatinem/rust-cache@v2
         with:
-          toolchain: stable
-          override: true
+          # Path to the Cargo.toml file
+          workspaces: "clients/rust -> target"
 
       - name: Run tests
         run: |
           cd clients/rust
-          cargo test
+          # Run all unit and integration tests with detailed output
+          cargo test --verbose
