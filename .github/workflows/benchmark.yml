@@ -1,10 +1,15 @@
 name: Benchmark NKTg
+
 on:
   push:
     paths:
-      - benchmarks/**
-      - core/**
-      - .github/workflows/benchmark.yml
+      - 'benchmarks/**'
+      - 'core/**'
+      - '.github/workflows/benchmark.yml'
+  pull_request:
+    paths:
+      - 'benchmarks/**'
+      - 'core/**'
 
 jobs:
   run-benchmark:
@@ -15,11 +20,17 @@ jobs:
       uses: actions/checkout@v3
 
     - name: Install build tools
-      run: sudo apt update && sudo apt install -y g++
+      run: |
+        sudo apt update
+        sudo apt install -y g++ build-essential
 
     - name: Compile benchmark
-      run: g++ -O2 benchmarks/benchmark.cpp core/nktg.cpp -o benchmark
+      run: |
+        # Using -O3 for maximum optimization during benchmarking
+        g++ -O3 benchmarks/benchmark.cpp core/nktg.cpp -Icore -o benchmark_exe
 
     - name: Run benchmark
-      run: ./benchmark
-
+      run: |
+        # Grant execution permission and run
+        chmod +x benchmark_exe
+        ./benchmark_exe
