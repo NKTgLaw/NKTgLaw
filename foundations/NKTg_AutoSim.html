@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKTg Auto Simulation</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;700;900&display=swap');
+
+        :root {
+            --cyan: #00f5ff;
+            --purple: #a855f7;
+            --green: #00ff88;
+            --red: #ff3366;
+            --yellow: #ffd700;
+            --orange: #ff8c00;
+            --bg-dark: #020818;
+            --glass: rgba(0, 245, 255, 0.04);
+            --border: rgba(0, 245, 255, 0.15);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--bg-dark);
+            color: #e0f7ff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background:
+                radial-gradient(ellipse at 30% 20%, rgba(0,100,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 80%, rgba(168,85,247,0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+        }
+
+        .mono { font-family: 'Share Tech Mono', monospace; }
+
+        header {
+            position: sticky; top: 0; z-index: 100;
+            background: rgba(2,8,24,0.9);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+
+        .logo-text {
+            font-size: 18px; font-weight: 900;
+            letter-spacing: 2px; color: var(--cyan);
+            text-shadow: 0 0 20px rgba(0,245,255,0.5);
+        }
+
+        main {
+            position: relative; z-index: 1;
+            padding: 20px;
+            max-width: 1400px; margin: 0 auto;
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 20px;
+        }
+
+        @media (max-width: 1024px) { main { grid-template-columns: 1fr; } }
+
+        /* SCENARIO BUTTONS */
+        .scenario-btn {
+            width: 100%;
+            padding: 12px 16px;
+            border-radius: 8px;
+            border: 1px solid;
+            cursor: pointer;
+            font-family: 'Exo 2', sans-serif;
+            font-weight: 700;
+            font-size: 13px;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            display: flex; align-items: center; gap: 10px;
+            margin-bottom: 8px;
+            background: transparent;
+            color: inherit;
+        }
+
+        .scenario-btn.rocket {
+            border-color: var(--orange);
+            color: var(--orange);
+        }
+        .scenario-btn.rocket:hover, .scenario-btn.rocket.active {
+            background: rgba(255,140,0,0.15);
+            box-shadow: 0 0 20px rgba(255,140,0,0.3);
+        }
+
+        .scenario-btn.drone {
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+        .scenario-btn.drone:hover, .scenario-btn.drone.active {
+            background: rgba(0,245,255,0.1);
+            box-shadow: 0 0 20px rgba(0,245,255,0.3);
+        }
+
+        .scenario-btn.car {
+            border-color: var(--green);
+            color: var(--green);
+        }
+        .scenario-btn.car:hover, .scenario-btn.car.active {
+            background: rgba(0,255,136,0.1);
+            box-shadow: 0 0 20px rgba(0,255,136,0.3);
+        }
+
+        /* PLAY/STOP BUTTON */
+        #playBtn {
+            width: 100%;
+            padding: 14px;
+            border-radius: 8px;
+            border: 2px solid var(--purple);
+            background: rgba(168,85,247,0.1);
+            color: var(--purple);
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 4px;
+        }
+
+        #playBtn:hover {
+            background: rgba(168,85,247,0.25);
+            box-shadow: 0 0 25px rgba(168,85,247,0.4);
+        }
+
+        #playBtn.running {
+            border-color: var(--red);
+            background: rgba(255,51,102,0.1);
+            color: var(--red);
+            animation: runPulse 1s ease-in-out infinite;
+        }
+
+        @keyframes runPulse {
+            0%, 100% { box-shadow: 0 0 15px rgba(255,51,102,0.2); }
+            50% { box-shadow: 0 0 35px rgba(255,51,102,0.5); }
+        }
+
+        /* STATUS BOX */
+        #statusBox {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 24px; font-weight: bold;
+            text-align: center; padding: 16px;
+            border-radius: 8px; letter-spacing: 4px;
+            transition: all 0.4s; border: 1px solid;
+        }
+
+        #statusBox.stable {
+            color: var(--green);
+            background: rgba(0,255,136,0.07);
+            border-color: rgba(0,255,136,0.3);
+        }
+
+        #statusBox.danger {
+            color: var(--red);
+            background: rgba(255,51,102,0.07);
+            border-color: rgba(255,51,102,0.3);
+            animation: dangerPulse 0.8s ease-in-out infinite;
+        }
+
+        @keyframes dangerPulse {
+            0%, 100% { box-shadow: 0 0 20px rgba(255,51,102,0.1) inset; }
+            50% { box-shadow: 0 0 40px rgba(255,51,102,0.3) inset; }
+        }
+
+        #statusBox.balance {
+            color: var(--cyan);
+            background: rgba(0,245,255,0.07);
+            border-color: rgba(0,245,255,0.3);
+        }
+
+        #statusBox.waiting {
+            color: rgba(224,247,255,0.3);
+            background: rgba(224,247,255,0.02);
+            border-color: rgba(224,247,255,0.08);
+        }
+
+        /* METRIC CARDS */
+        .metric-card {
+            border-radius: 10px; padding: 14px;
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 10px; letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(224,247,255,0.4); margin-bottom: 6px;
+        }
+
+        .metric-value {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 20px; font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        /* PROGRESS BAR */
+        .progress-wrap {
+            background: rgba(255,255,255,0.04);
+            border-radius: 4px; height: 6px;
+            overflow: hidden; margin-top: 8px;
+        }
+
+        .progress-fill {
+            height: 100%; border-radius: 4px;
+            transition: width 0.1s linear;
+            background: linear-gradient(to right, var(--purple), var(--cyan));
+        }
+
+        /* PHYSICS DISPLAY */
+        .phys-row {
+            display: flex; justify-content: space-between;
+            align-items: center; padding: 8px 0;
+            border-bottom: 1px solid rgba(0,245,255,0.06);
+            font-size: 13px;
+        }
+
+        .phys-row:last-child { border-bottom: none; }
+
+        .phys-label { color: rgba(224,247,255,0.5); letter-spacing: 1px; }
+
+        .phys-value {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 15px; font-weight: bold;
+            color: var(--cyan); min-width: 100px; text-align: right;
+        }
+
+        /* SECTION TITLE */
+        .sec-label {
+            font-size: 10px; letter-spacing: 3px;
+            color: rgba(0,245,255,0.4); margin-bottom: 3px;
+        }
+
+        .sec-title {
+            font-size: 14px; font-weight: 700;
+            color: var(--cyan); margin-bottom: 14px;
+            display: flex; align-items: center; gap: 8px;
+        }
+
+        .sec-title::after {
+            content: ''; flex: 1; height: 1px;
+            background: linear-gradient(to right, rgba(0,245,255,0.3), transparent);
+        }
+
+        /* SCENARIO INFO */
+        .scenario-info {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px; padding: 12px;
+            font-size: 12px; line-height: 1.7;
+            color: rgba(224,247,255,0.55);
+            border-left: 3px solid var(--purple);
+            min-height: 80px;
+        }
+
+        .scenario-info strong { color: var(--cyan); }
+
+        /* TIME DISPLAY */
+        #timeDisplay {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 28px; font-weight: bold;
+            color: var(--yellow);
+            text-align: center; padding: 10px;
+            text-shadow: 0 0 20px rgba(255,215,0,0.4);
+        }
+
+        .chart-container { position: relative; height: 280px; }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div style="display:flex; align-items:center; gap:12px;">
+        <div style="width:36px;height:36px;border:2px solid var(--cyan);border-radius:8px;display:flex;align-items:center;justify-content:center;color:var(--cyan);box-shadow:0 0 12px rgba(0,245,255,0.3);">
+            <i class="fas fa-rocket"></i>
+        </div>
+        <div>
+            <div class="logo-text">NKTg AUTO-SIMULATION</div>
+            <div style="font-size:10px;color:rgba(0,245,255,0.4);letter-spacing:2px;">DYNAMIC PHYSICS ENGINE</div>
+        </div>
+    </div>
+    <div id="timeDisplay">T = 0.00s</div>
+</header>
+
+<main>
+
+    <!-- LEFT PANEL -->
+    <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <!-- CHỌN KỊCH BẢN -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div class="sec-label">SELECT SCENARIO</div>
+            <div class="sec-title"><i class="fas fa-list" style="font-size:12px;"></i> Chọn Kịch bản</div>
+
+            <button class="scenario-btn rocket active" onclick="selectScenario('rocket')">
+                <i class="fas fa-rocket"></i> TÊN LỬA — Tiêu hao nhiên liệu
+            </button>
+            <button class="scenario-btn drone" onclick="selectScenario('drone')">
+                <i class="fas fa-plane"></i> DRONE — Thả hàng đột ngột
+            </button>
+            <button class="scenario-btn car" onclick="selectScenario('car')">
+                <i class="fas fa-car"></i> XE HƠI — Tăng tốc & Phanh
+            </button>
+
+            <div class="scenario-info" id="scenarioInfo">
+                <strong>Tên lửa:</strong> Khởi động với m=500kg, đốt nhiên liệu -5kg/s đều đặn. Quan sát NKTg₁ tăng khi tên lửa bay xa và NKTg₂ âm ổn định khi nhiên liệu đốt đều.
+            </div>
+        </div>
+
+        <!-- PLAY/STOP -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div class="sec-label">SIMULATION CONTROL</div>
+            <div class="sec-title"><i class="fas fa-play-circle" style="font-size:12px;"></i> Điều khiển</div>
+
+            <button id="playBtn" onclick="toggleSim()">
+                ▶ CHẠY MÔ PHỎNG
+            </button>
+
+            <div style="margin-top:14px;">
+                <div style="display:flex;justify-content:space-between;font-size:11px;color:rgba(224,247,255,0.4);margin-bottom:6px;">
+                    <span>TIẾN ĐỘ MÔ PHỎNG</span>
+                    <span id="progressLabel" class="mono">0%</span>
+                </div>
+                <div class="progress-wrap">
+                    <div class="progress-fill" id="progressFill" style="width:0%;"></div>
+                </div>
+            </div>
+
+            <div style="margin-top:12px;font-size:11px;color:rgba(224,247,255,0.3);text-align:center;">
+                Thời gian mô phỏng: <span class="mono" style="color:var(--yellow);">30 giây</span> — 50ms/bước
+            </div>
+        </div>
+
+        <!-- TRẠNG THÁI -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div class="sec-label">SYSTEM STATE</div>
+            <div class="sec-title"><i class="fas fa-broadcast-tower" style="font-size:12px;"></i> Trạng thái</div>
+            <div id="statusBox" class="waiting">ĐANG CHỜ...</div>
+            <p id="advice" style="font-size:11px;color:rgba(224,247,255,0.4);text-align:center;margin-top:8px;min-height:16px;font-style:italic;"></p>
+        </div>
+
+        <!-- GIÁ TRỊ VẬT LÝ -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div class="sec-label">PHYSICS VALUES</div>
+            <div class="sec-title"><i class="fas fa-atom" style="font-size:12px;"></i> Thông số thực</div>
+
+            <div class="phys-row">
+                <span class="phys-label">VỊ TRÍ (x)</span>
+                <span class="phys-value" id="disp_x">0.00 m</span>
+            </div>
+            <div class="phys-row">
+                <span class="phys-label">VẬN TỐC (v)</span>
+                <span class="phys-value" id="disp_v">0.00 m/s</span>
+            </div>
+            <div class="phys-row">
+                <span class="phys-label">KHỐI LƯỢNG (m)</span>
+                <span class="phys-value" id="disp_m">0.00 kg</span>
+            </div>
+            <div class="phys-row">
+                <span class="phys-label">dm/dt</span>
+                <span class="phys-value" id="disp_dmt">0.00 kg/s</span>
+            </div>
+            <div class="phys-row">
+                <span class="phys-label">ĐỘNG LƯỢNG (p)</span>
+                <span class="phys-value" id="disp_p" style="color:var(--cyan);">0.00</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- RIGHT PANEL -->
+    <div style="display:flex;flex-direction:column;gap:16px;">
+
+        <!-- METRIC CARDS -->
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:12px;">
+            <div class="glass metric-card" style="border-color:rgba(168,85,247,0.3);">
+                <div class="metric-label" style="color:rgba(168,85,247,0.6);">NKTg₁ ỔN ĐỊNH</div>
+                <div class="metric-value" id="res_n1" style="color:var(--purple);">0.00</div>
+                <div style="font-size:10px;color:rgba(224,247,255,0.3);margin-top:4px;">NKTm</div>
+            </div>
+            <div class="glass metric-card" style="border-color:rgba(0,255,136,0.2);">
+                <div class="metric-label" style="color:rgba(0,255,136,0.5);">NKTg₂ XUNG LỰC</div>
+                <div class="metric-value" id="res_n2" style="color:var(--green);">0.00</div>
+                <div style="font-size:10px;color:rgba(224,247,255,0.3);margin-top:4px;">NKTm/s</div>
+            </div>
+            <div class="glass metric-card">
+                <div class="metric-label">BƯỚC MÔ PHỎNG</div>
+                <div class="metric-value" id="res_step" style="color:var(--yellow);">0 / 600</div>
+                <div style="font-size:10px;color:rgba(224,247,255,0.3);margin-top:4px;">steps</div>
+            </div>
+        </div>
+
+        <!-- CHART NKTg1 & NKTg2 -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;">
+                <div>
+                    <div class="sec-label">REAL-TIME ANALYSIS</div>
+                    <div style="font-size:14px;font-weight:700;color:var(--cyan);">Biểu đồ NKTg₁ & NKTg₂ theo thời gian</div>
+                </div>
+                <button onclick="resetSim()" style="font-size:10px;color:rgba(224,247,255,0.3);background:none;border:1px solid rgba(224,247,255,0.1);padding:4px 10px;border-radius:4px;cursor:pointer;letter-spacing:1px;">RESET</button>
+            </div>
+            <div class="chart-container">
+                <canvas id="nktgChart"></canvas>
+            </div>
+        </div>
+
+        <!-- CHART PHYSICS -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div style="margin-bottom:14px;">
+                <div class="sec-label">PHYSICS DYNAMICS</div>
+                <div style="font-size:14px;font-weight:700;color:var(--cyan);">Biến thiên x, v, m theo thời gian</div>
+            </div>
+            <div class="chart-container">
+                <canvas id="physChart"></canvas>
+            </div>
+        </div>
+
+        <!-- SỰ KIỆN LOG -->
+        <div class="glass" style="border-radius:12px;padding:18px;">
+            <div class="sec-label">EVENT LOG</div>
+            <div class="sec-title"><i class="fas fa-terminal" style="font-size:12px;"></i> Nhật ký sự kiện NKTg</div>
+            <div id="eventLog" style="font-family:'Share Tech Mono',monospace;font-size:11px;background:rgba(0,0,0,0.4);border:1px solid rgba(0,245,255,0.1);border-radius:8px;padding:10px;height:100px;overflow-y:auto;color:rgba(0,245,255,0.6);line-height:1.7;">
+                <p style="color:rgba(0,245,255,0.4);">&gt; Chọn kịch bản và nhấn CHẠY MÔ PHỎNG...</p>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+// =========================================================
+// CẤU HÌNH CÁC KỊCH BẢN
+// =========================================================
+const SCENARIOS = {
+    rocket: {
+        name: 'Tên lửa',
+        icon: '🚀',
+        // Trạng thái ban đầu
+        x0: 0, v0: 0, m0: 500, dm_dt: -5,
+        // Lực đẩy (N) — giảm dần khi hết nhiên liệu
+        thrust: 15000,
+        // Thời gian mô phỏng (giây)
+        duration: 30,
+        // Mô tả sự kiện
+        events: [
+            { t: 0,  msg: '🚀 Tên lửa khai hỏa! Lực đẩy 15,000N', type: 'info' },
+            { t: 10, msg: '⚠ Đã tiêu hao 50kg nhiên liệu — xe nhẹ hơn, v tăng nhanh hơn', type: 'warn' },
+            { t: 20, msg: '🔴 Nhiên liệu còn 40% — NKTg₁ tăng vọt do x và v đều lớn', type: 'danger' },
+            { t: 28, msg: '✅ Hết nhiên liệu — dm/dt = 0, hệ thống ổn định quán tính', type: 'success' },
+        ],
+        info: '<strong>Tên lửa:</strong> Khởi động m=500kg, đốt -5kg/s đều đặn, lực đẩy 15,000N. Quan sát NKTg₁ tăng khi tên lửa bay xa và NKTg₂ âm ổn định khi nhiên liệu đốt đều.'
+    },
+    drone: {
+        name: 'Drone',
+        icon: '🚁',
+        x0: 0, v0: 5, m0: 50, dm_dt: -0.1,
+        thrust: 500,
+        duration: 30,
+        events: [
+            { t: 0,  msg: '🚁 Drone cất cánh — v=5m/s, m=50kg', type: 'info' },
+            { t: 10, msg: '📦 Drone đến điểm thả hàng — chuẩn bị thả 20kg', type: 'warn' },
+            { t: 12, msg: '💥 THẢ HÀNG! dm/dt = -20 kg/s đột ngột — NKTg₂ âm mạnh!', type: 'danger' },
+            { t: 13, msg: '⚠ Drone bật lên do mất khối lượng đột ngột — nguy hiểm!', type: 'danger' },
+            { t: 16, msg: '✅ Hệ thống bù lực rotor — Drone lấy lại cân bằng', type: 'success' },
+        ],
+        info: '<strong>Drone:</strong> Bay bình thường, đến t=12s thả hàng 20kg đột ngột. Quan sát NKTg₂ âm nhảy vọt — đây là cảnh báo PID không có!'
+    },
+    car: {
+        name: 'Xe hơi',
+        icon: '🚗',
+        x0: 0, v0: 0, m0: 1500, dm_dt: -0.02,
+        thrust: 3000,
+        duration: 30,
+        events: [
+            { t: 0,  msg: '🚗 Xe xuất phát — tăng tốc từ 0', type: 'info' },
+            { t: 8,  msg: '⚡ Đạt 100 km/h — NKTg₁ tăng nhanh', type: 'warn' },
+            { t: 15, msg: '🔴 NKTg₁ vượt ngưỡng 1,000,000 — phanh khẩn cấp!', type: 'danger' },
+            { t: 16, msg: '🛑 Kích hoạt phanh — lực đẩy = 0, xe giảm tốc', type: 'warn' },
+            { t: 25, msg: '✅ Xe dừng an toàn — NKTg₁ về 0', type: 'success' },
+        ],
+        info: '<strong>Xe hơi:</strong> Tăng tốc từ 0, đến t=15s NKTg₁ vượt ngưỡng nguy hiểm → phanh khẩn cấp. Quan sát quá trình giảm tốc và NKTg₁ trở về an toàn.'
+    }
+};
+
+// =========================================================
+// BIẾN TRẠNG THÁI
+// =========================================================
+let currentScenario = 'rocket';
+let simTimer = null;
+let isRunning = false;
+let simTime = 0;
+const DT = 0.05; // 50ms mỗi bước
+let state = {};
+let brakingActive = false;
+
+// Lưu lịch sử để vẽ đồ thị
+const MAXPOINTS = 600;
+let histTime = [];
+let histN1 = [], histN2 = [];
+let histX = [], histV = [], histM = [];
+
+// =========================================================
+// KHỞI TẠO ĐỒ THỊ
+// =========================================================
+const nktgChart = new Chart(document.getElementById('nktgChart').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [
+            {
+                label: 'NKTg₁ (Ổn định)',
+                data: [], borderColor: '#a855f7', borderWidth: 2,
+                tension: 0.3, fill: true,
+                backgroundColor: 'rgba(168,85,247,0.06)',
+                pointRadius: 0
+            },
+            {
+                label: 'NKTg₂ (Xung lực)',
+                data: [], borderColor: '#00ff88', borderWidth: 2,
+                tension: 0.3, fill: false,
+                pointRadius: 0
+            }
+        ]
+    },
+    options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 0 },
+        scales: {
+            x: { ticks: { color: 'rgba(224,247,255,0.3)', maxTicksLimit: 10, font: { family: "'Share Tech Mono'" } }, grid: { color: 'rgba(0,245,255,0.04)' } },
+            y: { ticks: { color: 'rgba(224,247,255,0.3)', font: { family: "'Share Tech Mono'" } }, grid: { color: 'rgba(0,245,255,0.04)' } }
+        },
+        plugins: {
+            legend: { labels: { color: 'rgba(224,247,255,0.5)', font: { family: "'Exo 2'" }, boxWidth: 14, padding: 12 } }
+        }
+    }
+});
+
+const physChart = new Chart(document.getElementById('physChart').getContext('2d'), {
+    type: 'line',
+    data: {
+        labels: [],
+        datasets: [
+            {
+                label: 'Vị trí x (m)',
+                data: [], borderColor: '#00f5ff', borderWidth: 2,
+                tension: 0.3, fill: false, pointRadius: 0
+            },
+            {
+                label: 'Vận tốc v (m/s)',
+                data: [], borderColor: '#ffd700', borderWidth: 2,
+                tension: 0.3, fill: false, pointRadius: 0
+            },
+            {
+                label: 'Khối lượng m (kg/10)',
+                data: [], borderColor: '#ff8c00', borderWidth: 2,
+                tension: 0.3, fill: false, pointRadius: 0,
+                borderDash: [5, 3]
+            }
+        ]
+    },
+    options: {
+        responsive: true, maintainAspectRatio: false,
+        animation: { duration: 0 },
+        scales: {
+            x: { ticks: { color: 'rgba(224,247,255,0.3)', maxTicksLimit: 10, font: { family: "'Share Tech Mono'" } }, grid: { color: 'rgba(0,245,255,0.04)' } },
+            y: { ticks: { color: 'rgba(224,247,255,0.3)', font: { family: "'Share Tech Mono'" } }, grid: { color: 'rgba(0,245,255,0.04)' } }
+        },
+        plugins: {
+            legend: { labels: { color: 'rgba(224,247,255,0.5)', font: { family: "'Exo 2'" }, boxWidth: 14, padding: 12 } }
+        }
+    }
+});
+
+// =========================================================
+// CHỌN KỊCH BẢN
+// =========================================================
+function selectScenario(name) {
+    if (isRunning) return;
+    currentScenario = name;
+
+    // Cập nhật nút
+    document.querySelectorAll('.scenario-btn').forEach(b => b.classList.remove('active'));
+    document.querySelector(`.scenario-btn.${name}`).classList.add('active');
+
+    // Cập nhật mô tả
+    document.getElementById('scenarioInfo').innerHTML = SCENARIOS[name].info;
+
+    resetSim();
+}
+
+// =========================================================
+// PLAY / STOP
+// =========================================================
+function toggleSim() {
+    if (isRunning) {
+        stopSim();
+    } else {
+        startSim();
+    }
+}
+
+function startSim() {
+    const sc = SCENARIOS[currentScenario];
+
+    // Khởi tạo trạng thái
+    state = {
+        x: sc.x0, v: sc.v0, m: sc.m0,
+        dm_dt: sc.dm_dt,
+        thrust: sc.thrust,
+        t: 0
+    };
+    brakingActive = false;
+    simTime = 0;
+
+    // Xóa lịch sử
+    histTime = []; histN1 = []; histN2 = [];
+    histX = []; histV = []; histM = [];
+    nktgChart.data.labels = [];
+    nktgChart.data.datasets.forEach(d => d.data = []);
+    physChart.data.labels = [];
+    physChart.data.datasets.forEach(d => d.data = []);
+
+    // Xóa log
+    document.getElementById('eventLog').innerHTML = '';
+    addLog(`${sc.icon} Bắt đầu mô phỏng: ${sc.name}`, 'info');
+
+    isRunning = true;
+    document.getElementById('playBtn').className = 'running';
+    document.getElementById('playBtn').innerText = '■ DỪNG MÔ PHỎNG';
+
+    simTimer = setInterval(simStep, 50);
+}
+
+function stopSim() {
+    clearInterval(simTimer);
+    isRunning = false;
+    document.getElementById('playBtn').className = '';
+    document.getElementById('playBtn').innerText = '▶ CHẠY LẠI';
+    addLog('⏹ Mô phỏng dừng.', 'info');
+}
+
+function resetSim() {
+    stopSim();
+    simTime = 0;
+
+    histTime = []; histN1 = []; histN2 = [];
+    histX = []; histV = []; histM = [];
+    nktgChart.data.labels = [];
+    nktgChart.data.datasets.forEach(d => d.data = []);
+    physChart.data.labels = [];
+    physChart.data.datasets.forEach(d => d.data = []);
+    nktgChart.update(); physChart.update();
+
+    document.getElementById('timeDisplay').innerText = 'T = 0.00s';
+    document.getElementById('statusBox').className = 'waiting';
+    document.getElementById('statusBox').innerText = 'ĐANG CHỜ...';
+    document.getElementById('advice').innerText = '';
+    document.getElementById('res_n1').innerText = '0.00';
+    document.getElementById('res_n2').innerText = '0.00';
+    document.getElementById('res_step').innerText = '0 / 600';
+    document.getElementById('progressFill').style.width = '0%';
+    document.getElementById('progressLabel').innerText = '0%';
+    document.getElementById('disp_x').innerText = '0.00 m';
+    document.getElementById('disp_v').innerText = '0.00 m/s';
+    document.getElementById('disp_m').innerText = '0.00 kg';
+    document.getElementById('disp_dmt').innerText = '0.00 kg/s';
+    document.getElementById('disp_p').innerText = '0.00';
+    document.getElementById('playBtn').innerText = '▶ CHẠY MÔ PHỎNG';
+    document.getElementById('eventLog').innerHTML = '<p style="color:rgba(0,245,255,0.4);">&gt; Nhấn CHẠY MÔ PHỎNG để bắt đầu...</p>';
+}
+
+// =========================================================
+// BƯỚC MÔ PHỎNG VẬT LÝ
+// =========================================================
+function simStep() {
+    const sc = SCENARIOS[currentScenario];
+    const totalSteps = sc.duration / DT;
+    const currentStep = Math.round(simTime / DT);
+
+    // Kiểm tra sự kiện theo thời gian
+    sc.events.forEach(ev => {
+        if (Math.abs(simTime - ev.t) < DT / 2) {
+            addLog(ev.msg, ev.type);
+        }
+    });
+
+    // === VẬT LÝ TỪNG KỊCH BẢN ===
+
+    if (currentScenario === 'rocket') {
+        // Nhiên liệu còn thì đốt, hết thì dm_dt = 0
+        if (state.m > 50) { // 50kg = khối lượng khung tên lửa
+            state.m += state.dm_dt * DT;
+            state.m = Math.max(50, state.m);
+        } else {
+            state.dm_dt = 0;
+        }
+        // a = F/m
+        const a = state.thrust / state.m;
+        state.v += a * DT;
+        state.x += state.v * DT;
+    }
+
+    else if (currentScenario === 'drone') {
+        // Giai đoạn bình thường
+        if (simTime < 12) {
+            state.m += state.dm_dt * DT; // tiêu hao nhiên liệu nhẹ
+            const a = (state.thrust - state.m * 9.81) / state.m;
+            state.v += a * DT * 0.1; // giữ tốc độ ổn định
+            state.x += state.v * DT;
+        }
+        // Thả hàng đột ngột t=12s
+        else if (simTime >= 12 && simTime < 13) {
+            state.dm_dt = -20; // thả 20kg/s trong 1 giây
+            state.m += state.dm_dt * DT;
+            state.m = Math.max(28, state.m); // tối thiểu 28kg
+            // Drone bật lên do mất tải đột ngột
+            state.v += 3 * DT;
+            state.x += state.v * DT;
+        }
+        // Sau thả hàng — lấy lại cân bằng
+        else {
+            state.dm_dt = -0.05; // chỉ tiêu hao nhiên liệu nhẹ
+            state.m += state.dm_dt * DT;
+            state.m = Math.max(20, state.m);
+            const a = (state.thrust * 0.6 - state.m * 9.81) / state.m;
+            state.v += a * DT * 0.05;
+            state.x += state.v * DT;
+        }
+    }
+
+    else if (currentScenario === 'car') {
+        // Tăng tốc đến t=15s
+        if (simTime < 15 && !brakingActive) {
+            state.m += state.dm_dt * DT; // tiêu hao xăng nhẹ
+            const a = state.thrust / state.m;
+            state.v += a * DT;
+            state.x += state.v * DT;
+
+            // Kiểm tra ngưỡng NKTg₁
+            const p_check = state.m * state.v;
+            const n1_check = state.x * p_check;
+            if (n1_check > 1000000) {
+                brakingActive = true;
+                addLog('🛑 NKTg₁ vượt ngưỡng! Phanh khẩn cấp kích hoạt!', 'danger');
+            }
+        }
+        // Phanh
+        else {
+            brakingActive = true;
+            state.dm_dt = 0;
+            // Giảm tốc do phanh
+            state.v -= 8 * DT; // gia tốc phanh -8 m/s²
+            state.v = Math.max(0, state.v);
+            state.x += state.v * DT;
+        }
+    }
+
+    // === TÍNH NKTg ===
+    const p  = state.m * state.v;
+    const n1 = state.x * p;
+    const n2 = state.dm_dt * p;
+
+    // === CẬP NHẬT UI ===
+    document.getElementById('timeDisplay').innerText = `T = ${simTime.toFixed(2)}s`;
+    document.getElementById('disp_x').innerText  = state.x.toFixed(2) + ' m';
+    document.getElementById('disp_v').innerText  = state.v.toFixed(2) + ' m/s';
+    document.getElementById('disp_m').innerText  = state.m.toFixed(2) + ' kg';
+    document.getElementById('disp_dmt').innerText = state.dm_dt.toFixed(3) + ' kg/s';
+    document.getElementById('disp_p').innerText  = p.toFixed(2);
+    document.getElementById('res_n1').innerText  = n1.toFixed(0);
+    document.getElementById('res_n2').innerText  = n2.toFixed(0);
+    document.getElementById('res_step').innerText = `${currentStep} / ${totalSteps}`;
+
+    // Progress
+    const pct = Math.min(100, (simTime / sc.duration) * 100);
+    document.getElementById('progressFill').style.width = pct + '%';
+    document.getElementById('progressLabel').innerText = pct.toFixed(0) + '%';
+
+    // Status
+    const sb = document.getElementById('statusBox');
+    if (n1 > 0) {
+        sb.innerText = '⚠ NGUY HIỂM'; sb.className = 'danger';
+        document.getElementById('advice').innerText = 'Hệ thống rời xa ổn định! Kích hoạt phanh phản xạ.';
+    } else if (n1 < 0) {
+        sb.innerText = '✓ ỔN ĐỊNH'; sb.className = 'stable';
+        document.getElementById('advice').innerText = 'Hệ thống hội tụ tốt. Duy trì quán tính bền.';
+    } else {
+        sb.innerText = '◈ CÂN BẰNG'; sb.className = 'balance';
+        document.getElementById('advice').innerText = 'Điểm cân bằng lý tưởng.';
+    }
+
+    // === CẬP NHẬT ĐỒ THỊ ===
+    const tLabel = simTime.toFixed(1) + 's';
+    nktgChart.data.labels.push(tLabel);
+    nktgChart.data.datasets[0].data.push(n1);
+    nktgChart.data.datasets[1].data.push(n2);
+
+    physChart.data.labels.push(tLabel);
+    physChart.data.datasets[0].data.push(state.x);
+    physChart.data.datasets[1].data.push(state.v);
+    physChart.data.datasets[2].data.push(state.m / 10); // chia 10 để fit đồ thị
+
+    nktgChart.update('none');
+    physChart.update('none');
+
+    // === TĂNG THỜI GIAN ===
+    simTime += DT;
+
+    // Kết thúc
+    if (simTime >= sc.duration) {
+        stopSim();
+        addLog(`🏁 Mô phỏng hoàn thành sau ${sc.duration}s!`, 'success');
+        document.getElementById('playBtn').innerText = '▶ CHẠY LẠI';
+    }
+}
+
+// =========================================================
+// EVENT LOG
+// =========================================================
+function addLog(msg, type = 'info') {
+    const log = document.getElementById('eventLog');
+    const colors = {
+        info: 'rgba(0,245,255,0.7)',
+        warn: 'rgba(255,215,0,0.8)',
+        danger: 'rgba(255,51,102,0.9)',
+        success: 'rgba(0,255,136,0.8)'
+    };
+    const p = document.createElement('p');
+    p.style.color = colors[type] || colors.info;
+    p.style.margin = '0';
+    p.style.padding = '1px 0';
+    p.textContent = `[T=${simTime.toFixed(1)}s] ${msg}`;
+    log.appendChild(p);
+    while (log.children.length > 50) log.removeChild(log.firstChild);
+    log.scrollTop = log.scrollHeight;
+}
+
+// Khởi chạy
+selectScenario('rocket');
+</script>
+</body>
+</html>
