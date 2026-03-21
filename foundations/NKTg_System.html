@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NKTg Pro-Control System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Exo+2:wght@300;400;700;900&display=swap');
+
+        :root {
+            --cyan: #00f5ff;
+            --purple: #a855f7;
+            --green: #00ff88;
+            --red: #ff3366;
+            --yellow: #ffd700;
+            --bg-dark: #020818;
+            --glass: rgba(0, 245, 255, 0.04);
+            --border: rgba(0, 245, 255, 0.15);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: var(--bg-dark);
+            color: #e0f7ff;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* Animated grid background */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(0,245,255,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,245,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(ellipse at 30% 20%, rgba(0,100,255,0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 70% 80%, rgba(168,85,247,0.06) 0%, transparent 50%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid var(--border);
+        }
+
+        .glass-strong {
+            background: rgba(0, 245, 255, 0.07);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(0, 245, 255, 0.25);
+        }
+
+        .mono { font-family: 'Share Tech Mono', monospace; }
+
+        /* Header */
+        header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(2, 8, 24, 0.85);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--border);
+            padding: 12px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+            border: 2px solid var(--cyan);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--cyan);
+            font-size: 18px;
+            box-shadow: 0 0 12px rgba(0,245,255,0.3);
+        }
+
+        .logo-text {
+            font-size: 18px;
+            font-weight: 900;
+            letter-spacing: 2px;
+            color: var(--cyan);
+            text-shadow: 0 0 20px rgba(0,245,255,0.5);
+        }
+
+        /* Connection button */
+        #connectSerialBtn {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 13px;
+            letter-spacing: 1px;
+            padding: 9px 18px;
+            border-radius: 6px;
+            border: 1px solid;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-weight: bold;
+        }
+
+        #connectSerialBtn.disconnected {
+            background: transparent;
+            border-color: var(--cyan);
+            color: var(--cyan);
+        }
+
+        #connectSerialBtn.disconnected:hover {
+            background: rgba(0,245,255,0.1);
+            box-shadow: 0 0 20px rgba(0,245,255,0.3);
+        }
+
+        #connectSerialBtn.connected {
+            background: rgba(0,255,136,0.1);
+            border-color: var(--green);
+            color: var(--green);
+            box-shadow: 0 0 15px rgba(0,255,136,0.2);
+        }
+
+        #connectSerialBtn.connecting {
+            background: rgba(255,215,0,0.1);
+            border-color: var(--yellow);
+            color: var(--yellow);
+        }
+
+        /* Status dot */
+        .status-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: currentColor;
+        }
+
+        .status-dot.pulse {
+            animation: dotPulse 1.5s ease-in-out infinite;
+        }
+
+        @keyframes dotPulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.3; transform: scale(0.7); }
+        }
+
+        /* Main layout */
+        main {
+            position: relative;
+            z-index: 1;
+            padding: 24px;
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 320px 1fr;
+            gap: 24px;
+        }
+
+        @media (max-width: 1024px) {
+            main { grid-template-columns: 1fr; }
+        }
+
+        /* Section labels */
+        .section-label {
+            font-size: 11px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: rgba(0,245,255,0.5);
+            margin-bottom: 4px;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--cyan);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, rgba(0,245,255,0.3), transparent);
+        }
+
+        /* Sliders */
+        .slider-group {
+            margin-bottom: 20px;
+        }
+
+        .slider-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+
+        .slider-label {
+            font-size: 12px;
+            color: rgba(224,247,255,0.6);
+            letter-spacing: 1px;
+        }
+
+        .slider-value {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 16px;
+            font-weight: bold;
+            color: var(--cyan);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        input[type="range"] {
+            -webkit-appearance: none;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background: rgba(0,245,255,0.15);
+            outline: none;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: var(--cyan);
+            box-shadow: 0 0 10px rgba(0,245,255,0.6);
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.3);
+        }
+
+        input[type="range"]::-webkit-slider-runnable-track {
+            height: 4px;
+            border-radius: 2px;
+        }
+
+        /* Status panel */
+        #statusBox {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            padding: 20px;
+            border-radius: 8px;
+            letter-spacing: 4px;
+            transition: all 0.4s ease;
+            border: 1px solid;
+        }
+
+        #statusBox.stable {
+            color: var(--green);
+            background: rgba(0,255,136,0.07);
+            border-color: rgba(0,255,136,0.3);
+            box-shadow: 0 0 30px rgba(0,255,136,0.1) inset;
+        }
+
+        #statusBox.danger {
+            color: var(--red);
+            background: rgba(255,51,102,0.07);
+            border-color: rgba(255,51,102,0.3);
+            box-shadow: 0 0 30px rgba(255,51,102,0.1) inset;
+            animation: dangerPulse 0.8s ease-in-out infinite;
+        }
+
+        @keyframes dangerPulse {
+            0%, 100% { box-shadow: 0 0 30px rgba(255,51,102,0.1) inset; }
+            50% { box-shadow: 0 0 50px rgba(255,51,102,0.25) inset; }
+        }
+
+        #statusBox.balance {
+            color: var(--cyan);
+            background: rgba(0,245,255,0.07);
+            border-color: rgba(0,245,255,0.3);
+            box-shadow: 0 0 30px rgba(0,245,255,0.1) inset;
+        }
+
+        #statusBox.waiting {
+            color: rgba(224,247,255,0.4);
+            background: rgba(224,247,255,0.02);
+            border-color: rgba(224,247,255,0.1);
+        }
+
+        /* Metric cards */
+        .metric-card {
+            border-radius: 10px;
+            padding: 16px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .metric-label {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: rgba(224,247,255,0.4);
+            margin-bottom: 8px;
+        }
+
+        .metric-value {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 22px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        /* Log console */
+        #serialLog {
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 11px;
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(0,245,255,0.1);
+            border-radius: 8px;
+            padding: 12px;
+            height: 120px;
+            overflow-y: auto;
+            color: rgba(0,245,255,0.6);
+            line-height: 1.6;
+        }
+
+        #serialLog::-webkit-scrollbar { width: 4px; }
+        #serialLog::-webkit-scrollbar-track { background: transparent; }
+        #serialLog::-webkit-scrollbar-thumb { background: rgba(0,245,255,0.2); border-radius: 2px; }
+
+        .log-entry { margin: 0; padding: 1px 0; }
+        .log-entry.success { color: var(--green); }
+        .log-entry.error { color: var(--red); }
+        .log-entry.info { color: var(--cyan); }
+        .log-entry.data { color: rgba(224,247,255,0.5); }
+
+        /* Chart container */
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        /* Code block for ESP32 */
+        .code-block {
+            background: rgba(0,0,0,0.5);
+            border: 1px solid rgba(0,245,255,0.15);
+            border-radius: 8px;
+            padding: 16px;
+            font-family: 'Share Tech Mono', monospace;
+            font-size: 12px;
+            line-height: 1.7;
+            color: rgba(224,247,255,0.7);
+            overflow-x: auto;
+            position: relative;
+        }
+
+        .code-block .kw { color: #ff79c6; }
+        .code-block .fn { color: #50fa7b; }
+        .code-block .cm { color: rgba(224,247,255,0.3); font-style: italic; }
+        .code-block .st { color: #f1fa8c; }
+        .code-block .nm { color: #bd93f9; }
+
+        .copy-btn {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0,245,255,0.1);
+            border: 1px solid rgba(0,245,255,0.3);
+            color: var(--cyan);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            cursor: pointer;
+            font-family: 'Share Tech Mono', monospace;
+            transition: all 0.2s;
+        }
+
+        .copy-btn:hover { background: rgba(0,245,255,0.2); }
+
+        /* NKTg_1 gauge */
+        .gauge-bar {
+            height: 8px;
+            border-radius: 4px;
+            background: rgba(255,255,255,0.05);
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .gauge-fill {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.3s ease, background 0.3s ease;
+        }
+
+        /* Instruction steps */
+        .step {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0,245,255,0.06);
+        }
+
+        .step:last-child { border-bottom: none; }
+
+        .step-num {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: rgba(0,245,255,0.1);
+            border: 1px solid rgba(0,245,255,0.3);
+            color: var(--cyan);
+            font-size: 11px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-family: 'Share Tech Mono', monospace;
+        }
+
+        .step-text {
+            font-size: 13px;
+            color: rgba(224,247,255,0.65);
+            line-height: 1.5;
+        }
+
+        .step-text strong { color: var(--cyan); }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <div class="logo-icon"><i class="fas fa-atom"></i></div>
+            <div>
+                <div class="logo-text">NKTg PRO-CONTROL</div>
+                <div style="font-size:10px; color:rgba(0,245,255,0.4); letter-spacing:2px;">INTELLIGENT DYNAMICS SYSTEM</div>
+            </div>
+        </div>
+        <div style="display:flex; align-items:center; gap:16px;">
+            <div id="connectionStatus" style="font-size:12px; color:rgba(224,247,255,0.4); font-family:'Share Tech Mono',monospace;">
+                OFFLINE
+            </div>
+            <button id="connectSerialBtn" class="disconnected">
+                <div class="status-dot" id="statusDot"></div>
+                <span id="btnText">KẾT NỐI XE (USB)</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- MAIN LAYOUT -->
+    <main>
+
+        <!-- LEFT PANEL -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+            <!-- SLIDERS -->
+            <div class="glass" style="border-radius:12px; padding:20px;">
+                <div class="section-label">INPUT PARAMETERS</div>
+                <div class="section-title"><i class="fas fa-sliders-h" style="font-size:13px;"></i> Cấu hình Hệ thống</div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-label">VỊ TRÍ (x) — meters</span>
+                        <span class="slider-value" id="v_x">0</span>
+                    </div>
+                    <input type="range" id="s_x" min="-100" max="100" value="0" step="0.5">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-label">VẬN TỐC (v) — m/s</span>
+                        <span class="slider-value" id="v_v">0</span>
+                    </div>
+                    <input type="range" id="s_v" min="-50" max="50" value="0" step="0.1">
+                </div>
+
+                <!-- FIX 1: min="10" thay vì min="1" để tránh khối lượng quá nhỏ -->
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-label">KHỐI LƯỢNG (m) — kg</span>
+                        <span class="slider-value" id="v_m">1.0</span>
+                    </div>
+                    <input type="range" id="s_m" min="10" max="1000" value="10" step="1">
+                </div>
+
+                <div class="slider-group">
+                    <div class="slider-header">
+                        <span class="slider-label">BIẾN THIÊN KL (dm/dt) — kg/s</span>
+                        <span class="slider-value" id="v_dmt">0.00</span>
+                    </div>
+                    <input type="range" id="s_dmt" min="-500" max="500" value="0" step="1">
+                </div>
+            </div>
+
+            <!-- STATUS BOX -->
+            <div class="glass" style="border-radius:12px; padding:20px;">
+                <div class="section-label">SYSTEM STATE</div>
+                <div class="section-title"><i class="fas fa-broadcast-tower" style="font-size:13px;"></i> Trạng thái Phản xạ</div>
+                <div id="statusBox" class="waiting">ĐANG CHỜ...</div>
+                <p id="advice" style="font-size:12px; color:rgba(224,247,255,0.4); text-align:center; margin-top:10px; min-height:18px; font-style:italic;"></p>
+
+                <div style="margin-top:16px;">
+                    <div style="display:flex; justify-content:space-between; font-size:11px; color:rgba(224,247,255,0.4); margin-bottom:6px;">
+                        <span>ĐỘ LỆCH TRẠNG THÁI</span>
+                        <span id="gaugeLabel" class="mono">—</span>
+                    </div>
+                    <div class="gauge-bar">
+                        <div class="gauge-fill" id="gaugeFill" style="width:50%; background:var(--cyan);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SERIAL LOG -->
+            <div class="glass" style="border-radius:12px; padding:20px;">
+                <div class="section-label">SERIAL MONITOR</div>
+                <div class="section-title"><i class="fas fa-terminal" style="font-size:13px;"></i> Console Log</div>
+                <div id="serialLog">
+                    <p class="log-entry info">&gt; Hệ thống khởi động. Sẵn sàng kết nối...</p>
+                </div>
+                <button onclick="clearLog()" style="margin-top:8px; font-size:10px; color:rgba(224,247,255,0.3); background:none; border:none; cursor:pointer; letter-spacing:1px;">
+                    [ XÓA LOG ]
+                </button>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL -->
+        <div style="display:flex; flex-direction:column; gap:20px;">
+
+            <!-- METRIC CARDS -->
+            <div style="display:grid; grid-template-columns:repeat(4, 1fr); gap:12px;">
+                <div class="glass metric-card">
+                    <div class="metric-label">ĐỘNG LƯỢNG p</div>
+                    <div class="metric-value" id="res_p" style="color:var(--cyan);">0.00</div>
+                    <div style="font-size:10px; color:rgba(224,247,255,0.3); margin-top:4px;">kg·m/s</div>
+                </div>
+                <div class="glass metric-card" style="border-color:rgba(168,85,247,0.3);">
+                    <div class="metric-label" style="color:rgba(168,85,247,0.6);">NKTg₁ ỔN ĐỊNH</div>
+                    <div class="metric-value" id="res_n1" style="color:var(--purple);">0.00</div>
+                    <div style="font-size:10px; color:rgba(224,247,255,0.3); margin-top:4px;">NKTm</div>
+                </div>
+                <div class="glass metric-card" style="border-color:rgba(0,255,136,0.2);">
+                    <div class="metric-label" style="color:rgba(0,255,136,0.5);">NKTg₂ XUNG LỰC</div>
+                    <div class="metric-value" id="res_n2" style="color:var(--green);">0.00</div>
+                    <div style="font-size:10px; color:rgba(224,247,255,0.3); margin-top:4px;">NKTm/s</div>
+                </div>
+                <div class="glass metric-card">
+                    <div class="metric-label">TẦN SỐ DỮ LIỆU</div>
+                    <div class="metric-value" id="res_hz" style="color:var(--yellow);">—</div>
+                    <div style="font-size:10px; color:rgba(224,247,255,0.3); margin-top:4px;">Hz</div>
+                </div>
+            </div>
+
+            <!-- CHART -->
+            <div class="glass" style="border-radius:12px; padding:20px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                    <div>
+                        <div class="section-label">REAL-TIME ANALYSIS</div>
+                        <div style="font-size:15px; font-weight:700; color:var(--cyan);">Biểu đồ NKTg₁ & NKTg₂ theo thời gian</div>
+                    </div>
+                    <button onclick="clearChart()" style="font-size:10px; color:rgba(224,247,255,0.3); background:none; border:1px solid rgba(224,247,255,0.1); padding:4px 10px; border-radius:4px; cursor:pointer; letter-spacing:1px;">RESET</button>
+                </div>
+                <div class="chart-container">
+                    <canvas id="mainChart"></canvas>
+                </div>
+            </div>
+
+            <!-- ESP32 CODE BLOCK -->
+            <div class="glass" style="border-radius:12px; padding:20px;">
+                <div class="section-label">FIRMWARE REFERENCE</div>
+                <div class="section-title"><i class="fas fa-microchip" style="font-size:13px;"></i> Code ESP32 / Arduino</div>
+                <div class="code-block" id="espCode">
+                    <button class="copy-btn" onclick="copyCode()">COPY</button>
+<pre style="margin:0; white-space:pre-wrap;"><span class="cm">// NKTg Real-time Controller — ESP32/Arduino</span>
+<span class="cm">// Gửi dữ liệu "x,v,m,dm_dt" lên Web qua USB Serial</span>
+
+<span class="kw">void</span> <span class="fn">setup</span>() {
+  Serial.begin(<span class="nm">115200</span>);
+  <span class="cm">// Chờ Web sẵn sàng trước khi gửi</span>
+  <span class="kw">while</span> (!Serial) delay(<span class="nm">10</span>);
+  Serial.println(<span class="st">"READY"</span>); <span class="cm">// Handshake</span>
+}
+
+<span class="kw">unsigned long</span> lastSend = <span class="nm">0</span>;
+<span class="kw">const unsigned long</span> INTERVAL = <span class="nm">50</span>; <span class="cm">// 20Hz</span>
+
+<span class="kw">void</span> <span class="fn">loop</span>() {
+  <span class="cm">// FIX: Dùng millis() thay delay() để không block chip</span>
+  <span class="kw">if</span> (millis() - lastSend >= INTERVAL) {
+    lastSend = millis();
+
+    <span class="cm">// Thay bằng cảm biến thật của bạn:</span>
+    <span class="kw">float</span> x   = (analogRead(<span class="nm">34</span>) - <span class="nm">2048</span>) / <span class="nm">20.0</span>;
+    <span class="kw">float</span> v   = (analogRead(<span class="nm">35</span>) - <span class="nm">2048</span>) / <span class="nm">40.0</span>;
+    <span class="kw">float</span> m   = <span class="nm">1.5</span>;    <span class="cm">// kg (đọc từ cảm biến tải)</span>
+    <span class="kw">float</span> dmt = <span class="nm">-0.01</span>; <span class="cm">// dm/dt (kg/s)</span>
+
+    <span class="cm">// Gửi: "x,v,m,dm_dt\n"</span>
+    Serial.print(x);   Serial.print(<span class="st">","</span>);
+    Serial.print(v);   Serial.print(<span class="st">","</span>);
+    Serial.print(m);   Serial.print(<span class="st">","</span>);
+    Serial.println(dmt);
+  }
+}</pre>
+                </div>
+
+                <!-- INSTRUCTIONS -->
+                <div style="margin-top:20px;">
+                    <div class="section-label" style="margin-bottom:12px;">HƯỚNG DẪN GHÉP NỐI</div>
+                    <div class="step">
+                        <div class="step-num">1</div>
+                        <div class="step-text">Kết nối bo mạch <strong>ESP32 / Arduino</strong> vào máy tính qua cáp USB.</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">2</div>
+                        <div class="step-text">Nạp code firmware ở trên vào bo mạch bằng <strong>Arduino IDE</strong>.</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">3</div>
+                        <div class="step-text">Mở file <strong>NKTg_System.html</strong> bằng <strong>Chrome hoặc Edge</strong> (bắt buộc — Firefox không hỗ trợ WebSerial).</div>
+                    </div>
+                    <div class="step">
+                        <div class="step-num">4</div>
+                        <div class="step-text">Bấm nút <strong>KẾT NỐI XE (USB)</strong>, chọn đúng cổng COM của bo mạch. Dữ liệu sẽ hiển thị tức thì.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+    // =========================================================
+    // KHỞI TẠO BIỂU ĐỒ
+    // =========================================================
+    const HISTORY = 60;
+
+    const ctx = document.getElementById('mainChart').getContext('2d');
+    const mainChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: Array(HISTORY).fill(''),
+            datasets: [
+                {
+                    label: 'NKTg₁ (Ổn định)',
+                    data: Array(HISTORY).fill(null),
+                    borderColor: '#a855f7',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: true,
+                    backgroundColor: 'rgba(168,85,247,0.06)',
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                },
+                {
+                    label: 'NKTg₂ (Xung lực)',
+                    data: Array(HISTORY).fill(null),
+                    borderColor: '#00ff88',
+                    borderWidth: 2,
+                    tension: 0.4,
+                    fill: false,
+                    backgroundColor: 'rgba(0,255,136,0.06)',
+                    pointRadius: 0,
+                    pointHoverRadius: 4
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            animation: { duration: 0 },
+            interaction: { mode: 'index', intersect: false },
+            scales: {
+                x: { display: false },
+                y: {
+                    beginAtZero: false,
+                    grid: { color: 'rgba(0,245,255,0.05)' },
+                    ticks: {
+                        color: 'rgba(224,247,255,0.3)',
+                        font: { family: "'Share Tech Mono', monospace", size: 10 }
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    labels: {
+                        color: 'rgba(224,247,255,0.5)',
+                        font: { family: "'Exo 2', sans-serif", size: 11 },
+                        boxWidth: 16,
+                        padding: 16
+                    }
+                }
+            }
+        }
+    });
+
+    function pushChart(n1, n2) {
+        mainChart.data.datasets[0].data.push(n1);
+        mainChart.data.datasets[0].data.shift();
+        mainChart.data.datasets[1].data.push(n2);
+        mainChart.data.datasets[1].data.shift();
+        mainChart.update('none');
+    }
+
+    function clearChart() {
+        mainChart.data.datasets.forEach(ds => ds.data.fill(null));
+        mainChart.update();
+    }
+
+    // =========================================================
+    // LOGIC TÍNH TOÁN NKTg
+    // =========================================================
+    const sliders = {
+        x:   document.getElementById('s_x'),
+        v:   document.getElementById('s_v'),
+        m:   document.getElementById('s_m'),
+        dmt: document.getElementById('s_dmt')
+    };
+    const views = {
+        x:   document.getElementById('v_x'),
+        v:   document.getElementById('v_v'),
+        m:   document.getElementById('v_m'),
+        dmt: document.getElementById('v_dmt'),
+        p:   document.getElementById('res_p'),
+        n1:  document.getElementById('res_n1'),
+        n2:  document.getElementById('res_n2'),
+        statusBox: document.getElementById('statusBox'),
+        advice:    document.getElementById('advice'),
+        gaugeFill: document.getElementById('gaugeFill'),
+        gaugeLabel: document.getElementById('gaugeLabel')
+    };
+
+    function computeAndUpdate(x, v, m, dm_dt) {
+        // Hiển thị giá trị slider
+        views.x.innerText   = x.toFixed(1);
+        views.v.innerText   = v.toFixed(1);
+        views.m.innerText   = m.toFixed(1);
+        views.dmt.innerText = (dm_dt / 100).toFixed(2);
+
+        // Tính NKTg
+        const p    = m * v;
+        const n1   = x * p;
+        const n2   = (dm_dt / 100) * p;
+
+        views.p.innerText  = p.toFixed(2);
+        views.n1.innerText = n1.toFixed(2);
+        views.n2.innerText = n2.toFixed(2);
+
+        // Cập nhật gauge (chuẩn hóa về 0-100%)
+        const maxVal = 10000;
+        const pct = Math.min(100, Math.abs(n1) / maxVal * 100);
+        const gaugeColor = n1 > 0 ? 'var(--red)' : n1 < 0 ? 'var(--green)' : 'var(--cyan)';
+        views.gaugeFill.style.width    = pct + '%';
+        views.gaugeFill.style.background = gaugeColor;
+        views.gaugeLabel.innerText = Math.abs(n1).toFixed(1);
+
+        // Cập nhật trạng thái
+        const sb = views.statusBox;
+        if (n1 > 0) {
+            sb.innerText = '⚠ NGUY HIỂM';
+            sb.className = 'danger';
+            views.advice.innerText = 'Hệ thống rời xa trạng thái ổn định! Kích hoạt phanh phản xạ.';
+        } else if (n1 < 0) {
+            sb.innerText = '✓ ỔN ĐỊNH';
+            sb.className = 'stable';
+            views.advice.innerText = 'Hệ thống hội tụ tốt. Tiếp tục duy trì quán tính bền.';
+        } else {
+            sb.innerText = '◈ CÂN BẰNG';
+            sb.className = 'balance';
+            views.advice.innerText = 'Điểm cân bằng lý tưởng — Zero-zone NKTg.';
+        }
+
+        pushChart(n1, n2);
+    }
+
+    function updateFromSliders() {
+        const x   = parseFloat(sliders.x.value);
+        const v   = parseFloat(sliders.v.value);
+        const m   = parseFloat(sliders.m.value) / 10; // scale: 10→1kg, 1000→100kg
+        const dmt = parseFloat(sliders.dmt.value);
+        computeAndUpdate(x, v, m, dmt);
+    }
+
+    Object.values(sliders).forEach(s => s.addEventListener('input', updateFromSliders));
+
+    // =========================================================
+    // WEBSERIAL — KẾT NỐI PHẦN CỨNG (ĐÃ SỬA ĐẦY ĐỦ)
+    // =========================================================
+    let serialPort   = null;
+    let serialReader = null;
+    let isConnected  = false;
+    let lastPacketTime = 0;
+    let packetCount  = 0;
+    let hzTimer      = null;
+
+    const btn       = document.getElementById('connectSerialBtn');
+    const btnText   = document.getElementById('btnText');
+    const statusDot = document.getElementById('statusDot');
+    const connStatus = document.getElementById('connectionStatus');
+
+    btn.addEventListener('click', async () => {
+        if (isConnected) {
+            await disconnectSerial();
+        } else {
+            await connectSerial();
+        }
+    });
+
+    async function connectSerial() {
+        if (!('serial' in navigator)) {
+            addLog('WebSerial không được hỗ trợ. Dùng Chrome hoặc Edge.', 'error');
+            alert('Trình duyệt không hỗ trợ WebSerial.\nVui lòng dùng Chrome hoặc Edge.');
+            return;
+        }
+
+        try {
+            btn.className = 'connecting';
+            btnText.innerText = 'ĐANG KẾT NỐI...';
+            statusDot.className = 'status-dot pulse';
+
+            serialPort = await navigator.serial.requestPort();
+            await serialPort.open({ baudRate: 115200 });
+
+            isConnected = true;
+            btn.className = 'connected';
+            btnText.innerText = 'NGẮT KẾT NỐI';
+            statusDot.className = 'status-dot';
+            connStatus.innerText = 'ONLINE';
+            connStatus.style.color = 'var(--green)';
+
+            addLog('Kết nối thành công!', 'success');
+            addLog('Đang chờ dữ liệu từ ESP32...', 'info');
+
+            // Đo tần số dữ liệu mỗi giây
+            hzTimer = setInterval(() => {
+                document.getElementById('res_hz').innerText = packetCount + ' Hz';
+                packetCount = 0;
+            }, 1000);
+
+            await readSerial();
+
+        } catch (err) {
+            addLog('Lỗi: ' + err.message, 'error');
+            resetConnectionUI();
+        }
+    }
+
+    async function readSerial() {
+        // FIX 4: Buffer để ghép các chunk thành dòng hoàn chỉnh
+        let buffer = '';
+
+        const decoder = new TextDecoderStream();
+        serialPort.readable.pipeTo(decoder.writable);
+        serialReader = decoder.readable.getReader();
+
+        try {
+            while (isConnected) {
+                // FIX 2: try/catch bên trong vòng lặp để xử lý ngắt kết nối đột ngột
+                let value, done;
+                try {
+                    ({ value, done } = await serialReader.read());
+                } catch (readErr) {
+                    addLog('Mất kết nối: ' + readErr.message, 'error');
+                    break;
+                }
+
+                if (done) {
+                    addLog('Cổng Serial đã đóng.', 'info');
+                    break;
+                }
+
+                if (value) {
+                    buffer += value;
+                    // Tách thành từng dòng hoàn chỉnh
+                    const lines = buffer.split('\n');
+                    buffer = lines.pop(); // phần chưa có \n — giữ lại cho lần sau
+
+                    for (const line of lines) {
+                        const trimmed = line.trim();
+                        if (!trimmed) continue;
+
+                        // Handshake
+                        if (trimmed === 'READY') {
+                            addLog('ESP32 sẵn sàng — Đang nhận dữ liệu...', 'success');
+                            continue;
+                        }
+
+                        // Parse: "x,v,m,dm_dt"
+                        const parts = trimmed.split(',');
+                        if (parts.length >= 4) {
+                            const x   = parseFloat(parts[0]);
+                            const v   = parseFloat(parts[1]);
+                            const m   = parseFloat(parts[2]);
+                            const dmt = parseFloat(parts[3]);
+
+                            if (!isNaN(x) && !isNaN(v) && !isNaN(m) && !isNaN(dmt)) {
+                                // Đồng bộ slider với dữ liệu thật
+                                sliders.x.value   = x;
+                                sliders.v.value   = v;
+                                sliders.m.value   = m * 10;
+                                sliders.dmt.value = dmt * 100;
+
+                                computeAndUpdate(x, v, m, dmt * 100);
+                                packetCount++;
+
+                                addLog(`DATA: x=${x.toFixed(2)} v=${v.toFixed(2)} m=${m.toFixed(2)} dm/dt=${dmt.toFixed(3)}`, 'data');
+                            }
+                        } else {
+                            addLog(`Dữ liệu không hợp lệ: "${trimmed}"`, 'error');
+                        }
+                    }
+                }
+            }
+        } finally {
+            // FIX 3: Dọn dẹp reader đúng cách
+            try { serialReader.cancel(); } catch (_) {}
+            try { serialReader.releaseLock(); } catch (_) {}
+            await disconnectSerial(false);
+        }
+    }
+
+    async function disconnectSerial(userInitiated = true) {
+        isConnected = false;
+        clearInterval(hzTimer);
+
+        if (serialReader) {
+            try { await serialReader.cancel(); } catch (_) {}
+        }
+        if (serialPort) {
+            try { await serialPort.close(); } catch (_) {}
+            serialPort = null;
+        }
+
+        resetConnectionUI();
+        if (userInitiated) addLog('Đã ngắt kết nối.', 'info');
+    }
+
+    function resetConnectionUI() {
+        btn.className = 'disconnected';
+        btnText.innerText = 'KẾT NỐI XE (USB)';
+        statusDot.className = 'status-dot';
+        connStatus.innerText = 'OFFLINE';
+        connStatus.style.color = 'rgba(224,247,255,0.4)';
+        document.getElementById('res_hz').innerText = '—';
+        packetCount = 0;
+    }
+
+    // =========================================================
+    // SERIAL LOG
+    // =========================================================
+    const MAX_LOG = 80;
+
+    function addLog(msg, type = 'data') {
+        const log = document.getElementById('serialLog');
+        const now = new Date();
+        const ts  = now.toTimeString().slice(0, 8);
+        const p   = document.createElement('p');
+        p.className = 'log-entry ' + type;
+        p.textContent = `[${ts}] ${msg}`;
+        log.appendChild(p);
+
+        // Giới hạn số dòng log
+        while (log.children.length > MAX_LOG) {
+            log.removeChild(log.firstChild);
+        }
+
+        log.scrollTop = log.scrollHeight;
+    }
+
+    function clearLog() {
+        document.getElementById('serialLog').innerHTML = '';
+        addLog('Log đã được xóa.', 'info');
+    }
+
+    // =========================================================
+    // COPY CODE
+    // =========================================================
+    function copyCode() {
+        const code = `// NKTg Real-time Controller — ESP32/Arduino
+void setup() {
+  Serial.begin(115200);
+  while (!Serial) delay(10);
+  Serial.println("READY");
+}
+
+unsigned long lastSend = 0;
+const unsigned long INTERVAL = 50;
+
+void loop() {
+  if (millis() - lastSend >= INTERVAL) {
+    lastSend = millis();
+    float x   = (analogRead(34) - 2048) / 20.0;
+    float v   = (analogRead(35) - 2048) / 40.0;
+    float m   = 1.5;
+    float dmt = -0.01;
+    Serial.print(x);   Serial.print(",");
+    Serial.print(v);   Serial.print(",");
+    Serial.print(m);   Serial.print(",");
+    Serial.println(dmt);
+  }
+}`;
+        navigator.clipboard.writeText(code).then(() => {
+            const btn = document.querySelector('.copy-btn');
+            btn.innerText = 'COPIED!';
+            setTimeout(() => btn.innerText = 'COPY', 2000);
+        });
+    }
+
+    // =========================================================
+    // KHỞI CHẠY LẦN ĐẦU
+    // =========================================================
+    updateFromSliders();
+    </script>
+</body>
+</html>
