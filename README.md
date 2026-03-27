@@ -1,10 +1,8 @@
-Core library & API for the NKTg Law (Nguyen Khanh Tung). Includes core implementation, REST/gRPC API, and 150+ client wrappers
-
 ## 📘 Programming the Dynamics of the Universe
 
 Explore the book **"Programming the Dynamics of the Universe: A Practical Guide in 11 Programming Languages with Experimental Validation from ESA Data"** by Nguyen Khanh Tung.
 
-This work introduces the **NKTg Law on Varying Inertia (NKTg = f(x, v, m))**, a computable framework that transforms physical laws into executable algorithms across 150+ programming languages, enabling real-world applications in AI, robotics, and space dynamics. :contentReference[oaicite:0]{index=0}
+This work introduces the **NKTg Law on Varying Inertia (NKTg = f(x, v, m))**, a computable framework that transforms physical laws into executable algorithms across 150+ programming languages, enabling real-world applications in AI, robotics, and space dynamics.
 
 👉 Get the full book here:  
 - Amazon: https://www.amazon.com/dp/B0GTSBBRYR  
