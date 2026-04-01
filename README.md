@@ -9,7 +9,6 @@ This work introduces the **NKTg Law on Varying Inertia (NKTg = f(x, v, m))**, a 
 - Google Play Books: https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli  
 - Leanpub: https://leanpub.com/NKTgLaw  
 
-If you find this project valuable, consider supporting it by purchasing the book.
 ---
 
 ## 📖 Introduction
