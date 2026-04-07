@@ -139,7 +139,7 @@ This framework can reflect any system with state, velocity, and mass variation â
   - [GitLab](https://gitlab.com/NKTgLaw/NKTgLaw)  
   - [Gitea](https://gitea.com/NKTgLaw/NKTgLaw)  
   - [Codeberg](https://codeberg.org/NKTgLaw/NKTgLaw)  
-  - [Launchpad](https://git.launchpad.net/nktglaw)  
+  - [Launchpad](https://launchpad.net/nktglaw)  
   - [SourceForge](https://sourceforge.net/projects/nktglaw/)  
   - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
