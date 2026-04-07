@@ -1,13 +1,40 @@
-## 📘 Programming the Dynamics of the Universe
+# 🚀 PROGRAMMING COSMIC DYNAMICS
+Physics isn’t broken. It’s just never been programmed. For 300 years, inertia was treated as a constant. What if it isn’t? What if motion can be computed — not just described? Introducing the **NKTg Law** by Nguyen Khanh Tung:
 
-Explore the book **"Programming the Dynamics of the Universe: A Practical Guide in 11 Programming Languages with Experimental Validation from ESA Data"** by Nguyen Khanh Tung.
+$$NKTg = f(x, v, m)$$
 
-This work introduces the **NKTg Law on Varying Inertia (NKTg = f(x, v, m))**, a computable framework that transforms physical laws into executable algorithms across 150+ programming languages, enabling real-world applications in AI, robotics, and space dynamics.
+### 🧪 Not a theory. A system.
+Built across 11 programming languages • Tested with real data from the European Space Agency • **Error margin: 0.208%**
 
-👉 Get the full book here:  
-- Amazon: https://www.amazon.com/dp/B0GTSBBRYR  
-- Google Play Books: https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli  
-- Leanpub: https://leanpub.com/NKTgLaw  
+### 💡 What this unlocks
+* **AI** that reacts like physical systems
+* **Autonomous vehicles** with real-time physics engines
+* **Space navigation** beyond classical models
+* **Simulation** that doesn’t approximate — it executes
+
+### ⚙️ From Python to Assembly
+From AI to Quantum Computing. One law. One engine. Infinite applications.
+
+### 🌍 Get the book (choose your language)
+
+**🔹 Leanpub**
+* 🇬🇧 English: https://leanpub.com/NKTgLaw
+* 🇻🇳 Tiếng Việt: https://leanpub.com/NKTgLaw-vi
+* 🌐 Bundle (English + Vietnamese): https://leanpub.com/b/NKTgLaw-global
+
+**🔹 Google Play Books**
+* 🇬🇧 English: https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
+* 🇻🇳 Tiếng Việt: https://play.google.com/store/books/details?id=buDMEQAAQBAJ
+* 🌐 Series (English + Vietnamese): https://play.google.com/store/books/series?id=Fa6gHAAAABC0sM
+
+**🔹 Amazon**
+* 🇬🇧 English: https://www.amazon.com/dp/B0GTSBBRYR
+* 🇹🇼 Traditional Chinese (Phồn thể): https://www.amazon.com/dp/B0GHZMSKYB
+* 🌐 Bundle (English + Traditional Chinese): https://www.amazon.com/dp/B0D6579Q3G
+
+### ⚠️ This is the shift
+Not better formulas. • Not faster simulations.  
+👉 **A new way to build reality in code.** 
 
 ---
 
