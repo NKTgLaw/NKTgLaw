@@ -32,8 +32,10 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 * 🇹🇼 Traditional Chinese (Phồn thể): https://www.amazon.com/dp/B0GHZMSKYB
 * 🌐 Bundle (English + Traditional Chinese): https://www.amazon.com/dp/B0D6579Q3G
 
-### ⚠️ This is the shift
-Not better formulas. • Not faster simulations.  👉 **A new way to build reality in code.** 
+###  👉 This is the shift
+**Not better formulas. 
+**Not faster simulations.   
+****A new way to build reality in code.** **
 
 ---
 
