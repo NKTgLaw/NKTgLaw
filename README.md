@@ -34,8 +34,8 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 
 ###  👉 This is the shift
 * Not better formulas.
-* Not faster simulations.   
-*** A new way to build reality in code.**
+* Not faster simulations.
+* A new way to build reality in code.
 
 ---
 
