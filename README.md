@@ -145,6 +145,7 @@ This framework can reflect any system with state, velocity, and mass variation â
   - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
   - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
   - [Rocketgit](https://rocketgit.com/NKTgLaw/NKTgLaw)
+  - [Framagit](https://framagit.org/NKTgLaw/NKTgLaw)
 
 - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
   - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
