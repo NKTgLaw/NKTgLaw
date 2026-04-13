@@ -134,19 +134,22 @@ This framework can reflect any system with state, velocity, and mass variation â
 - **Reference DOI:** These DOIs provide long-term preservation and citation access for all **150 language source** packages and verified implementations of the NKTgLaw Core & API.
   - Zenodo â€” [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
 - **Experimental verification:** Consistent results with **planetary and NASA datasets**  Detailed datasets and DOI references for these verifications are provided in the **Foundations** section.
-- **Multi-Platform Deployment** To ensure long-term accessibility, validation, and global interoperability, the API and its repositories are deployed and maintained across 9 major Git platforms:
 
-  - [GitHub](https://github.com/NKTgLaw/NKTgLaw)  
-  - [GitLab](https://gitlab.com/NKTgLaw/NKTgLaw)  
-  - [Gitea](https://gitea.com/NKTgLaw/NKTgLaw)  
-  - [Codeberg](https://codeberg.org/NKTgLaw/NKTgLaw)  
-  - [Launchpad](https://launchpad.net/nktglaw)  
-  - [SourceForge](https://sourceforge.net/projects/nktglaw/)  
-  - [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)  
-  - [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
-  - [Rocketgit](https://rocketgit.com/NKTgLaw/NKTgLaw)
-  - [Framagit](https://framagit.org/NKTgLaw/NKTgLaw)
-  - [Disroot](https://git.disroot.org/NKTgLaw/NKTgLaw)
+- Multi-Platform Deployment
+
+To ensure long-term accessibility, independent verification, and global interoperability, the API and its repositories are deployed in a distributed manner across an ever-expanding set of Git platforms, in order to eliminate dependence on any single infrastructure:
+
+- [GitHub](https://github.com/NKTgLaw/NKTgLaw)
+- [GitLab](https://gitlab.com/NKTgLaw/NKTgLaw)
+- [Gitea](https://gitea.com/NKTgLaw/NKTgLaw)
+- [Codeberg](https://codeberg.org/NKTgLaw/NKTgLaw)
+- [Launchpad](https://launchpad.net/nktglaw)
+- [SourceForge](https://sourceforge.net/projects/nktglaw/)
+- [Bitbucket](https://bitbucket.org/nktglaw/nktglaw/src/main/)
+- [SourceHut](https://git.sr.ht/~nktglaw/NKTgLaw)
+- [Rocketgit](https://rocketgit.com/NKTgLaw/NKTgLaw)
+- [Framagit](https://framagit.org/NKTgLaw/NKTgLaw)
+- [Disroot](https://git.disroot.org/NKTgLaw/NKTgLaw)
 
 - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
   - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
