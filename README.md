@@ -135,7 +135,7 @@ This framework can reflect any system with state, velocity, and mass variation â
   - Zenodo â€” [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
 - **Experimental verification:** Consistent results with **planetary and NASA datasets**  Detailed datasets and DOI references for these verifications are provided in the **Foundations** section.
 
-Multi-Platform Deployment
+- **Multi-Platform Deployment:**
 
 To ensure long-term accessibility, independent verification, global interoperability, and universal availability, the NKTg Law is established as a distributed computational infrastructure, in which its API and associated repositories are persistently deployed across an ever-expanding network of Git platforms worldwide.
 
