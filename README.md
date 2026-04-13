@@ -135,8 +135,14 @@ This framework can reflect any system with state, velocity, and mass variation �
   - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
 - **Experimental verification:** Consistent results with **planetary and NASA datasets**  Detailed datasets and DOI references for these verifications are provided in the **Foundations** section.
 
-- Multi-Platform Deployment
-To ensure long-term accessibility, independent verification, and global interoperability, the API and its repositories are deployed in a distributed manner across an ever-expanding set of Git platforms, in order to eliminate dependence on any single infrastructure:
+Multi-Platform Deployment
+
+To ensure long-term accessibility, independent verification, global interoperability, and universal availability, the NKTg Law is established as a distributed computational infrastructure, in which its API and associated repositories are persistently deployed across an ever-expanding network of Git platforms worldwide.
+
+This architecture forms a globally accessible, infrastructure-independent system that transcends any single platform, authority, or point of failure. Each repository instance represents a verifiable node of the NKTg Law, ensuring that its mathematical structure, computational integrity, and reproducibility are preserved identically across all environments.
+
+Through this distributed presence, the NKTg Law operates not merely as software, but as a persistent, verifiable, and universally accessible system of computational physics — capable of existing, executing, and being validated anywhere in the world, independent of centralized control.
+
   - GitHub: https://github.com/NKTgLaw/NKTgLaw
   - GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
   - Gitea: https://gitea.com/NKTgLaw/NKTgLaw
