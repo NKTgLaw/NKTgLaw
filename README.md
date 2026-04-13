@@ -137,23 +137,23 @@ This framework can reflect any system with state, velocity, and mass variation �
 
 - **Multi-Platform Deployment:**
 
-To ensure long-term accessibility, independent verification, global interoperability, and universal availability, the NKTg Law is established as a distributed computational infrastructure, in which its API and associated repositories are persistently deployed across an ever-expanding network of Git platforms worldwide.
+  - To ensure long-term accessibility, independent verification, global interoperability, and universal availability, the NKTg Law is established as a distributed computational infrastructure, in which its API and associated repositories are persistently deployed across an ever-expanding network of Git platforms worldwide.
 
-This architecture forms a globally accessible, infrastructure-independent system that transcends any single platform, authority, or point of failure. Each repository instance represents a verifiable node of the NKTg Law, ensuring that its mathematical structure, computational integrity, and reproducibility are preserved identically across all environments.
+  - This architecture forms a globally accessible, infrastructure-independent system that transcends any single platform, authority, or point of failure. Each repository instance represents a verifiable node of the NKTg Law, ensuring that its mathematical structure, computational integrity, and reproducibility are preserved identically across all environments.
 
-Through this distributed presence, the NKTg Law operates not merely as software, but as a persistent, verifiable, and universally accessible system of computational physics — capable of existing, executing, and being validated anywhere in the world, independent of centralized control.
+  - Through this distributed presence, the NKTg Law operates not merely as software, but as a persistent, verifiable, and universally accessible system of computational physics — capable of existing, executing, and being validated anywhere in the world, independent of centralized control.
 
-  - GitHub: https://github.com/NKTgLaw/NKTgLaw
-  - GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
-  - Gitea: https://gitea.com/NKTgLaw/NKTgLaw
-  - Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
-  - Launchpad: https://launchpad.net/nktglaw
-  - SourceForge: https://sourceforge.net/projects/nktglaw/
-  - Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
-  - SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
-  - Rocketgit: https://rocketgit.com/NKTgLaw/NKTgLaw
-  - Framagit: https://framagit.org/NKTgLaw/NKTgLaw
-  - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
+    - GitHub: https://github.com/NKTgLaw/NKTgLaw
+    - GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
+    - Gitea: https://gitea.com/NKTgLaw/NKTgLaw
+    - Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
+    - Launchpad: https://launchpad.net/nktglaw
+    - SourceForge: https://sourceforge.net/projects/nktglaw/
+    - Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
+    - SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
+    - Rocketgit: https://rocketgit.com/NKTgLaw/NKTgLaw
+    - Framagit: https://framagit.org/NKTgLaw/NKTgLaw
+    - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
 
 - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
