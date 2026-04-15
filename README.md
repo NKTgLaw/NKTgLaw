@@ -156,16 +156,14 @@ This framework can reflect any system with state, velocity, and mass variation �
     - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
     - Gogs: https://try.gogs.io/NKTgLaw/NKTgLaw
 
-    
-
-- **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
+  - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
   - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
 - **Reference DOI:** Publica­tion of software description and algorithm for the nktg law of variable inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
   - [Zenodo: 10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
 
 - **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
-- The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, across **8 Git platforms**, **Offline Mode and Online Mode**.
+- The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, **Offline Mode and Online Mode**.
 
 - This distributed presence establishes **NKTgUniversa API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
 
