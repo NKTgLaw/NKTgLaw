@@ -1,9 +1,14 @@
 # 🚀 PROGRAMMING COSMIC DYNAMICS
+
 Physics isn’t broken. It’s just never been programmed. For 300 years, inertia was treated as a constant. What if it isn’t? What if motion can be computed — not just described? Introducing the **NKTg Law** by Nguyen Khanh Tung:
 
-$$NKTg = f(x, v, m)$$
+NKTg = f(x, v, m)
+
+A physical law encoded into executable code.
 
 ### 🧪 Not a theory. A system.
+A programmable physical law that executes, not approximates.
+
 Built across 11 programming languages • Tested with real data from the European Space Agency • **Error margin: 0.208%**
 
 ### 💡 What this unlocks
@@ -31,6 +36,17 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 * 🇬🇧 English: https://www.amazon.com/dp/B0GTSBBRYR
 * 🇹🇼 Traditional Chinese (Phồn thể): https://www.amazon.com/dp/B0GHZMSKYB
 * 🌐 Bundle (English + Traditional Chinese): https://www.amazon.com/dp/B0D6579Q3G
+
+**🔹 Payhip**
+* 🇬🇧 English: https://payhip.com/b/fU8Xr
+* 🇻🇳 Tiếng Việt: https://payhip.com/b/aU9Ex
+* 🌐 Bundle (English + Vietnamese): https://payhip.com/b/a5l9k
+* 🏪 Storefront: https://payhip.com/NKTgLaw
+
+**🔹 Gumroad**
+* 🇬🇧 English: https://nktglaw.gumroad.com/l/NKTgLaw
+* 🇻🇳 Tiếng Việt: https://nktglaw.gumroad.com/l/NKTgLaw-vi
+* 🌐 Bundle (English + Vietnamese): https://nktglaw.gumroad.com/l/NKTgLaw-global
 
 ###  👉 This is the shift
 * Not better formulas.
