@@ -4,9 +4,9 @@ Physics isn’t broken. It’s just never been programmed. For 300 years, inerti
 
 **🔹NKTg = f(x, v, m)**
 
-    * NKTg₁ = x × p
+  * NKTg₁ = x × p
 
-    * NKTg₂ = (dm/dt) × p
+  * NKTg₂ = (dm/dt) × p
 
 A physical law encoded into executable code.
 
