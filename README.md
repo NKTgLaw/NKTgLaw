@@ -2,11 +2,11 @@
 
 Physics isn’t broken. It’s just never been programmed. For 300 years, inertia was treated as a constant. What if it isn’t? What if motion can be computed — not just described? Introducing the **NKTg Law** by Nguyen Khanh Tung:
 
-NKTg = f(x, v, m)
+**🔹NKTg = f(x, v, m)**
 
-  NKTg₁ = x × p
+  * NKTg₁ = x × p
 
-  NKTg₂ = (dm/dt) × p
+  * NKTg₂ = (dm/dt) × p
 
 A physical law encoded into executable code.
 
