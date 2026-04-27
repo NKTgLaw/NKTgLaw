@@ -58,6 +58,27 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 * A new way to build reality in code.
 
 ---
+## 🌐 NKTg Autonomous Vehicle Ecosystem: Physics & Distributed Control
+
+This repository hosts an **autonomous vehicle project powered by the ESP32**, governed by the principles of the **NKTg Law**. The system integrates specialized sensors and a web-based dashboard for real-time data monitoring and telemetry.
+
+This project is globally verifiable and accessible. Through this distributed presence, the system operates not merely as software, but as a persistent and autonomous computational physics framework—capable of existing, executing, and being validated independently of centralized control.
+
+### 🔗 Distributed Repository Presence
+
+|   | Platform | Official Repository Link |
+| :-- | :--- | :--- |
+| 1 | **GitLab** | [gitlab.com/.../real-time-control](https://gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control) |
+| 2 | **GitHub** | [github.com/.../control-system](https://github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system) |
+| 3 | **Gitea** | [gitea.com/.../embedded-systems](https://gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems) |
+| 4 | **Codeberg** | [codeberg.org/.../vehicle-system](https://codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system) |
+| 5 | **Bitbucket** | [bitbucket.org/.../motion-control](https://bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/) |
+| 6 | **Launchpad** | [launchpad.net/.../dynamic-systems](https://launchpad.net/programming-cosmic-dynamics-dynamic-systems) |
+| 7 | **SourceForge** | [sourceforge.net/projects/cosmic-dynamics-system/](https://sourceforge.net/projects/cosmic-dynamics-system/) |
+| 8 | **SourceHut** | [git.sr.ht/.../ai-robotics](https://git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics) |
+| 9 | **Rocketgit** | [rocketgit.com/.../data-simulation](https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation) |
+| 10 | **Framagit** | [framagit.org/.../control-system](https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system) |
+| 11 | **Disroot** | [git.disroot.org/.../control-engine](https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine) |
 
 ## 📖 Introduction
 
@@ -179,8 +200,6 @@ This framework can reflect any system with state, velocity, and mass variation �
   - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
 - **Reference DOI:** Publica­tion of software description and algorithm for the nktg law of variable inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
   - [Zenodo: 10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
-
-- **Dual-license model:** GPL-3.0 (open source) / Commercial license (enterprise-grade).
 
 - The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, **Offline Mode and Online Mode**.
 
