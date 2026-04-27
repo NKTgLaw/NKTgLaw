@@ -60,9 +60,9 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 ---
 ## 🌐 NKTg Autonomous Vehicle Ecosystem: Physics & Distributed Control
 
-NKTg-Variable-Inertia repository hosts an **autonomous vehicle project powered by the ESP32**, governed by the principles of the **NKTg Law**. The system integrates specialized sensors and a web-based dashboard for real-time data monitoring and telemetry.
+Pproject hosts an **autonomous vehicle project powered by the ESP32**, governed by the principles of the **NKTg Law**. The system integrates specialized sensors and a web-based dashboard for real-time data monitoring and telemetry.
 
-NKTg-Variable-Inertia project is globally verifiable and accessible. Through this distributed presence, the system operates not merely as software, but as a persistent and autonomous computational physics framework—capable of existing, executing, and being validated independently of centralized control.
+Pproject is globally verifiable and accessible. Through this distributed presence, the system operates not merely as software, but as a persistent and autonomous computational physics framework—capable of existing, executing, and being validated independently of centralized control.
 
 ### 🔗 Distributed Repository Presence
 
