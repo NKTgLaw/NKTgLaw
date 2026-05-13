@@ -24,8 +24,6 @@ Built across 11 programming languages • Tested with real data from the Europea
 ### ⚙️ From Python to Assembly
 From AI to Quantum Computing. One law. One engine. Infinite applications.
 
-### 🌍 Get the book (choose your language)
-
 ### 📚 Where to Get It
 
 #### I. Leanpub
@@ -58,7 +56,6 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 | 2 | Vietnamese Edition | https://payhip.com/b/aU9Ex |
 | 3 | Chinese Simplified Edition | https://payhip.com/b/6UJbN |
 | 4 | Global Bundle (English + Chinese Simplified + Vietnamese) | https://payhip.com/b/a5l9k |
-| — | Storefront | https://payhip.com/NKTgLaw |
 
 #### V. Gumroad
 | # | Edition | Link |
