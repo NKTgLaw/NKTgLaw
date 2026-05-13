@@ -26,31 +26,37 @@ From AI to Quantum Computing. One law. One engine. Infinite applications.
 
 ### 🌍 Get the book (choose your language)
 
-**🔹 Leanpub**
-* 🇬🇧 English: https://leanpub.com/NKTgLaw
-* 🇻🇳 Tiếng Việt: https://leanpub.com/NKTgLaw-vi
-* 🌐 Bundle (English + Vietnamese): https://leanpub.com/b/NKTgLaw-global
-
-**🔹 Google Play Books**
-* 🇬🇧 English: https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
-* 🇻🇳 Tiếng Việt: https://play.google.com/store/books/details?id=buDMEQAAQBAJ
-* 🌐 Series (English + Vietnamese): https://play.google.com/store/books/series?id=Fa6gHAAAABC0sM
-
-**🔹 Amazon**
-* 🇬🇧 English: https://www.amazon.com/dp/B0GTSBBRYR
-* 🇹🇼 Traditional Chinese (Phồn thể): https://www.amazon.com/dp/B0GHZMSKYB
-* 🌐 Bundle (English + Traditional Chinese): https://www.amazon.com/dp/B0D6579Q3G
-
-**🔹 Payhip**
-* 🇬🇧 English: https://payhip.com/b/fU8Xr
-* 🇻🇳 Tiếng Việt: https://payhip.com/b/aU9Ex
-* 🌐 Bundle (English + Vietnamese): https://payhip.com/b/a5l9k
-* 🏪 Storefront: https://payhip.com/NKTgLaw
-
-**🔹 Gumroad**
-* 🇬🇧 English: https://nktglaw.gumroad.com/l/NKTgLaw
-* 🇻🇳 Tiếng Việt: https://nktglaw.gumroad.com/l/NKTgLaw-vi
-* 🌐 Bundle (English + Vietnamese): https://nktglaw.gumroad.com/l/NKTgLaw-global
+I. Leanpub
+#	Edition	Link
+1	English Edition	https://leanpub.com/NKTgLaw
+2	Vietnamese Edition	https://leanpub.com/NKTgLaw-vi
+3	Chinese Simplified Edition	https://leanpub.com/NKTgLaw-zh
+4	Global Bundle (English + Vietnamese)	https://leanpub.com/b/NKTgLaw-global
+II. Google Play Books
+#	Edition	Link
+1	English Edition	https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
+2	Vietnamese Edition	https://play.google.com/store/books/details?id=buDMEQAAQBAJ
+3	Chinese Simplified Edition	https://play.google.com/store/books/details?id=OMDTEQAAQBAJ
+4	Global Bundle (English + Chinese Simplified + Vietnamese)	https://play.google.com/store/books/series?id=Fa6gHAAAABC0sM
+III. Amazon
+#	Edition	Link
+1	English Edition	https://www.amazon.com/dp/B0GTSBBRYR
+2	Traditional Chinese Edition	https://www.amazon.com/dp/B0GHZMSKYB
+3	Global Bundle (English + Traditional Chinese)	https://www.amazon.com/dp/B0D6579Q3G
+IV. Payhip
+#	Edition	Link
+1	English Edition	https://payhip.com/b/fU8Xr
+2	Vietnamese Edition	https://payhip.com/b/aU9Ex
+3	Chinese Simplified Edition	https://payhip.com/b/6UJbN
+4	Global Bundle (English + Chinese Simplified + Vietnamese)	https://payhip.com/b/a5l9k
+—	Storefront	https://payhip.com/NKTgLaw
+V. Gumroad
+#	Edition	Link
+1	English Edition	https://nktglaw.gumroad.com/l/NKTgLaw
+2	Vietnamese Edition	https://nktglaw.gumroad.com/l/NKTgLaw-vi
+3	Chinese Simplified Edition	https://nktglaw.gumroad.com/l/NKTgLaw-zh
+4	Global Bundle (English + Chinese Simplified + Vietnamese)	https://nktglaw.gumroad.com/l/NKTgLaw-global
+This is the shift. Not better formulas. Not faster simulations. A new way to build reality in code.
 
 ###  👉 This is the shift
 * Not better formulas.
