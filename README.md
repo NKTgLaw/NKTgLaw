@@ -14,43 +14,23 @@ This repository presents the complete commercial ecosystem built on the **NKTg L
 
 ### 👉 Where to Get It
 
-**I. Leanpub**  
+**. Leanpub**  
 https://leanpub.com/NKTgLaw
 
-**II. Google Play Books**  
+**. Google Play Books**  
 English Edition  
 https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
 
-**III. Amazon**  
+**. Amazon**  
 https://www.amazon.com/dp/B0GTSBBRYR
 
-**IV. Payhip**  
+**. Payhip**  
 https://payhip.com/b/fU8Xr
 
-**V. Gumroad**  
+**. Gumroad**  
 https://nktglaw.gumroad.com/l/NKTgLaw
 
 📚 Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
-
-###  👉 Where to Get It
-
-#### I. Leanpub 
-https://leanpub.com/NKTgLaw
-
-#### II. Google Play Books
-English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
- 
-
-#### III. Amazon
-https://www.amazon.com/dp/B0GTSBBRYR
-
-
-#### IV. Payhip
-https://payhip.com/b/fU8Xr
-
-
-#### V. Gumroad
-https://nktglaw.gumroad.com/l/NKTgLaw
 
 
 ---
