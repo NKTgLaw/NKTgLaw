@@ -2,22 +2,23 @@
 
 ###  👉 Where to Get It
 
-#### I. Leanpub | https://leanpub.com/NKTgLaw |
+#### I. Leanpub 
+https://leanpub.com/NKTgLaw
 
 #### II. Google Play Books
-|   | English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli |
+English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
  
 
 #### III. Amazon
-|   | English Edition | https://www.amazon.com/dp/B0GTSBBRYR |
+https://www.amazon.com/dp/B0GTSBBRYR
 
 
 #### IV. Payhip
-|   | English Edition | https://payhip.com/b/fU8Xr |
+https://payhip.com/b/fU8Xr
 
 
 #### V. Gumroad
-|   | English Edition | https://nktglaw.gumroad.com/l/NKTgLaw |
+https://nktglaw.gumroad.com/l/NKTgLaw
 
 
 ---
