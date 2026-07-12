@@ -1,9 +1,8 @@
-👉 Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
+📚 Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
 
-### 📚 Where to Get It
+###  👉 Where to Get It
 
-#### I. Leanpub
-|   | English Edition | https://leanpub.com/NKTgLaw |
+#### I. Leanpub | https://leanpub.com/NKTgLaw |
 
 #### II. Google Play Books
 |   | English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli |
