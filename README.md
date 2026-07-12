@@ -147,38 +147,38 @@ Detailed experimental datasets and verification results are provided in the **Fo
 
 To ensure long-term availability, independent verification, reproducibility, and platform independence, the NKTgUniversa API is continuously distributed across multiple Git hosting platforms. Each repository contains an identical implementation of the NKTg Law, allowing anyone to verify, reproduce, and access the system without relying on a single provider.
 
-GitHub: https://github.com/NKTgLaw/NKTgLaw
+- GitHub: https://github.com/NKTgLaw/NKTgLaw
 
-GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
+- GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
 
-Gitea: https://gitea.com/NKTgLaw/NKTgLaw
+- Gitea: https://gitea.com/NKTgLaw/NKTgLaw
 
-Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
+- Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
 
-Launchpad: https://launchpad.net/nktglaw
+- Launchpad: https://launchpad.net/nktglaw
 
-SourceForge: https://sourceforge.net/projects/nktglaw/
+- SourceForge: https://sourceforge.net/projects/nktglaw/
 
-Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
+- Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
 
-SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
+- SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
 
-RocketGit: https://rocketgit.com/NKTgLaw/NKTgLaw
+- RocketGit: https://rocketgit.com/NKTgLaw/NKTgLaw
 
-Framagit: https://framagit.org/NKTgLaw/NKTgLaw
+- Framagit: https://framagit.org/NKTgLaw/NKTgLaw
 
-Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
+- Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
 
-### Reference DOIs
+- **Reference DOI:**
 
 **NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
 
-Zenodo: [10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
+- Zenodo: [10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
 
 **Publication of Software Description and Algorithm for the NKTg Law of Variable Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
 
-Zenodo: [10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
+- Zenodo: [10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
 
 The NKTg Law follows open-source reproducibility principles through transparent, multilingual, and cross-platform implementations. The system has been experimentally verified using publicly available NASA datasets with consistent computational results and is available in more than **150 programming languages**, supporting both **Offline Mode** and **Online Mode**.
 
