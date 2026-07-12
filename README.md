@@ -169,15 +169,16 @@ Framagit: https://framagit.org/NKTgLaw/NKTgLaw
 
 Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
+
 ### Reference DOIs
 
 **NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
 
-Zenodo: 10.5281/zenodo.18722425
+Zenodo: [10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
 
 **Publication of Software Description and Algorithm for the NKTg Law of Variable Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
 
-Zenodo: 10.5281/zenodo.18890313
+Zenodo: [10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
 
 The NKTg Law follows open-source reproducibility principles through transparent, multilingual, and cross-platform implementations. The system has been experimentally verified using publicly available NASA datasets with consistent computational results and is available in more than **150 programming languages**, supporting both **Offline Mode** and **Online Mode**.
 
