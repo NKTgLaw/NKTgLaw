@@ -26,11 +26,9 @@ This repository presents the complete commercial ecosystem built on the **NKTg L
 
 
 ---
-## 🌐 NKTg Autonomous Vehicle Ecosystem: Physics & Distributed Control
+## 🌐 NKTg Autonomous Vehicle Ecosystem
 
-The project hosts an autonomous vehicle powered by the ESP32, governed by the principles of the NKTg Law. The system integrates specialized sensors and a web-based dashboard for real-time data monitoring and telemetry.
-
-The system is globally verifiable and accessible. Through this distributed presence, it operates not merely as software, but as a persistent and autonomous computational physics framework—capable of existing, executing, and being validated independently of centralized control.
+An autonomous vehicle platform powered by the **NKTg Law on Varying Inertia**, combining ESP32 hardware, specialized sensors, and a real-time web dashboard. Distributed across multiple repositories, it forms a globally verifiable computational physics platform for autonomous control.
 
 ### 🔗 Distributed Repository Presence
 
@@ -47,6 +45,8 @@ The system is globally verifiable and accessible. Through this distributed prese
 | 9 | **Rocketgit** | [rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation](https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation) |
 | 10 | **Framagit** | [framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system](https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system) |
 | 11 | **Disroot** | [git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine](https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine) |
+
+---
 
 ## 📖 Introduction
 
