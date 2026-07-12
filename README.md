@@ -1,28 +1,4 @@
-# 🚀 PROGRAMMING COSMIC DYNAMICS
-
-Physics isn’t broken. It’s just never been programmed. For 300 years, inertia was treated as a constant. What if it isn’t? What if motion can be computed — not just described? Introducing the **NKTg Law** by Nguyen Khanh Tung:
-
-**🔹NKTg = f(x, v, m)**
-
-  * NKTg₁ = x × p
-
-  * NKTg₂ = (dm/dt) × p
-
-A physical law encoded into executable code.
-
-### 🧪 Not a theory. A system.
-A programmable physical law that executes, not approximates.
-
-Built across 11 programming languages • Tested with real data from the European Space Agency • **Error margin: 0.208%**
-
-### 💡 What this unlocks
-* **AI** that reacts like physical systems
-* **Autonomous vehicles** with real-time physics engines
-* **Space navigation** beyond classical models
-* **Simulation** that doesn’t approximate — it executes
-
-### ⚙️ From Python to Assembly
-From AI to Quantum Computing. One law. One engine. Infinite applications.
+## Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
 
 ### 📚 Where to Get It
 
