@@ -1,4 +1,34 @@
-This repository presents the commercial ecosystem built on the NKTg Law on Varying Inertia, together with its theoretical foundation and experimental validations conducted using publicly available datasets from NASA and the European Space Agency (ESA). 
+This repository presents the complete commercial ecosystem built on the **NKTg Law on Varying Inertia**, including **NKTg AI**, **Programming Cosmic Dynamics**, **NKTgUniversa API**, autonomous vehicle technologies, together with the theoretical foundation of the law and experimental validations conducted using publicly available datasets from **NASA** and the **European Space Agency (ESA)**.
+
+# 🧠 NKTg AI
+
+**NKTg AI** is the flagship commercial product built on the **NKTg Law on Varying Inertia**. Unlike traditional summarization tools or generative AI, it is a deterministic **Language Decoding System** that applies physical algorithms to measure semantic energy and identify the **Core Content**—the author's original logical genetic code. Designed for organizations, researchers, professionals, and decision-makers, NKTg AI performs all processing locally through WebAssembly, requiring no server, cloud service, external AI model, or remote database, ensuring deterministic results, complete privacy, and offline capability.
+
+🌐 **Official Website:** https://nktg.org
+
+---
+
+## 📚 Programming Cosmic Dynamics
+
+**Programming Cosmic Dynamics** is a book series by **Nguyen Khanh Tung** based on the **NKTg Law on Varying Inertia**. Available worldwide through major digital publishing platforms. Built across **11 programming languages** • Tested with real data from the **European Space Agency (ESA)** • **Error margin: 0.208%**.
+
+### 👉 Where to Get It
+
+**I. Leanpub**  
+https://leanpub.com/NKTgLaw
+
+**II. Google Play Books**  
+English Edition  
+https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
+
+**III. Amazon**  
+https://www.amazon.com/dp/B0GTSBBRYR
+
+**IV. Payhip**  
+https://payhip.com/b/fU8Xr
+
+**V. Gumroad**  
+https://nktglaw.gumroad.com/l/NKTgLaw
 
 📚 Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
 
