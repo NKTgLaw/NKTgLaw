@@ -3,35 +3,22 @@
 ### 📚 Where to Get It
 
 #### I. Leanpub
-| # | Edition | Link |
-|---|---------|------|
 |   | English Edition | https://leanpub.com/NKTgLaw |
 
 #### II. Google Play Books
-| # | Edition | Link |
-|---|---------|------|
 |   | English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli |
  
 
 #### III. Amazon
-| # | Edition | Link |
-|---|---------|------|
 |   | English Edition | https://www.amazon.com/dp/B0GTSBBRYR |
 
 
 #### IV. Payhip
-| # | Edition | Link |
-|---|---------|------|
 |   | English Edition | https://payhip.com/b/fU8Xr |
 
 
 #### V. Gumroad
-| # | Edition | Link |
-|---|---------|------|
 |   | English Edition | https://nktglaw.gumroad.com/l/NKTgLaw |
-| 2 | Vietnamese Edition | https://nktglaw.gumroad.com/l/NKTgLaw-vi |
-| 3 | Chinese Simplified Edition | https://nktglaw.gumroad.com/l/NKTgLaw-zh |
-| 4 | Global Bundle (English + Chinese Simplified + Vietnamese) | https://nktglaw.gumroad.com/l/NKTgLaw-global |
 
 
 ---
