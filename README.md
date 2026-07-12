@@ -32,17 +32,17 @@ An autonomous vehicle platform powered by the **NKTg Law on Varying Inertia**, c
 
 ### 🔗 Distributed Repository Presence
 
-- **GitLab:** https://gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control
-- **GitHub:** https://github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
-- **Gitea:** https://gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems
-- **Codeberg:** https://codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system
-- **Bitbucket:** https://bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/
-- **Launchpad:** https://launchpad.net/programming-cosmic-dynamics-dynamic-systems
-- **SourceForge:** https://sourceforge.net/projects/cosmic-dynamics-system/
-- **SourceHut:** https://git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics
-- **RocketGit:** https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation
-- **Framagit:** https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
-- **Disroot:** https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine
+- GitHub: https://github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
+- GitLab: https://gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control
+- Gitea: https://gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems
+- Codeberg: https://codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system
+- Bitbucket: https://bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/
+- Launchpad: https://launchpad.net/programming-cosmic-dynamics-dynamic-systems
+- SourceForge: https://sourceforge.net/projects/cosmic-dynamics-system/
+- SourceHut: https://git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics
+- RocketGit: https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation
+- Framagit: https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
+- Disroot: https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine
 
 ---
 
