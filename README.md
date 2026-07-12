@@ -32,23 +32,21 @@ An autonomous vehicle platform powered by the **NKTg Law on Varying Inertia**, c
 
 ### 🔗 Distributed Repository Presence
 
-| # | Platform | Official Repository Link |
-| :-- | :--- | :--- |
-| 1 | **GitLab** | [gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control](https://gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control) |
-| 2 | **GitHub** | [github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system](https://github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system) |
-| 3 | **Gitea** | [gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems](https://gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems) |
-| 4 | **Codeberg** | [codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system](https://codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system) |
-| 5 | **Bitbucket** | [bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/](https://bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/) |
-| 6 | **Launchpad** | [launchpad.net/programming-cosmic-dynamics-dynamic-systems](https://launchpad.net/programming-cosmic-dynamics-dynamic-systems) |
-| 7 | **SourceForge** | [sourceforge.net/projects/cosmic-dynamics-system/](https://sourceforge.net/projects/cosmic-dynamics-system/) |
-| 8 | **SourceHut** | [git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics](https://git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics) |
-| 9 | **Rocketgit** | [rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation](https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation) |
-| 10 | **Framagit** | [framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system](https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system) |
-| 11 | **Disroot** | [git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine](https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine) |
+- **GitLab:** https://gitlab.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-real-time-control
+- **GitHub:** https://github.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
+- **Gitea:** https://gitea.com/NKTg-Variable-Inertia/programming-cosmic-dynamics-embedded-systems
+- **Codeberg:** https://codeberg.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-vehicle-system
+- **Bitbucket:** https://bitbucket.org/nktg-variable-inertia/programming-cosmic-dynamics-motion-control/src/main/
+- **Launchpad:** https://launchpad.net/programming-cosmic-dynamics-dynamic-systems
+- **SourceForge:** https://sourceforge.net/projects/cosmic-dynamics-system/
+- **SourceHut:** https://git.sr.ht/~nktg-variable-inertia/programming-cosmic-dynamics-ai-robotics
+- **RocketGit:** https://rocketgit.com/user/NKTg-Variable-Inertia/programming-cosmic-dynamics-data-simulation
+- **Framagit:** https://framagit.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-system
+- **Disroot:** https://git.disroot.org/NKTg-Variable-Inertia/programming-cosmic-dynamics-control-engine
 
 ---
 
-## 📖 Introduction
+## 📖 Foundational Law
 
 **The NKTg Law on Varying Inertia** describes the movement tendency of an object in space depends on the relationship between its position, velocity, and mass.
 
