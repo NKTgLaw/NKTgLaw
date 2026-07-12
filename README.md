@@ -14,15 +14,15 @@ This repository presents the complete commercial ecosystem built on the **NKTg L
 
 ### 👉 Where to Get It
 
-**Leanpub**  https://leanpub.com/NKTgLaw
+**- Leanpub**  https://leanpub.com/NKTgLaw
 
-**Google Play Books** https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
+**- Google Play Books** https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli
 
-**Amazon**  https://www.amazon.com/dp/B0GTSBBRYR
+**- Amazon**  https://www.amazon.com/dp/B0GTSBBRYR
 
-**Payhip**  https://payhip.com/b/fU8Xr
+**- Payhip**  https://payhip.com/b/fU8Xr
 
-**Gumroad** https://nktglaw.gumroad.com/l/NKTgLaw
+**- Gumroad** https://nktglaw.gumroad.com/l/NKTgLaw
 
 
 ---
