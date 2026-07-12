@@ -1,50 +1,38 @@
-Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
+👉 Programming Cosmic Dynamics is a book series by Nguyen Khanh Tung based on the NKTg Law on Varying Inertia. Available worldwide through major digital publishing platforms. Built across 11 programming languages • Tested with real data from the European Space Agency • Error margin: 0.208%.
 
 ### 📚 Where to Get It
 
 #### I. Leanpub
 | # | Edition | Link |
 |---|---------|------|
-| 1 | English Edition | https://leanpub.com/NKTgLaw |
-| 2 | Vietnamese Edition | https://leanpub.com/NKTgLaw-vi |
-| 3 | Chinese Simplified Edition | https://leanpub.com/NKTgLaw-zh |
-| 4 | Global Bundle (English + Vietnamese) | https://leanpub.com/b/NKTgLaw-global |
+|   | English Edition | https://leanpub.com/NKTgLaw |
 
 #### II. Google Play Books
 | # | Edition | Link |
 |---|---------|------|
-| 1 | English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli |
-| 2 | Vietnamese Edition | https://play.google.com/store/books/details?id=buDMEQAAQBAJ |
-| 3 | Chinese Simplified Edition | https://play.google.com/store/books/details?id=OMDTEQAAQBAJ |
-| 4 | Global Bundle (English + Chinese Simplified + Vietnamese) | https://play.google.com/store/books/series?id=Fa6gHAAAABC0sM |
+|   | English Edition | https://play.google.com/store/books/details?id=CNLKEQAAQBAJ&pli |
+ 
 
 #### III. Amazon
 | # | Edition | Link |
 |---|---------|------|
-| 1 | English Edition | https://www.amazon.com/dp/B0GTSBBRYR |
-| 2 | Traditional Chinese Edition | https://www.amazon.com/dp/B0GHZMSKYB |
-| 3 | Global Bundle (English + Traditional Chinese) | https://www.amazon.com/dp/B0D6579Q3G |
+|   | English Edition | https://www.amazon.com/dp/B0GTSBBRYR |
+
 
 #### IV. Payhip
 | # | Edition | Link |
 |---|---------|------|
-| 1 | English Edition | https://payhip.com/b/fU8Xr |
-| 2 | Vietnamese Edition | https://payhip.com/b/aU9Ex |
-| 3 | Chinese Simplified Edition | https://payhip.com/b/6UJbN |
-| 4 | Global Bundle (English + Chinese Simplified + Vietnamese) | https://payhip.com/b/a5l9k |
+|   | English Edition | https://payhip.com/b/fU8Xr |
+
 
 #### V. Gumroad
 | # | Edition | Link |
 |---|---------|------|
-| 1 | English Edition | https://nktglaw.gumroad.com/l/NKTgLaw |
+|   | English Edition | https://nktglaw.gumroad.com/l/NKTgLaw |
 | 2 | Vietnamese Edition | https://nktglaw.gumroad.com/l/NKTgLaw-vi |
 | 3 | Chinese Simplified Edition | https://nktglaw.gumroad.com/l/NKTgLaw-zh |
 | 4 | Global Bundle (English + Chinese Simplified + Vietnamese) | https://nktglaw.gumroad.com/l/NKTgLaw-global |
 
-###  👉 This is the shift
-* Not better formulas.
-* Not faster simulations.
-* A new way to build reality in code.
 
 ---
 ## 🌐 NKTg Autonomous Vehicle Ecosystem: Physics & Distributed Control
