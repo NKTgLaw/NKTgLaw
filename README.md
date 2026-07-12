@@ -117,59 +117,71 @@ An autonomous vehicle platform powered by the **NKTg Law on Varying Inertia**, c
 
 ---
 
-### 🌌 NKTgUniversa API  
+## 🌌 NKTgUniversa API
 
-- **The NKTgUniversa API** is formally established as the **Universal Dynamics Ecosystem** — covering multiple fields, cross-platform, and cross-disciplinary, aimed at modeling variable inertia, dynamic mass interactions, and systemic motion across various domains, applied in the following areas:
+The **NKTgUniversa API** is the Universal Dynamics Ecosystem built on the **NKTg Law on Varying Inertia**, providing a cross-platform and cross-disciplinary framework for modeling variable inertia, dynamic mass interactions, and systemic motion across multiple domains, including:
 
-  - Planetary dynamics
+- Planetary dynamics
+- Orbit navigation
+- Robotics & control systems
+- State-reflective AI
+- Physics simulation
 
-  - Orbit navigation motion
+By modeling the relationships among position, velocity, and mass variation, the framework is applicable not only in theoretical physics but also in practical engineering and real-world computational systems.
 
-  - Robotics & control systems
+### Key Features
 
-  - State-reflective AI
+- Core libraries implemented in **C++, Rust, and Go**
+- **REST** and **gRPC** API interfaces
+- Over **150 programming language** implementations
+- Consistent mathematical behavior across all supported platforms
+- Experimental verification using planetary and NASA datasets
 
-  - Physics simulation
+**Reference DOI** — Long-term preservation and citation for the NKTg Law Core, API, and 150 language implementations.
 
-This framework can reflect any system with state, velocity, and mass variation — so it is not only mathematically correct but also practically applicable in real-world engineering.
+**Zenodo:** 10.5281/zenodo.17190536
 
-👉 This recognition is based on:  
+Detailed experimental datasets and verification results are provided in the **Foundations** section.
 
-- **Completed Core & API Layers:** Implemented in C++, Rust, Go, with REST/gRPC interfaces.  
-- **Cross-language adoption:** Over **150 client implementations** across major programming languages.  
-- **The NKTg Law** preserves its invariant mathematical structure across more than **150 programming languages**, applied throughout all domains of science and life. It requires no differentiation or approximation methods, ensuring that its computational results remain precise, reproducible, and consistent across all environments and implementations.
-- **Reference DOI:** These DOIs provide long-term preservation and citation access for all **150 language source** packages and verified implementations of the NKTgLaw Core & API.
-  - Zenodo — [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)  
-- **Experimental verification:** Consistent results with **planetary and NASA datasets**  Detailed datasets and DOI references for these verifications are provided in the **Foundations** section.
+### 🌍 Multi-Platform Deployment
 
-- **Multi-Platform Deployment:**
+To ensure long-term availability, independent verification, reproducibility, and platform independence, the NKTgUniversa API is continuously distributed across multiple Git hosting platforms. Each repository contains an identical implementation of the NKTg Law, allowing anyone to verify, reproduce, and access the system without relying on a single provider.
 
-  - To ensure long-term accessibility, independent verification, global interoperability, and universal availability, the NKTg Law is established as a distributed computational infrastructure, in which its API and associated repositories are persistently deployed across an ever-expanding network of Git platforms worldwide.
+GitHub: https://github.com/NKTgLaw/NKTgLaw
 
-  - This architecture forms a globally accessible, infrastructure-independent system that transcends any single platform, authority, or point of failure. Each repository instance represents a verifiable node of the NKTg Law, ensuring that its mathematical structure, computational integrity, and reproducibility are preserved identically across all environments.
+GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
 
-  - Through this distributed presence, the NKTg Law operates not merely as software, but as a persistent, verifiable, and universally accessible system of computational physics — capable of existing, executing, and being validated anywhere in the world, independent of centralized control.
+Gitea: https://gitea.com/NKTgLaw/NKTgLaw
 
-    - GitHub: https://github.com/NKTgLaw/NKTgLaw
-    - GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
-    - Gitea: https://gitea.com/NKTgLaw/NKTgLaw
-    - Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
-    - Launchpad: https://launchpad.net/nktglaw
-    - SourceForge: https://sourceforge.net/projects/nktglaw/
-    - Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
-    - SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
-    - Rocketgit: https://rocketgit.com/NKTgLaw/NKTgLaw
-    - Framagit: https://framagit.org/NKTgLaw/NKTgLaw
-    - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
+Codeberg: https://codeberg.org/NKTgLaw/NKTgLaw
 
-  - **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
-  - [Zenodo: 10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
-- **Reference DOI:** Publica­tion of software description and algorithm for the nktg law of variable inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
-  - [Zenodo: 10.5281/zenodo.18890313](https://doi.org/10.5281/zenodo.18890313)
+Launchpad: https://launchpad.net/nktglaw
 
-- The verification of NKTg Law adheres to open-source reproducibility standards, featuring transparent, multilingual, and cross-platform implementations—accessible anytime, anywhere. It is**empirically validated using NASA’s public datasets**, producing fully consistent results. Implemented in **150 programming languages**, **Offline Mode and Online Mode**.
+SourceForge: https://sourceforge.net/projects/nktglaw/
 
-- This distributed presence establishes **NKTgUniversa API** as an **independent, verifiable, and community-accessible Universal Dynamics Ecosystem**, aligned with the principles of **open science, cross-domain collaboration, and global reproducibility**
+Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
+
+SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
+
+RocketGit: https://rocketgit.com/NKTgLaw/NKTgLaw
+
+Framagit: https://framagit.org/NKTgLaw/NKTgLaw
+
+Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
+
+### Reference DOIs
+
+**NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
+
+Zenodo: 10.5281/zenodo.18722425
+
+**Publication of Software Description and Algorithm for the NKTg Law of Variable Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues**
+
+Zenodo: 10.5281/zenodo.18890313
+
+The NKTg Law follows open-source reproducibility principles through transparent, multilingual, and cross-platform implementations. The system has been experimentally verified using publicly available NASA datasets with consistent computational results and is available in more than **150 programming languages**, supporting both **Offline Mode** and **Online Mode**.
+
+Through this distributed infrastructure, **NKTgUniversa API** serves as a globally accessible, independently verifiable Universal Dynamics Ecosystem for open science, cross-domain engineering, and reproducible computational physics.
 
 ---
 
