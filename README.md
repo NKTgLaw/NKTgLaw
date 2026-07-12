@@ -170,7 +170,7 @@ To ensure long-term availability, independent verification, reproducibility, and
 - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
 
-- **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
+**Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
 
   - Zenodo: [10.5281/zenodo.18722425](https://doi.org/10.5281/zenodo.18722425)
 
