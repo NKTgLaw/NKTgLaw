@@ -137,11 +137,12 @@ By modeling the relationships among position, velocity, and mass variation, the 
 - Consistent mathematical behavior across all supported platforms
 - Experimental verification using planetary and NASA datasets
 
-**Reference DOI** — Long-term preservation and citation for the NKTg Law Core, API, and 150 language implementations.
+**Reference DOI:** Long-term preservation and citation for the NKTg Law Core, API, and 150 language implementations.
 
-**Zenodo:** 10.5281/zenodo.17190536
+  - Zenodo: [10.5281/zenodo.17190536](https://doi.org/10.5281/zenodo.17190536)
 
 Detailed experimental datasets and verification results are provided in the **Foundations** section.
+
 
 ### 🌍 Multi-Platform Deployment
 
