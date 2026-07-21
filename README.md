@@ -170,6 +170,9 @@ To ensure long-term availability, independent verification, reproducibility, and
 
 - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
+- Huggingface: https://huggingface.co/NKTgLaw/NKTgLaw
+
+
 
 **Reference DOI:** NKTg Law of Varying Inertia: Content Standardized Across the 21 Most Widely Spoken Human Tongues
 
