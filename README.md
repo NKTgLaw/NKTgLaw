@@ -4,7 +4,32 @@ This repository presents the complete commercial ecosystem built on the **NKTg L
 
 **NKTg AI** is the flagship commercial product built on the **NKTg Law on Varying Inertia**. Unlike traditional summarization tools or generative AI, it is a deterministic **Language Decoding System** that applies physical algorithms to measure semantic energy and identify the **Core Content**—the author's original logical genetic code. Designed for organizations, researchers, professionals, and decision-makers, NKTg AI performs all processing locally through WebAssembly, requiring no server, cloud service, external AI model, or remote database, ensuring deterministic results, complete privacy, and offline capability.
 
-🌐 **Official Website:** https://nktg.org
+## Official Resources
+
+| Resource | Link |
+|----------|------|
+| 🌐 Official Website | https://nktg.org |
+| 📚 NKTg AI Help Center | https://help.nktg.org |
+
+---
+
+## Repository Distribution
+
+NKTg AI is officially distributed across multiple public source code hosting platforms to improve availability, long-term preservation, redundancy, and global accessibility.
+
+| Platform | Repository |
+|----------|------------|
+| GitLab | https://gitlab.com/NKTgAI/NKTgAI |
+| Hugging Face | https://huggingface.co/NKTgAI/NKTgAI |
+| Gitea | https://gitea.com/NKTgAI/NKTgAI |
+| Codeberg | https://codeberg.org/NKTgAI/NKTgAI |
+| Bitbucket | https://bitbucket.org/nktgai/nktgai/src/main/ |
+| Launchpad | https://launchpad.net/nktgai |
+| SourceForge | https://sourceforge.net/projects/nktgai/ |
+| SourceHut | https://git.sr.ht/~nktgai/NKTgAI |
+| RocketGit | https://rocketgit.com/NKTgAI/NKTgAI |
+| Framagit | https://framagit.org/NKTgAI/NKTgAI |
+| Disroot Git | https://git.disroot.org/NKTgAI/NKTgAI |
 
 ---
 
