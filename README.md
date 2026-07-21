@@ -148,9 +148,9 @@ Detailed experimental datasets and verification results are provided in the **Fo
 
 To ensure long-term availability, independent verification, reproducibility, and platform independence, the NKTgUniversa API is continuously distributed across multiple Git hosting platforms. Each repository contains an identical implementation of the NKTg Law, allowing anyone to verify, reproduce, and access the system without relying on a single provider.
 
-- GitHub: https://github.com/NKTgLaw/NKTgLaw
-
 - GitLab: https://gitlab.com/NKTgLaw/NKTgLaw
+
+- Huggingface: https://huggingface.co/NKTgLaw/NKTgLaw
 
 - Gitea: https://gitea.com/NKTgLaw/NKTgLaw
 
@@ -170,7 +170,9 @@ To ensure long-term availability, independent verification, reproducibility, and
 
 - Disroot: https://git.disroot.org/NKTgLaw/NKTgLaw
 
-- Huggingface: https://huggingface.co/NKTgLaw/NKTgLaw
+- GitHub: https://github.com/NKTgLaw/NKTgLaw
+
+
 
 
 
