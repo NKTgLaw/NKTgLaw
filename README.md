@@ -185,7 +185,7 @@ To ensure long-term availability, independent verification, reproducibility, and
 
 - SourceForge: https://sourceforge.net/projects/nktglaw/
 
-- Bitbucket: https://bitbucket.org/nktglaw/nktglaw/src/main/
+- Bitbucket: https://bitbucket.org/nktg/nktglaw/src/main/
 
 - SourceHut: https://git.sr.ht/~nktglaw/NKTgLaw
 
